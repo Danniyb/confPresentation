@@ -1,0 +1,177 @@
+[
+  {
+    "objectID": "slides/index.html",
+    "href": "slides/index.html",
+    "title": "Conference Presentations",
+    "section": "",
+    "text": "View Presentation\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\n\n\n\n\nView Presentation\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\n\n\n\n\nView Presentation\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\n\n\n\n\nView Presentation\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content\n\n\n\n\n\nUse the navigation menu at the top of the page to move between presentations. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references"
+  },
+  {
+    "objectID": "slides/index.html#available-presentations",
+    "href": "slides/index.html#available-presentations",
+    "title": "Conference Presentations",
+    "section": "",
+    "text": "View Presentation\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\n\n\n\n\nView Presentation\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\n\n\n\n\nView Presentation\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\n\n\n\n\nView Presentation\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content"
+  },
+  {
+    "objectID": "slides/index.html#navigation",
+    "href": "slides/index.html#navigation",
+    "title": "Conference Presentations",
+    "section": "",
+    "text": "Use the navigation menu at the top of the page to move between presentations. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Conference Presentations",
+    "section": "",
+    "text": "Welcome to our collection of conference presentations focusing on educational technology and development tools. These presentations cover various aspects of modern software development, automated testing, and educational technology implementation.\n\n\n\nAutomated and Configurable Programming Project Checking with Chasten\n\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\nUp and Running with GitHub, GitHub Classroom, and GitHub Actions\n\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\nExecExam: A Tool to Facilitate Effective Executable Examinations in Python\n\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\nBuilding and Deploying Course Websites with Python, Quarto, and Mkdocs\n\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content\n\n\n\n\n\nEach presentation is available in the slides section. You can navigate through the presentations using the navigation menu above. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references\n\n\n\n\nThese presentations are open source and available for educational purposes. Feel free to use and modify them according to your needs. If you find any issues or have suggestions for improvements, please contribute through our GitHub repository."
+  },
+  {
+    "objectID": "index.html#available-presentations",
+    "href": "index.html#available-presentations",
+    "title": "Conference Presentations",
+    "section": "",
+    "text": "Automated and Configurable Programming Project Checking with Chasten\n\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\nUp and Running with GitHub, GitHub Classroom, and GitHub Actions\n\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\nExecExam: A Tool to Facilitate Effective Executable Examinations in Python\n\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\nBuilding and Deploying Course Websites with Python, Quarto, and Mkdocs\n\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content"
+  },
+  {
+    "objectID": "index.html#getting-started",
+    "href": "index.html#getting-started",
+    "title": "Conference Presentations",
+    "section": "",
+    "text": "Each presentation is available in the slides section. You can navigate through the presentations using the navigation menu above. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references"
+  },
+  {
+    "objectID": "index.html#contributing",
+    "href": "index.html#contributing",
+    "title": "Conference Presentations",
+    "section": "",
+    "text": "These presentations are open source and available for educational purposes. Feel free to use and modify them according to your needs. If you find any issues or have suggestions for improvements, please contribute through our GitHub repository."
+  },
+  {
+    "objectID": "slides/chasten/index.html#the-problem-with-traditional-static-analysis",
+    "href": "slides/chasten/index.html#the-problem-with-traditional-static-analysis",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "The Problem with Traditional Static Analysis",
+    "text": "The Problem with Traditional Static Analysis\nRegular expression (regex) ≠ code understanding\n\nFails on structural nuance\nHard to maintain across formatting/styles"
+  },
+  {
+    "objectID": "slides/chasten/index.html#the-problem-with-traditional-static-analysis-1",
+    "href": "slides/chasten/index.html#the-problem-with-traditional-static-analysis-1",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "The Problem with Traditional Static Analysis",
+    "text": "The Problem with Traditional Static Analysis\nAST tools are powerful but complex\n\nRequire managing node types\nDifficult to prototype new rules"
+  },
+  {
+    "objectID": "slides/chasten/index.html#chasten",
+    "href": "slides/chasten/index.html#chasten",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Chasten",
+    "text": "Chasten\nA Python program that uses XPATH expressions to find patterns in the abstract syntax tree (AST) of a Python program"
+  },
+  {
+    "objectID": "slides/chasten/index.html#what-is-an-ast",
+    "href": "slides/chasten/index.html#what-is-an-ast",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "What is an AST?",
+    "text": "What is an AST?"
+  },
+  {
+    "objectID": "slides/chasten/index.html#why-xpath",
+    "href": "slides/chasten/index.html#why-xpath",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Why XPATH?",
+    "text": "Why XPATH?"
+  },
+  {
+    "objectID": "slides/chasten/index.html#features",
+    "href": "slides/chasten/index.html#features",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Features",
+    "text": "Features\n\n✨ Easy-to-configure, automated analysis of a Python program’s abstract syntax tree\n📃 Flexible and easy-to-use YAML-based configuration file for describing analyses and checks\n🚀 Configurable saving of analysis results in the JSON, CSV, or SQLite formats\n🌄 Interactive results analysis through the use of a locally running datasette server"
+  },
+  {
+    "objectID": "slides/chasten/index.html#comparison-for-education-research",
+    "href": "slides/chasten/index.html#comparison-for-education-research",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Comparison for Education & Research",
+    "text": "Comparison for Education & Research"
+  },
+  {
+    "objectID": "slides/chasten/index.html#comparison-for-education-research-1",
+    "href": "slides/chasten/index.html#comparison-for-education-research-1",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Comparison for Education & Research",
+    "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nCustom Rule Creation\n✅ Write in YAML with XPath — no coding\n❌ Hard-coded; not extensible\n⚠️ Requires Python plugin"
+  },
+  {
+    "objectID": "slides/chasten/index.html#comparison-for-education-research-2",
+    "href": "slides/chasten/index.html#comparison-for-education-research-2",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Comparison for Education & Research",
+    "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nLearning AST Concepts\n✅ Transparent — great for teaching ASTs\n❌ Abstracted away\n⚠️ Indirect via rule behavior"
+  },
+  {
+    "objectID": "slides/chasten/index.html#comparison-for-education-research-3",
+    "href": "slides/chasten/index.html#comparison-for-education-research-3",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Comparison for Education & Research",
+    "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nResearch Use\n✅ Structured output + pattern mining\n❌ Not suited for deep analysis\n⚠️ Output not researcher-friendly"
+  },
+  {
+    "objectID": "slides/chasten/index.html#comparison-for-education-research-4",
+    "href": "slides/chasten/index.html#comparison-for-education-research-4",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Comparison for Education & Research",
+    "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nOutput Formats\n✅ JSON, CSV, SQLite (queryable)\nText, JSON\nText, JSON"
+  },
+  {
+    "objectID": "slides/chasten/index.html#comparison-for-education-research-5",
+    "href": "slides/chasten/index.html#comparison-for-education-research-5",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Comparison for Education & Research",
+    "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nInteractive Exploration\n✅ Datasette dashboards (SQLite-ready)\n❌ None\n❌ None"
+  },
+  {
+    "objectID": "slides/chasten/index.html#key-takeaways",
+    "href": "slides/chasten/index.html#key-takeaways",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nLearn how Chasten fits into a workflow for project-centric learning\nCreate custom linting rules through a simple YAML configuration\nPractical examples of enforcing code standards on documentation and code\nWays to analyze results through interactive dashboards with Datasette\nHow to integrate Chasten into GitHub Classroom and GitHub Actions"
+  },
+  {
+    "objectID": "slides/chasten/index.html#introduction-the-problem-with-static-analysis",
+    "href": "slides/chasten/index.html#introduction-the-problem-with-static-analysis",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Introduction: The Problem with Static Analysis",
+    "text": "Introduction: The Problem with Static Analysis\n\nThe limitations of regex for code analysis\nThe complexity of traditional AST analysis frameworks\nWhat makes Chasten different: comparison to Ruff and Pylint"
+  },
+  {
+    "objectID": "slides/chasten/index.html#understanding-ast-analysis",
+    "href": "slides/chasten/index.html#understanding-ast-analysis",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Understanding AST Analysis",
+    "text": "Understanding AST Analysis\n\nWhat is an Abstract Syntax Tree (AST)\nXPath basics for programmers\nUsing XPath to search the AST"
+  },
+  {
+    "objectID": "slides/chasten/index.html#getting-started-with-chasten",
+    "href": "slides/chasten/index.html#getting-started-with-chasten",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Getting Started with Chasten",
+    "text": "Getting Started with Chasten\n\nInstallation and basic setup\nUnderstanding the configuration files\nConcrete examples of linting rules:\n\nFinding missing docstrings\nDetecting improper nesting of control structures\nEnforcing type annotations\nIdentifying complex code patterns"
+  },
+  {
+    "objectID": "slides/chasten/index.html#analyzing-chastens-results",
+    "href": "slides/chasten/index.html#analyzing-chastens-results",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Analyzing Chasten’s Results",
+    "text": "Analyzing Chasten’s Results\n\nSaving and integrating results\nUsing the Datasette dashboard\nInterpreting the findings"
+  },
+  {
+    "objectID": "slides/chasten/index.html#integration-into-workflows",
+    "href": "slides/chasten/index.html#integration-into-workflows",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Integration into Workflows",
+    "text": "Integration into Workflows\n\nUsing Chasten in CI/CD pipelines\nIncorporating into development practices\nHow to use Chasten for educational purposes"
+  }
+]
