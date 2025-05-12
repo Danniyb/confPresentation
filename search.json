@@ -74,14 +74,14 @@
     "href": "slides/chasten/index.html#what-is-an-ast",
     "title": "Automated and Configurable Programming Project Checking with Chasten",
     "section": "What is an AST?",
-    "text": "What is an AST?"
+    "text": "What is an AST?\nAbstract Syntax Tree (AST) = structured representation of code\nx = 1 + 2\nAssign\n ├── Name(x)\n └── BinOp(+)\n      ├── Constant(1)\n      └── Constant(2)"
   },
   {
     "objectID": "slides/chasten/index.html#why-xpath",
     "href": "slides/chasten/index.html#why-xpath",
     "title": "Automated and Configurable Programming Project Checking with Chasten",
     "section": "Why XPATH?",
-    "text": "Why XPATH?"
+    "text": "Why XPATH?\n\n✅ Perfect for navigating ASTs\n✅ Easy to write and understand\n\n/FunctionDef/body//If[ancestor::If and not(parent::orelse)]\n–&gt; Matches function with double nested if"
   },
   {
     "objectID": "slides/chasten/index.html#features",
@@ -133,45 +133,17 @@
     "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nInteractive Exploration\n✅ Datasette dashboards (SQLite-ready)\n❌ None\n❌ None"
   },
   {
+    "objectID": "slides/chasten/index.html#chasten-workflow",
+    "href": "slides/chasten/index.html#chasten-workflow",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Chasten Workflow",
+    "text": "Chasten Workflow"
+  },
+  {
     "objectID": "slides/chasten/index.html#key-takeaways",
     "href": "slides/chasten/index.html#key-takeaways",
     "title": "Automated and Configurable Programming Project Checking with Chasten",
     "section": "Key Takeaways",
-    "text": "Key Takeaways\n\nLearn how Chasten fits into a workflow for project-centric learning\nCreate custom linting rules through a simple YAML configuration\nPractical examples of enforcing code standards on documentation and code\nWays to analyze results through interactive dashboards with Datasette\nHow to integrate Chasten into GitHub Classroom and GitHub Actions"
-  },
-  {
-    "objectID": "slides/chasten/index.html#introduction-the-problem-with-static-analysis",
-    "href": "slides/chasten/index.html#introduction-the-problem-with-static-analysis",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Introduction: The Problem with Static Analysis",
-    "text": "Introduction: The Problem with Static Analysis\n\nThe limitations of regex for code analysis\nThe complexity of traditional AST analysis frameworks\nWhat makes Chasten different: comparison to Ruff and Pylint"
-  },
-  {
-    "objectID": "slides/chasten/index.html#understanding-ast-analysis",
-    "href": "slides/chasten/index.html#understanding-ast-analysis",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Understanding AST Analysis",
-    "text": "Understanding AST Analysis\n\nWhat is an Abstract Syntax Tree (AST)\nXPath basics for programmers\nUsing XPath to search the AST"
-  },
-  {
-    "objectID": "slides/chasten/index.html#getting-started-with-chasten",
-    "href": "slides/chasten/index.html#getting-started-with-chasten",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Getting Started with Chasten",
-    "text": "Getting Started with Chasten\n\nInstallation and basic setup\nUnderstanding the configuration files\nConcrete examples of linting rules:\n\nFinding missing docstrings\nDetecting improper nesting of control structures\nEnforcing type annotations\nIdentifying complex code patterns"
-  },
-  {
-    "objectID": "slides/chasten/index.html#analyzing-chastens-results",
-    "href": "slides/chasten/index.html#analyzing-chastens-results",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Analyzing Chasten’s Results",
-    "text": "Analyzing Chasten’s Results\n\nSaving and integrating results\nUsing the Datasette dashboard\nInterpreting the findings"
-  },
-  {
-    "objectID": "slides/chasten/index.html#integration-into-workflows",
-    "href": "slides/chasten/index.html#integration-into-workflows",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Integration into Workflows",
-    "text": "Integration into Workflows\n\nUsing Chasten in CI/CD pipelines\nIncorporating into development practices\nHow to use Chasten for educational purposes"
+    "text": "Key Takeaways\n\n✅ Declarative rule-writing with XPath\nEasily define grading criteria and static analysis checks — no need to write Python plugins.\n🧠 Teachable insights into code structure\nHelps students understand Abstract Syntax Trees (ASTs) and how code is interpreted structurally.\n📊 Structured, explorable outputs\nExport results to SQLite and use Datasette to visualize errors, coverage, and student patterns.\n🧪 Supports research and pedagogy\nUseful for analyzing coding behavior at scale, detecting common anti-patterns in student code.\n📚 Integrates into grading pipelines\nRun Chasten on student submissions to check for required docstrings, type hints, nested logic, etc."
   }
 ]

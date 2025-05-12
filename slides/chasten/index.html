@@ -28,6 +28,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
   <link rel="stylesheet" href="../../css/styles.css">
@@ -160,9 +226,22 @@
 </section>
 <section id="what-is-an-ast" class="slide level2">
 <h2>What is an AST?</h2>
+<p><strong>Abstract Syntax Tree (AST)</strong> = structured representation of code</p>
+<p>x = 1 + 2</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource scss number-lines code-with-copy"><code class="sourceCode scss"><span id="cb1-1"><a></a>Assign</span>
+<span id="cb1-2"><a></a> ├── Name(x)</span>
+<span id="cb1-3"><a></a> └── BinOp(<span class="op">+</span>)</span>
+<span id="cb1-4"><a></a>      ├── Constant(1)</span>
+<span id="cb1-5"><a></a>      └── Constant(2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="why-xpath" class="slide level2">
 <h2>Why XPATH?</h2>
+<ul>
+<li class="fragment">✅ Perfect for navigating ASTs</li>
+<li class="fragment">✅ Easy to write and understand</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource xpath number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>/FunctionDef/body//If[ancestor::If and not(parent::orelse)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>–&gt; Matches function with double nested if</p>
 </section>
 <section id="features" class="slide level2">
 <h2>Features</h2>
@@ -311,60 +390,22 @@
 </tbody>
 </table>
 </section>
+<section id="chasten-workflow" class="slide level2">
+<h2>Chasten Workflow</h2>
+</section>
 <section id="key-takeaways" class="slide level2">
 <h2>Key Takeaways</h2>
 <ul>
-<li class="fragment">Learn how Chasten fits into a workflow for project-centric learning</li>
-<li class="fragment">Create custom linting rules through a simple YAML configuration</li>
-<li class="fragment">Practical examples of enforcing code standards on documentation and code</li>
-<li class="fragment">Ways to analyze results through interactive dashboards with Datasette</li>
-<li class="fragment">How to integrate Chasten into GitHub Classroom and GitHub Actions</li>
-</ul>
-</section>
-<section id="introduction-the-problem-with-static-analysis" class="slide level2">
-<h2>Introduction: The Problem with Static Analysis</h2>
-<ul>
-<li class="fragment">The limitations of regex for code analysis</li>
-<li class="fragment">The complexity of traditional AST analysis frameworks</li>
-<li class="fragment">What makes Chasten different: comparison to Ruff and Pylint</li>
-</ul>
-</section>
-<section id="understanding-ast-analysis" class="slide level2">
-<h2>Understanding AST Analysis</h2>
-<ul>
-<li class="fragment">What is an Abstract Syntax Tree (AST)</li>
-<li class="fragment">XPath basics for programmers</li>
-<li class="fragment">Using XPath to search the AST</li>
-</ul>
-</section>
-<section id="getting-started-with-chasten" class="slide level2">
-<h2>Getting Started with Chasten</h2>
-<ul>
-<li class="fragment">Installation and basic setup</li>
-<li class="fragment">Understanding the configuration files</li>
-<li class="fragment">Concrete examples of linting rules:
-<ul>
-<li class="fragment">Finding missing docstrings</li>
-<li class="fragment">Detecting improper nesting of control structures</li>
-<li class="fragment">Enforcing type annotations</li>
-<li class="fragment">Identifying complex code patterns</li>
-</ul></li>
-</ul>
-</section>
-<section id="analyzing-chastens-results" class="slide level2">
-<h2>Analyzing Chasten’s Results</h2>
-<ul>
-<li class="fragment">Saving and integrating results</li>
-<li class="fragment">Using the Datasette dashboard</li>
-<li class="fragment">Interpreting the findings</li>
-</ul>
-</section>
-<section id="integration-into-workflows" class="slide level2">
-<h2>Integration into Workflows</h2>
-<ul>
-<li class="fragment">Using Chasten in CI/CD pipelines</li>
-<li class="fragment">Incorporating into development practices</li>
-<li class="fragment">How to use Chasten for educational purposes</li>
+<li class="fragment"><p>✅ <strong>Declarative rule-writing with XPath</strong><br>
+Easily define grading criteria and static analysis checks — no need to write Python plugins.</p></li>
+<li class="fragment"><p>🧠 <strong>Teachable insights into code structure</strong><br>
+Helps students understand Abstract Syntax Trees (ASTs) and how code is interpreted structurally.</p></li>
+<li class="fragment"><p>📊 <strong>Structured, explorable outputs</strong><br>
+Export results to SQLite and use Datasette to visualize errors, coverage, and student patterns.</p></li>
+<li class="fragment"><p>🧪 <strong>Supports research and pedagogy</strong><br>
+Useful for analyzing coding behavior at scale, detecting common anti-patterns in student code.</p></li>
+<li class="fragment"><p>📚 <strong>Integrates into grading pipelines</strong><br>
+Run Chasten on student submissions to check for required docstrings, type hints, nested logic, etc.</p></li>
 </ul>
 
 
