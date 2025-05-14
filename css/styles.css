@@ -36,6 +36,21 @@ code {
     font-family: "Ubuntu Mono", monospace;
 }
 
+.reveal div.sourceCode pre code {
+  margin-top: -0.05em;
+  min-height: 100% !important;
+  max-height: 550px !important;
+}
+
+.reveal code {
+    color: #3459e6 !important;
+    font-size: 0.875em;
+    background-color: rgba(0, 0, 0, 0);
+    white-space: pre-wrap;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+        "Courier New", monospace;
+}
+
 /* Navigation */
 
 .navbar {
@@ -94,6 +109,42 @@ a:hover {
 
 .reveal .slide-number {
     font-size: 0.8em;
+}
+
+.boxed-content {
+    border: 3px solid #1c1c1c;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tight-boxed-content {
+    border: 3px solid #1c1c1c;
+    padding: -2px;
+    border-radius: 5px;
+}
+
+.boxed-content p {
+    color: #333;
+}
+
+.quarto-light .reveal .btn.btn-exercise-editor.btn-primary {
+    border: 1px solid #333;
+    --exercise-btn-bg: var(--bs-btn-bg, transparent);
+    --exercise-btn-color: var(--bs-btn-color, #333);
+    --exercise-btn-border-color: var(--bs-btn-border-color, #333);
+    --exercise-btn-hover-border-color: var(--bs-btn-hover-border-color, #333);
+    --exercise-btn-hover-bg: var(--bs-btn-hover-bg, #e45c08);
+    --exercise-btn-hover-color: var(--bs-btn-hover-color, #ffffff);
+}
+
+.quarto-light .reveal .btn.btn-exercise-editor.btn-outline-dark {
+    border: 1px solid #333;
+    --exercise-btn-bg: var(--bs-btn-bg, transparent);
+    --exercise-btn-color: var(--bs-btn-color, #333);
+    --exercise-btn-border-color: var(--bs-btn-border-color, #333);
+    --exercise-btn-hover-border-color: var(--bs-btn-hover-border-color, #333);
+    --exercise-btn-hover-bg: var(--bs-btn-hover-bg, #e45c08);
+    --exercise-btn-hover-color: var(--bs-btn-hover-color, #ffffff);
 }
 
 /* Custom callout boxes */

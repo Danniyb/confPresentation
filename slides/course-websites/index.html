@@ -6,9 +6,14 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4a990d8dcb58f517c7c86712b8f2ac7c.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4a990d8dcb58f517c7c86712b8f2ac7c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="../../site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
+<script src="../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.31">
 
+  <meta name="author" content="Alish Chhetri and Gregory M. Kapfhammer">
+  <meta name="dcterms.date" content="2025-05-15">
   <title>Building and Deploying Course Websites with Python, Quarto, and Mkdocs</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -122,6 +127,8 @@
       margin-right: 0; 
     }
   </style>
+  <script type="module" src="../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+  <link href="../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -129,21 +136,162 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Building and Deploying Course Websites with Python, Quarto, and Mkdocs</h1>
-  <p class="subtitle">Alish Chhetri and Gregory M. Kapfhammer</p>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Alish Chhetri and Gregory M. Kapfhammer 
+</div>
+</div>
 </div>
 
+  <p class="date">May 15, 2025</p>
 </section>
-<section id="course-websites-are-nice-with-quarto" class="slide level2">
-<h2>Course Websites are Nice with Quarto!</h2>
+<section id="what-problem-are-we-solving" class="slide level2">
+<h2>What Problem Are We Solving?</h2>
+<div style="margin-top: -0.15em;">
 <ul>
-<li class="fragment">Executable examinations</li>
-<li class="fragment">Python program</li>
-<li class="fragment">Uses Pytest</li>
+<li class="fragment">Course sites as <strong>static archives</strong> rather than <strong>living resources</strong></li>
+<li class="fragment">Students view materials as <strong>products to consume</strong> not <strong>projects to contribute to</strong>, limiting learning and engagement</li>
+<li class="fragment">Interactive examples require <strong>separate tools</strong> or <strong>platforms</strong></li>
+<li class="fragment">Content becomes <strong>quickly outdated</strong> without a sustainable update process that leverages <strong>industry-standard tools</strong></li>
+</ul>
+</div>
+<div class="fragment fade boxed-content" style="margin-top: -0.05em; font-size: 0.9em;">
+<p><iconify-icon role="img" inline="" icon="fa6-solid:lightbulb" aria-label="Icon lightbulb from fa6-solid Iconify.design set." title="Icon lightbulb from fa6-solid Iconify.design set."></iconify-icon> <strong>Ultimate Goal</strong>: Introduce how using packages like Quarto make it possible to create <strong>interactive</strong> and <strong>maintainable</strong> course websites</p>
+</div>
+</section>
+<section id="building-and-deploying-with-quarto" class="slide level2">
+<h2>Building and Deploying with Quarto</h2>
+<div class="fragment">
+<ul>
+<li><strong>Quarto</strong>: Accessible markdown-based framework</li>
+<li><strong>Python + WebAssembly</strong>: Easily run Python in the browser</li>
+<li><strong>GitHub</strong>: Version control and collaborative workflows</li>
+<li><strong>GitHub Actions</strong>: Automated testing and deployment</li>
+</ul>
+</div>
+<div class="fragment fade tight-boxed-content" style="margin-top: -0.05em; margin-bottom: -0.25em; font-size: 0.8em;">
+<ul>
+<li><iconify-icon role="img" inline="" icon="fa6-solid:lightbulb" aria-label="Icon lightbulb from fa6-solid Iconify.design set." title="Icon lightbulb from fa6-solid Iconify.design set."></iconify-icon> <strong>Ultimate Goal</strong>: Build content-focused, interactive, collaborative course sites that instructors can maintain with minimal effort</li>
+<li><iconify-icon role="img" inline="" icon="fa6-solid:diagram-project" aria-label="Icon diagram-project from fa6-solid Iconify.design set." title="Icon diagram-project from fa6-solid Iconify.design set."></iconify-icon> <strong>Next Steps</strong>: Give examples of content you can immediately use! See <code>https://github.com/GatorEducator/PyCon2025-EducationAndTypingSummit-Presentations</code> for more details!</li>
+</ul>
+</div>
+</section>
+<section id="explore-use-of-the-linkedlist" class="slide level2">
+<h2>Explore Use of the <code>LinkedList</code></h2>
+<div>
+<div id="pyodide-1" class="exercise-cell">
+
+</div>
+<script type="pyodide-1-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWUsIm1heC1saW5lcyI6MTB9LCJjb2RlIjoiY2xhc3MgTGlzdE5vZGU6XG4gICAgZGVmIF9faW5pdF9fKHNlbGYsIGRhdGEsIGxpbmsgPSBOb25lKTpcbiAgICAgICAgc2VsZi5kYXRhID0gZGF0YVxuICAgICAgICBzZWxmLmxpbmsgPSBsaW5rXG5cbmNsYXNzIExpbmtlZExpc3Q6XG4gICAgZGVmIF9faW5pdF9fKHNlbGYpOlxuICAgICAgICBzZWxmLl9oZWFkID0gTm9uZVxuXG4gICAgZGVmIGFkZGZpcnN0KHNlbGYsIGl0ZW0pOlxuICAgICAgICBzZWxmLl9oZWFkID0gTGlzdE5vZGUoaXRlbSwgc2VsZi5faGVhZClcblxuICAgIGRlZiBhZGRsYXN0KHNlbGYsIGl0ZW0pOlxuICAgICAgICBpZiBzZWxmLl9oZWFkIGlzIE5vbmU6XG4gICAgICAgICAgICBzZWxmLmFkZGZpcnN0KGl0ZW0pXG4gICAgICAgIGVsc2U6XG4gICAgICAgICAgICBjdXJyZW50bm9kZSA9IHNlbGYuX2hlYWRcbiAgICAgICAgICAgIHdoaWxlIGN1cnJlbnRub2RlLmxpbmsgaXMgbm90IE5vbmU6XG4gICAgICAgICAgICAgICAgY3VycmVudG5vZGUgPSBjdXJyZW50bm9kZS5saW5rXG4gICAgICAgICAgICBjdXJyZW50bm9kZS5saW5rID0gTGlzdE5vZGUoaXRlbSlcblxuICAgIGRlZiByZW1vdmVmaXJzdChzZWxmKTpcbiAgICAgICAgaXRlbSA9IHNlbGYuX2hlYWQuZGF0YVxuICAgICAgICBzZWxmLl9oZWFkID0gc2VsZi5faGVhZC5saW5rXG4gICAgICAgIHJldHVybiBpdGVtXG5cbiAgICBkZWYgcmVtb3ZlbGFzdChzZWxmKTpcbiAgICAgICAgaWYgc2VsZi5faGVhZC5saW5rIGlzIE5vbmU6XG4gICAgICAgICAgICByZXR1cm4gc2VsZi5yZW1vdmVmaXJzdCgpXG4gICAgICAgIGVsc2U6XG4gICAgICAgICAgICBjdXJyZW50bm9kZSA9IHNlbGYuX2hlYWRcbiAgICAgICAgICAgIHdoaWxlIGN1cnJlbnRub2RlLmxpbmsubGluayBpcyBub3QgTm9uZTpcbiAgICAgICAgICAgICAgICBjdXJyZW50bm9kZSA9IGN1cnJlbnRub2RlLmxpbmtcbiAgICAgICAgICAgIGl0ZW0gPSBjdXJyZW50bm9kZS5saW5rLmRhdGFcbiAgICAgICAgICAgIGN1cnJlbnRub2RlLmxpbmsgPSBOb25lXG4gICAgICAgICAgICByZXR1cm4gaXRlbVxuXG5MTCA9IExpbmtlZExpc3QoKVxuTEwuYWRkZmlyc3QoMylcbkxMLmFkZGZpcnN0KDUpXG5wcmludChMTC5yZW1vdmVmaXJzdCgpID09IDUpXG5MTC5hZGRsYXN0KDkpXG5MTC5hZGRsYXN0KDEzKVxucHJpbnQoTEwucmVtb3ZlZmlyc3QoKSA9PSAzKVxucHJpbnQoTEwucmVtb3ZlZmlyc3QoKSA9PSA5KVxucHJpbnQoTEwucmVtb3ZlbGFzdCgpID09IDEzKSJ9
+</script>
+</div>
+<div class="fragment" style="margin-top: -0.25em; font-size: 0.775em;">
+<ul>
+<li><iconify-icon role="img" inline="" icon="fa6-solid:robot" aria-label="Icon robot from fa6-solid Iconify.design set." title="Icon robot from fa6-solid Iconify.design set."></iconify-icon> <strong>Task</strong>: Visualize <code>ListNode</code> and <code>LinkedList</code> and explain the <code>True</code> outputs!</li>
+</ul>
+</div>
+</section>
+<section id="setting-up-the-course-infrastructure" class="slide level2 scrollable">
+<h2>Setting Up the Course Infrastructure</h2>
+<ol type="1">
+<li class="fragment">Create a GitHub repository with Quarto structure</li>
+<li class="fragment">Configure navigation, styling, and organization in <code>_quarto.yml</code></li>
+<li class="fragment">Set up GitHub Actions for automated deployment</li>
+<li class="fragment">Create templates for student contributions</li>
+<li class="fragment">Publish to GitHub Pages or Netlify</li>
+</ol>
+</section>
+<section id="the-instructors-role" class="slide level2">
+<h2>The Instructor’s Role</h2>
+<div class="fragment fade-right">
+<ul>
+<li>Create core course content and structure</li>
+<li>Establish contribution guidelines</li>
+<li>Review and provide feedback on student submissions</li>
+<li>Guide collaborative knowledge building</li>
+</ul>
+</div>
+</section>
+<section id="how-students-contribute" class="slide level2">
+<h2>How Students Contribute</h2>
+<ul>
+<li class="fragment">Fork the repository and create content in their assigned folder</li>
+<li class="fragment">Write reflections and examples in simple Markdown with code</li>
+<li class="fragment">Submit a Pull Request for review and feedback</li>
+<li class="fragment">Content is automatically published when approved</li>
+</ul>
+</section>
+<section id="real-world-example" class="slide level2">
+<h2>Real World Example</h2>
+<div class="fragment fade-right">
+<ul>
+<li><a href="https://algorithmology.org/">Algorithmology.org</a></li>
+<li><a href="https://github.com/Algorithmology/www.algorithmology.org">Algorithmology GitHub repository</a></li>
+</ul>
+</div>
+</section>
+<section id="educational-benefits" class="slide level2">
+<h2>Educational Benefits</h2>
+<ul>
+<li class="fragment"><strong>Learn by Contributing</strong>: Students practice real-world technical documentation</li>
+<li class="fragment"><strong>Code + Context</strong>: Code always presented with educational context</li>
+<li class="fragment"><strong>Literate Programming</strong>: Encourages explaining code, not just writing it</li>
+<li class="fragment"><strong>Continuous Improvement</strong>: Course materials evolve each semester</li>
+</ul>
+</section>
+<section id="technical-advantages" class="slide level2">
+<h2>Technical Advantages</h2>
+<div class="fragment fade-right">
+<ul>
+<li><strong>Low Barrier to Entry</strong>: Markdown is easier than HTML/CSS/JS</li>
+<li><strong>Focus on Content</strong>: Technical details are abstracted away</li>
+<li><strong>Interactive Examples</strong>: Code runs in the browser without installation</li>
+<li><strong>Full-Text Search</strong>: Find anything across all course materials</li>
+<li><strong>Developer Workflow</strong>: Students learn how to collaborate using industry-standard tools</li>
+</ul>
+</div>
+</section>
+<section id="future-improvements" class="slide level2">
+<h2>Future Improvements</h2>
+<div class="fragment fade-right">
+<ul>
+<li>Full browser-based IDE experience</li>
+<li>Better error messages for WebAssembly Python</li>
+<li>Implementation of a note taking tool, allowing students to take notes in the browser by commenting on the slides</li>
+</ul>
+</div>
+</section>
+<section id="why-you-should-consider-this-approach" class="slide level2">
+<h2>Why You Should Consider This Approach</h2>
+<ul>
+<li class="fragment"><strong>Student Ownership</strong>: Contributions create investment in the course</li>
+<li class="fragment"><strong>Living Knowledge Base</strong>: Materials improve rather than decay over time</li>
+<li class="fragment"><strong>Practical Skills</strong>: Industry tools in an educational context</li>
+<li class="fragment"><strong>Transparency</strong>: Public materials encourage higher quality work</li>
+<li class="fragment"><strong>Scalability</strong>: Works for any course size, from small seminars to large lectures</li>
 </ul>
 
 
+<script type="pyodide-data">
+eyJvcHRpb25zIjp7ImVudiI6eyJQTE9UTFlfUkVOREVSRVIiOiJwbG90bHlfbWltZXR5cGUifSwiaW5kZXhVUkwiOiJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvcHlvZGlkZS92MC4yNy4wL2Z1bGwvIn0sInBhY2thZ2VzIjp7InBrZ3MiOlsicHlvZGlkZV9odHRwIiwibWljcm9waXAiLCJpcHl0aG9uIl19fQ==
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTEiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0Iiwic291cmNlIjoidmlld29mIF9weW9kaWRlX2VkaXRvcl8xID0ge1xuICBjb25zdCB7IFB5b2RpZGVFeGVyY2lzZUVkaXRvciwgYjY0RGVjb2RlIH0gPSB3aW5kb3cuX2V4ZXJjaXNlX29qc19ydW50aW1lO1xuXG4gIGNvbnN0IHNjcmlwdENvbnRlbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGBzY3JpcHRbdHlwZT1cXFwicHlvZGlkZS0xLWNvbnRlbnRzXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgYmxvY2sgPSBKU09OLnBhcnNlKGI2NERlY29kZShzY3JpcHRDb250ZW50KSk7XG5cbiAgY29uc3Qgb3B0aW9ucyA9IE9iamVjdC5hc3NpZ24oeyBpZDogYHB5b2RpZGUtMS1jb250ZW50c2AgfSwgYmxvY2suYXR0cik7XG4gIGNvbnN0IGVkaXRvciA9IG5ldyBQeW9kaWRlRXhlcmNpc2VFZGl0b3IoXG4gICAgcHlvZGlkZU9qcy5weW9kaWRlUHJvbWlzZSxcbiAgICBibG9jay5jb2RlLFxuICAgIG9wdGlvbnNcbiAgKTtcblxuICByZXR1cm4gZWRpdG9yLmNvbnRhaW5lcjtcbn1cbl9weW9kaWRlX3ZhbHVlXzEgPSBweW9kaWRlT2pzLnByb2Nlc3MoX3B5b2RpZGVfZWRpdG9yXzEsIHt9KTtcbiJ9LHsiY2VsbE5hbWUiOiJweW9kaWRlLXByZWx1ZGUiLCJpbmxpbmUiOmZhbHNlLCJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJweW9kaWRlT2pzID0ge1xuICBjb25zdCB7XG4gICAgUHlvZGlkZUV2YWx1YXRvcixcbiAgICBQeW9kaWRlRW52aXJvbm1lbnRNYW5hZ2VyLFxuICAgIHNldHVwUHl0aG9uLFxuICAgIHN0YXJ0UHlvZGlkZVdvcmtlcixcbiAgICBiNjREZWNvZGUsXG4gICAgY29sbGFwc2VQYXRoLFxuICB9ID0gd2luZG93Ll9leGVyY2lzZV9vanNfcnVudGltZTtcblxuICBjb25zdCBzdGF0dXNDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctc3RhdHVzXCIpO1xuICBjb25zdCBpbmRpY2F0b3JDb250YWluZXIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImV4ZXJjaXNlLWxvYWRpbmctaW5kaWNhdG9yXCIpO1xuICBpbmRpY2F0b3JDb250YWluZXIuY2xhc3NMaXN0LnJlbW92ZShcImQtbm9uZVwiKTtcblxuICBsZXQgc3RhdHVzVGV4dCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIilcbiAgc3RhdHVzVGV4dC5jbGFzc0xpc3QgPSBcImV4ZXJjaXNlLWxvYWRpbmctZGV0YWlsc1wiO1xuICBzdGF0dXNUZXh0ID0gc3RhdHVzQ29udGFpbmVyLmFwcGVuZENoaWxkKHN0YXR1c1RleHQpO1xuICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYEluaXRpYWxpc2VgO1xuXG4gIC8vIEhvaXN0IGluZGljYXRvciBvdXQgZnJvbSBmaW5hbCBzbGlkZSB3aGVuIHJ1bm5pbmcgdW5kZXIgcmV2ZWFsXG4gIGNvbnN0IHJldmVhbFN0YXR1cyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmV2ZWFsIC5leGVyY2lzZS1sb2FkaW5nLWluZGljYXRvclwiKTtcbiAgaWYgKHJldmVhbFN0YXR1cykge1xuICAgIHJldmVhbFN0YXR1cy5yZW1vdmUoKTtcbiAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJldmVhbCA+IC5zbGlkZXNcIikuYXBwZW5kQ2hpbGQocmV2ZWFsU3RhdHVzKTtcbiAgfVxuXG4gIC8vIE1ha2UgYW55IHJldmVhbCBzbGlkZXMgd2l0aCBsaXZlIGNlbGxzIHNjcm9sbGFibGVcbiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbChcIi5yZXZlYWwgLmV4ZXJjaXNlLWNlbGxcIikuZm9yRWFjaCgoZWwpID0+IHtcbiAgICBlbC5jbG9zZXN0KCdzZWN0aW9uLnNsaWRlJykuY2xhc3NMaXN0LmFkZChcInNjcm9sbGFibGVcIik7XG4gIH0pXG5cbiAgLy8gUHlvZGlkZSBzdXBwbGVtZW50YWwgZGF0YSBhbmQgb3B0aW9uc1xuICBjb25zdCBkYXRhQ29udGVudCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoYHNjcmlwdFt0eXBlPVxcXCJweW9kaWRlLWRhdGFcXFwiXWApLnRleHRDb250ZW50O1xuICBjb25zdCBkYXRhID0gSlNPTi5wYXJzZShiNjREZWNvZGUoZGF0YUNvbnRlbnQpKTtcblxuICAvLyBHcmFiIGxpc3Qgb2YgcmVzb3VyY2VzIHRvIGJlIGRvd25sb2FkZWRcbiAgY29uc3QgZmlsZXNDb250ZW50ID0gZG9jdW1lbnQucXVlcnlTZWxlY3Rvcihgc2NyaXB0W3R5cGU9XFxcInZmcy1maWxlXFxcIl1gKS50ZXh0Q29udGVudDtcbiAgY29uc3QgZmlsZXMgPSBKU09OLnBhcnNlKGI2NERlY29kZShmaWxlc0NvbnRlbnQpKTtcblxuICBsZXQgcHlvZGlkZVByb21pc2UgPSAoYXN5bmMgKCkgPT4ge1xuICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgUHlvZGlkZWA7XG4gICAgY29uc3QgcHlvZGlkZSA9IGF3YWl0IHN0YXJ0UHlvZGlkZVdvcmtlcihkYXRhLm9wdGlvbnMpO1xuXG4gICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiBtaWNyb3BpcGA7XG4gICAgYXdhaXQgcHlvZGlkZS5sb2FkUGFja2FnZShcIm1pY3JvcGlwXCIpO1xuICAgIGNvbnN0IG1pY3JvcGlwID0gYXdhaXQgcHlvZGlkZS5weWltcG9ydChcIm1pY3JvcGlwXCIpO1xuICAgIGF3YWl0IGRhdGEucGFja2FnZXMucGtncy5tYXAoKHBrZykgPT4gKCkgPT4ge1xuICAgICAgc3RhdHVzVGV4dC50ZXh0Q29udGVudCA9IGBEb3dubG9hZGluZyBwYWNrYWdlOiAke3BrZ31gO1xuICAgICAgcmV0dXJuIG1pY3JvcGlwLmluc3RhbGwocGtnKTtcbiAgICB9KS5yZWR1Y2UoKGN1ciwgbmV4dCkgPT4gY3VyLnRoZW4obmV4dCksIFByb21pc2UucmVzb2x2ZSgpKTtcbiAgICBhd2FpdCBtaWNyb3BpcC5kZXN0cm95KCk7XG5cbiAgICAvLyBEb3dubG9hZCBhbmQgaW5zdGFsbCByZXNvdXJjZXNcbiAgICBhd2FpdCBmaWxlcy5tYXAoKGZpbGUpID0+IGFzeW5jICgpID0+IHtcbiAgICAgIGNvbnN0IG5hbWUgPSBmaWxlLnN1YnN0cmluZyhmaWxlLmxhc3RJbmRleE9mKCcvJykgKyAxKTtcbiAgICAgIHN0YXR1c1RleHQudGV4dENvbnRlbnQgPSBgRG93bmxvYWRpbmcgcmVzb3VyY2U6ICR7bmFtZX1gO1xuICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChmaWxlKTtcbiAgICAgIGlmICghcmVzcG9uc2Uub2spIHtcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBDYW4ndCBkb3dubG9hZCBcXGAke2ZpbGV9XFxgLiBFcnJvciAke3Jlc3BvbnNlLnN0YXR1c306IFwiJHtyZXNwb25zZS5zdGF0dXNUZXh0fVwiLmApO1xuICAgICAgfVxuICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmFycmF5QnVmZmVyKCk7XG5cbiAgICAgIC8vIFN0b3JlIFVSTHMgaW4gdGhlIGN3ZCB3aXRob3V0IGFueSBzdWJkaXJlY3Rvcnkgc3RydWN0dXJlXG4gICAgICBpZiAoZmlsZS5pbmNsdWRlcyhcIjovL1wiKSkge1xuICAgICAgICBmaWxlID0gbmFtZTtcbiAgICAgIH1cblxuICAgICAgLy8gQ29sbGFwc2UgaGlnaGVyIGRpcmVjdG9yeSBzdHJ1Y3R1cmVcbiAgICAgIGZpbGUgPSBjb2xsYXBzZVBhdGgoZmlsZSk7XG5cbiAgICAgIC8vIENyZWF0ZSBkaXJlY3RvcnkgdHJlZSwgaWdub3JpbmcgXCJkaXJlY3RvcnkgZXhpc3RzXCIgVkZTIGVycm9yc1xuICAgICAgY29uc3QgcGFydHMgPSBmaWxlLnNwbGl0KCcvJykuc2xpY2UoMCwgLTEpO1xuICAgICAgbGV0IHBhdGggPSAnJztcbiAgICAgIHdoaWxlIChwYXJ0cy5sZW5ndGggPiAwKSB7XG4gICAgICAgIHBhdGggKz0gcGFydHMuc2hpZnQoKSArICcvJztcbiAgICAgICAgdHJ5IHtcbiAgICAgICAgICBhd2FpdCBweW9kaWRlLkZTLm1rZGlyKHBhdGgpO1xuICAgICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgICAgaWYgKGUubmFtZSAhPT0gXCJFcnJub0Vycm9yXCIpIHRocm93IGU7XG4gICAgICAgICAgaWYgKGUuZXJybm8gIT09IDIwKSB7XG4gICAgICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICAgICAgY29uc3QgZXJyb3JUZXh0ID0gYXdhaXQgcHlvZGlkZS5fbW9kdWxlLlVURjhUb1N0cmluZyhlcnJvclRleHRQdHIpO1xuICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBGaWxlc3lzdGVtIEVycm9yICR7ZS5lcnJub30gXCIke2Vycm9yVGV4dH1cIi5gKTtcbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH1cblxuICAgICAgLy8gV3JpdGUgdGhpcyBmaWxlIHRvIHRoZSBWRlNcbiAgICAgIHRyeSB7XG4gICAgICAgIHJldHVybiBhd2FpdCBweW9kaWRlLkZTLndyaXRlRmlsZShmaWxlLCBuZXcgVWludDhBcnJheShkYXRhKSk7XG4gICAgICB9IGNhdGNoIChlKSB7XG4gICAgICAgIGlmIChlLm5hbWUgIT09IFwiRXJybm9FcnJvclwiKSB0aHJvdyBlO1xuICAgICAgICBjb25zdCBlcnJvclRleHRQdHIgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuX3N0cmVycm9yKGUuZXJybm8pO1xuICAgICAgICBjb25zdCBlcnJvclRleHQgPSBhd2FpdCBweW9kaWRlLl9tb2R1bGUuVVRGOFRvU3RyaW5nKGVycm9yVGV4dFB0cik7XG4gICAgICAgIHRocm93IG5ldyBFcnJvcihgRmlsZXN5c3RlbSBFcnJvciAke2UuZXJybm99IFwiJHtlcnJvclRleHR9XCIuYCk7XG4gICAgICB9XG4gICAgfSkucmVkdWNlKChjdXIsIG5leHQpID0+IGN1ci50aGVuKG5leHQpLCBQcm9taXNlLnJlc29sdmUoKSk7XG5cbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gYFB5b2RpZGUgZW52aXJvbm1lbnQgc2V0dXBgO1xuICAgIGF3YWl0IHNldHVwUHl0aG9uKHB5b2RpZGUpO1xuXG4gICAgc3RhdHVzVGV4dC5yZW1vdmUoKTtcbiAgICBpZiAoc3RhdHVzQ29udGFpbmVyLmNoaWxkcmVuLmxlbmd0aCA9PSAwKSB7XG4gICAgICBzdGF0dXNDb250YWluZXIucGFyZW50Tm9kZS5yZW1vdmUoKTtcbiAgICB9XG4gICAgcmV0dXJuIHB5b2RpZGU7XG4gIH0pKCkuY2F0Y2goKGVycikgPT4ge1xuICAgIHN0YXR1c1RleHQuc3R5bGUuY29sb3IgPSBcInZhcigtLWV4ZXJjaXNlLWVkaXRvci1obC1lciwgI0FEMDAwMClcIjtcbiAgICBzdGF0dXNUZXh0LnRleHRDb250ZW50ID0gZXJyLm1lc3NhZ2U7XG4gICAgLy9pbmRpY2F0b3JDb250YWluZXIucXVlcnlTZWxlY3RvcihcIi5zcGlubmVyLWdyb3dcIikuY2xhc3NMaXN0LmFkZChcImQtbm9uZVwiKTtcbiAgICB0aHJvdyBlcnI7XG4gIH0pO1xuXG4gIC8vIEtlZXAgdHJhY2sgb2YgaW5pdGlhbCBPSlMgYmxvY2sgcmVuZGVyXG4gIGNvbnN0IHJlbmRlcmVkT2pzID0ge307XG5cbiAgY29uc3QgcHJvY2VzcyA9IGFzeW5jIChjb250ZXh0LCBpbnB1dHMpID0+IHtcbiAgICBjb25zdCBweW9kaWRlID0gYXdhaXQgcHlvZGlkZVByb21pc2U7XG4gICAgY29uc3QgZXZhbHVhdG9yID0gbmV3IFB5b2RpZGVFdmFsdWF0b3IocHlvZGlkZSwgY29udGV4dCk7XG4gICAgYXdhaXQgZXZhbHVhdG9yLnByb2Nlc3MoaW5wdXRzKTtcbiAgICByZXR1cm4gZXZhbHVhdG9yLmNvbnRhaW5lcjtcbiAgfVxuXG4gIHJldHVybiB7XG4gICAgcHlvZGlkZVByb21pc2UsXG4gICAgcmVuZGVyZWRPanMsXG4gICAgcHJvY2VzcyxcbiAgfTtcbn1cbiJ9XX0=
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
@@ -359,6 +507,17 @@
           RevealZoom
         ]
       });
+    </script>
+    <script type="ojs-module-contents">
+    eyJjb250ZW50cyI6W119
+    </script>
+    <script type="module">
+    if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+    window._ojs.paths.runtimeToDoc = "../../slides/course-websites";
+    window._ojs.paths.runtimeToRoot = "../..";
+    window._ojs.paths.docToRoot = "../..";
+    window._ojs.selfContained = false;
+    window._ojs.runtime.interpretFromScriptTags();
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {

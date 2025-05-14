@@ -9,6 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4a990d8dcb58f517c7c86712b8f2ac7c.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.31">
 
+  <meta name="dcterms.date" content="2025-05-15">
   <title>Automated and Configurable Programming Project Checking with Chasten</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -200,21 +201,22 @@
 <div class="quarto-title-authors">
 </div>
 
+  <p class="date">May 15, 2025</p>
 </section>
 <section id="the-problem-with-traditional-static-analysis" class="slide level2">
 <h2>The Problem with Traditional Static Analysis</h2>
 <h3 id="regular-expression-regex-code-understanding">Regular expression (regex) ≠ code understanding</h3>
 <ul>
-<li class="fragment">Fails on structural nuance</li>
-<li class="fragment">Hard to maintain across formatting/styles</li>
+<li>Fails on structural nuance</li>
+<li>Hard to maintain across formatting/styles</li>
 </ul>
 </section>
 <section id="the-problem-with-traditional-static-analysis-1" class="slide level2">
 <h2>The Problem with Traditional Static Analysis</h2>
 <h3 id="ast-tools-are-powerful-but-complex">AST tools are powerful but complex</h3>
 <ul>
-<li class="fragment">Require managing node types</li>
-<li class="fragment">Difficult to prototype new rules</li>
+<li>Require managing node types</li>
+<li>Difficult to prototype new rules</li>
 </ul>
 </section>
 <section id="chasten" class="slide level2">
@@ -234,8 +236,8 @@
 <section id="why-xpath" class="slide level2">
 <h2>Why XPATH?</h2>
 <ul>
-<li class="fragment">✅ Perfect for navigating ASTs</li>
-<li class="fragment">✅ Easy to write and understand</li>
+<li>✅ Perfect for navigating ASTs</li>
+<li>✅ Easy to write and understand</li>
 </ul>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource xpath number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>/FunctionDef/body//If[ancestor::If and not(parent::orelse)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>–&gt; Matches function with double nested if</p>
@@ -243,10 +245,10 @@
 <section id="features" class="slide level2">
 <h2>Features</h2>
 <ul>
-<li class="fragment">✨ Easy-to-configure, automated analysis of a Python program’s abstract syntax tree</li>
-<li class="fragment">📃 Flexible and easy-to-use YAML-based configuration file for describing analyses and checks</li>
-<li class="fragment">🚀 Configurable saving of analysis results in the JSON, CSV, or SQLite formats</li>
-<li class="fragment">🌄 Interactive results analysis through the use of a locally running datasette server</li>
+<li>✨ Easy-to-configure, automated analysis of a Python program’s abstract syntax tree</li>
+<li>📃 Flexible and easy-to-use YAML-based configuration file for describing analyses and checks</li>
+<li>🚀 Configurable saving of analysis results in the JSON, CSV, or SQLite formats</li>
+<li>🌄 Interactive results analysis through the use of a locally running datasette server</li>
 </ul>
 </section>
 <section id="comparison-for-education-research" class="slide level2">
@@ -393,15 +395,15 @@
 <section id="key-takeaways" class="slide level2">
 <h2>Key Takeaways</h2>
 <ul>
-<li class="fragment"><p>✅ <strong>Declarative rule-writing with XPath</strong><br>
+<li><p>✅ <strong>Declarative rule-writing with XPath</strong><br>
 Easily define grading criteria and static analysis checks — no need to write Python plugins.</p></li>
-<li class="fragment"><p>🧠 <strong>Teachable insights into code structure</strong><br>
+<li><p>🧠 <strong>Teachable insights into code structure</strong><br>
 Helps students understand Abstract Syntax Trees (ASTs) and how code is interpreted structurally.</p></li>
-<li class="fragment"><p>📊 <strong>Structured, explorable outputs</strong><br>
+<li><p>📊 <strong>Structured, explorable outputs</strong><br>
 Export results to SQLite and use Datasette to visualize errors, coverage, and student patterns.</p></li>
-<li class="fragment"><p>🧪 <strong>Supports research and pedagogy</strong><br>
+<li><p>🧪 <strong>Supports research and pedagogy</strong><br>
 Useful for analyzing coding behavior at scale, detecting common anti-patterns in student code.</p></li>
-<li class="fragment"><p>📚 <strong>Integrates into grading pipelines</strong><br>
+<li><p>📚 <strong>Integrates into grading pipelines</strong><br>
 Run Chasten on student submissions to check for required docstrings, type hints, nested logic, etc.</p></li>
 </ul>
 
