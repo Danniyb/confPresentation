@@ -28,6 +28,104 @@
     "text": "Contributing\nThese presentations are open source and available for educational purposes. Feel free to use and modify them according to your needs. If you find any issues or have suggestions for improvements, please contribute through our GitHub repository."
   },
   {
+    "objectID": "slides/chasten/index.html#the-problem-with-traditional-static-analysis",
+    "href": "slides/chasten/index.html#the-problem-with-traditional-static-analysis",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "The Problem with Traditional Static Analysis",
+    "text": "The Problem with Traditional Static Analysis\nRegular expression (regex) ≠ code understanding\n\nFails on structural nuance\nHard to maintain across formatting/styles"
+  },
+  {
+    "objectID": "slides/chasten/index.html#the-problem-with-traditional-static-analysis-1",
+    "href": "slides/chasten/index.html#the-problem-with-traditional-static-analysis-1",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "The Problem with Traditional Static Analysis",
+    "text": "The Problem with Traditional Static Analysis\nAST tools are powerful but complex\n\nRequire managing node types\nDifficult to prototype new rules"
+  },
+  {
+    "objectID": "slides/chasten/index.html#chasten",
+    "href": "slides/chasten/index.html#chasten",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Chasten",
+    "text": "Chasten\nA Python program that uses XPATH expressions to find patterns in the abstract syntax tree (AST) of a Python program"
+  },
+  {
+    "objectID": "slides/chasten/index.html#what-is-an-ast",
+    "href": "slides/chasten/index.html#what-is-an-ast",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "What is an AST?",
+    "text": "What is an AST?\nAbstract Syntax Tree (AST) = structured representation of code\nx = 1 + 2\nAssign\n ├── Name(x)\n └── BinOp(+)\n      ├── Constant(1)\n      └── Constant(2)"
+  },
+  {
+    "objectID": "slides/chasten/index.html#why-xpath",
+    "href": "slides/chasten/index.html#why-xpath",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Why XPATH?",
+    "text": "Why XPATH?\n\n✅ Perfect for navigating ASTs\n✅ Easy to write and understand\n\n/FunctionDef/body//If[ancestor::If and not(parent::orelse)]\n–&gt; Matches function with double nested if"
+  },
+  {
+    "objectID": "slides/chasten/index.html#features",
+    "href": "slides/chasten/index.html#features",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Features",
+    "text": "Features\n\n✨ Easy-to-configure, automated analysis of a Python program’s abstract syntax tree\n📃 Flexible and easy-to-use YAML-based configuration file for describing analyses and checks\n🚀 Configurable saving of analysis results in the JSON, CSV, or SQLite formats\n🌄 Interactive results analysis through the use of a locally running datasette server"
+  },
+  {
+    "objectID": "slides/chasten/index.html#comparison-for-education-research",
+    "href": "slides/chasten/index.html#comparison-for-education-research",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Comparison for Education & Research",
+    "text": "Comparison for Education & Research"
+  },
+  {
+    "objectID": "slides/chasten/index.html#comparison-for-education-research-1",
+    "href": "slides/chasten/index.html#comparison-for-education-research-1",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Comparison for Education & Research",
+    "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nCustom Rule Creation\n✅ Write in YAML with XPath — no coding\n❌ Hard-coded; not extensible\n⚠️ Requires Python plugin"
+  },
+  {
+    "objectID": "slides/chasten/index.html#comparison-for-education-research-2",
+    "href": "slides/chasten/index.html#comparison-for-education-research-2",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Comparison for Education & Research",
+    "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nLearning AST Concepts\n✅ Transparent — great for teaching ASTs\n❌ Abstracted away\n⚠️ Indirect via rule behavior"
+  },
+  {
+    "objectID": "slides/chasten/index.html#comparison-for-education-research-3",
+    "href": "slides/chasten/index.html#comparison-for-education-research-3",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Comparison for Education & Research",
+    "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nResearch Use\n✅ Structured output + pattern mining\n❌ Not suited for deep analysis\n⚠️ Output not researcher-friendly"
+  },
+  {
+    "objectID": "slides/chasten/index.html#comparison-for-education-research-4",
+    "href": "slides/chasten/index.html#comparison-for-education-research-4",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Comparison for Education & Research",
+    "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nOutput Formats\n✅ JSON, CSV, SQLite (queryable)\nText, JSON\nText, JSON"
+  },
+  {
+    "objectID": "slides/chasten/index.html#comparison-for-education-research-5",
+    "href": "slides/chasten/index.html#comparison-for-education-research-5",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Comparison for Education & Research",
+    "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nInteractive Exploration\n✅ Datasette dashboards (SQLite-ready)\n❌ None\n❌ None"
+  },
+  {
+    "objectID": "slides/chasten/index.html#chasten-workflow",
+    "href": "slides/chasten/index.html#chasten-workflow",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Chasten Workflow",
+    "text": "Chasten Workflow"
+  },
+  {
+    "objectID": "slides/chasten/index.html#key-takeaways",
+    "href": "slides/chasten/index.html#key-takeaways",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\n✅ Declarative rule-writing with XPath\nEasily define grading criteria and static analysis checks — no need to write Python plugins.\n🧠 Teachable insights into code structure\nHelps students understand Abstract Syntax Trees (ASTs) and how code is interpreted structurally.\n📊 Structured, explorable outputs\nExport results to SQLite and use Datasette to visualize errors, coverage, and student patterns.\n🧪 Supports research and pedagogy\nUseful for analyzing coding behavior at scale, detecting common anti-patterns in student code.\n📚 Integrates into grading pipelines\nRun Chasten on student submissions to check for required docstrings, type hints, nested logic, etc."
+  },
+  {
     "objectID": "slides/github-workflow/index.html#the-challenge-of-programming-assignments",
     "href": "slides/github-workflow/index.html#the-challenge-of-programming-assignments",
     "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
@@ -210,118 +308,6 @@
     "text": "Questions?\nThank you for your attention!"
   },
   {
-    "objectID": "slides/course-websites/index.html#course-websites-are-nice-with-quarto",
-    "href": "slides/course-websites/index.html#course-websites-are-nice-with-quarto",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Course Websites are Nice with Quarto!",
-    "text": "Course Websites are Nice with Quarto!\n\nExecutable examinations\nPython program\nUses Pytest"
-  },
-  {
-    "objectID": "slides/chasten/index.html#the-problem-with-traditional-static-analysis",
-    "href": "slides/chasten/index.html#the-problem-with-traditional-static-analysis",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "The Problem with Traditional Static Analysis",
-    "text": "The Problem with Traditional Static Analysis\nRegular expression (regex) ≠ code understanding\n\nFails on structural nuance\nHard to maintain across formatting/styles"
-  },
-  {
-    "objectID": "slides/chasten/index.html#the-problem-with-traditional-static-analysis-1",
-    "href": "slides/chasten/index.html#the-problem-with-traditional-static-analysis-1",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "The Problem with Traditional Static Analysis",
-    "text": "The Problem with Traditional Static Analysis\nAST tools are powerful but complex\n\nRequire managing node types\nDifficult to prototype new rules"
-  },
-  {
-    "objectID": "slides/chasten/index.html#chasten",
-    "href": "slides/chasten/index.html#chasten",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Chasten",
-    "text": "Chasten\nA Python program that uses XPATH expressions to find patterns in the abstract syntax tree (AST) of a Python program"
-  },
-  {
-    "objectID": "slides/chasten/index.html#what-is-an-ast",
-    "href": "slides/chasten/index.html#what-is-an-ast",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "What is an AST?",
-    "text": "What is an AST?\nAbstract Syntax Tree (AST) = structured representation of code\nx = 1 + 2\nAssign\n ├── Name(x)\n └── BinOp(+)\n      ├── Constant(1)\n      └── Constant(2)"
-  },
-  {
-    "objectID": "slides/chasten/index.html#why-xpath",
-    "href": "slides/chasten/index.html#why-xpath",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Why XPATH?",
-    "text": "Why XPATH?\n\n✅ Perfect for navigating ASTs\n✅ Easy to write and understand\n\n/FunctionDef/body//If[ancestor::If and not(parent::orelse)]\n–&gt; Matches function with double nested if"
-  },
-  {
-    "objectID": "slides/chasten/index.html#features",
-    "href": "slides/chasten/index.html#features",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Features",
-    "text": "Features\n\n✨ Easy-to-configure, automated analysis of a Python program’s abstract syntax tree\n📃 Flexible and easy-to-use YAML-based configuration file for describing analyses and checks\n🚀 Configurable saving of analysis results in the JSON, CSV, or SQLite formats\n🌄 Interactive results analysis through the use of a locally running datasette server"
-  },
-  {
-    "objectID": "slides/chasten/index.html#comparison-for-education-research",
-    "href": "slides/chasten/index.html#comparison-for-education-research",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Comparison for Education & Research",
-    "text": "Comparison for Education & Research"
-  },
-  {
-    "objectID": "slides/chasten/index.html#comparison-for-education-research-1",
-    "href": "slides/chasten/index.html#comparison-for-education-research-1",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Comparison for Education & Research",
-    "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nCustom Rule Creation\n✅ Write in YAML with XPath — no coding\n❌ Hard-coded; not extensible\n⚠️ Requires Python plugin"
-  },
-  {
-    "objectID": "slides/chasten/index.html#comparison-for-education-research-2",
-    "href": "slides/chasten/index.html#comparison-for-education-research-2",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Comparison for Education & Research",
-    "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nLearning AST Concepts\n✅ Transparent — great for teaching ASTs\n❌ Abstracted away\n⚠️ Indirect via rule behavior"
-  },
-  {
-    "objectID": "slides/chasten/index.html#comparison-for-education-research-3",
-    "href": "slides/chasten/index.html#comparison-for-education-research-3",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Comparison for Education & Research",
-    "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nResearch Use\n✅ Structured output + pattern mining\n❌ Not suited for deep analysis\n⚠️ Output not researcher-friendly"
-  },
-  {
-    "objectID": "slides/chasten/index.html#comparison-for-education-research-4",
-    "href": "slides/chasten/index.html#comparison-for-education-research-4",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Comparison for Education & Research",
-    "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nOutput Formats\n✅ JSON, CSV, SQLite (queryable)\nText, JSON\nText, JSON"
-  },
-  {
-    "objectID": "slides/chasten/index.html#comparison-for-education-research-5",
-    "href": "slides/chasten/index.html#comparison-for-education-research-5",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Comparison for Education & Research",
-    "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nInteractive Exploration\n✅ Datasette dashboards (SQLite-ready)\n❌ None\n❌ None"
-  },
-  {
-    "objectID": "slides/chasten/index.html#chasten-workflow",
-    "href": "slides/chasten/index.html#chasten-workflow",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Chasten Workflow",
-    "text": "Chasten Workflow"
-  },
-  {
-    "objectID": "slides/chasten/index.html#key-takeaways",
-    "href": "slides/chasten/index.html#key-takeaways",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Key Takeaways",
-    "text": "Key Takeaways\n\n✅ Declarative rule-writing with XPath\nEasily define grading criteria and static analysis checks — no need to write Python plugins.\n🧠 Teachable insights into code structure\nHelps students understand Abstract Syntax Trees (ASTs) and how code is interpreted structurally.\n📊 Structured, explorable outputs\nExport results to SQLite and use Datasette to visualize errors, coverage, and student patterns.\n🧪 Supports research and pedagogy\nUseful for analyzing coding behavior at scale, detecting common anti-patterns in student code.\n📚 Integrates into grading pipelines\nRun Chasten on student submissions to check for required docstrings, type hints, nested logic, etc."
-  },
-  {
-    "objectID": "slides/execexam/index.html#wonderful-content-about-execexam",
-    "href": "slides/execexam/index.html#wonderful-content-about-execexam",
-    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
-    "section": "Wonderful Content about ExecExam",
-    "text": "Wonderful Content about ExecExam\n\nExecutable examinations\nPython program\nUses Pytest"
-  },
-  {
     "objectID": "slides/index.html",
     "href": "slides/index.html",
     "title": "Slides",
@@ -341,5 +327,19 @@
     "title": "Slides",
     "section": "",
     "text": "Use the navigation menu at the top of the page to move between presentations. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references"
+  },
+  {
+    "objectID": "slides/execexam/index.html#wonderful-content-about-execexam",
+    "href": "slides/execexam/index.html#wonderful-content-about-execexam",
+    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
+    "section": "Wonderful Content about ExecExam",
+    "text": "Wonderful Content about ExecExam\n\nExecutable examinations\nPython program\nUses Pytest"
+  },
+  {
+    "objectID": "slides/course-websites/index.html#course-websites-are-nice-with-quarto",
+    "href": "slides/course-websites/index.html#course-websites-are-nice-with-quarto",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "section": "Course Websites are Nice with Quarto!",
+    "text": "Course Websites are Nice with Quarto!\n\nExecutable examinations\nPython program\nUses Pytest"
   }
 ]
