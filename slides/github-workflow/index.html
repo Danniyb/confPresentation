@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de84f8d6bb715db06a919283c2d1e787.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.42">
 
-  <title>Automated and Configurable Programming Project Checking with Chasten</title>
+  <title>Up and Running with GitHub, GitHub Classroom, and GitHub Actions</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -193,216 +193,327 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Automated and Configurable Programming Project Checking with Chasten</h1>
-  <p class="subtitle">Daniel Bekele, Chi (Jaclyn) Pham, and Gregory M. Kapfhammer</p>
+  <h1 class="title">Up and Running with GitHub, GitHub Classroom, and GitHub Actions</h1>
+  <p class="subtitle">Hemani Alaparthi and Gregory M. Kapfhammer</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="the-problem-with-traditional-static-analysis" class="slide level2">
-<h2>The Problem with Traditional Static Analysis</h2>
-<h3 id="regular-expression-regex-code-understanding">Regular expression (regex) ≠ code understanding</h3>
+<section id="the-challenge-of-programming-assignments" class="slide level2">
+<h2>The Challenge of Programming Assignments</h2>
 <ul>
-<li class="fragment">Fails on structural nuance</li>
-<li class="fragment">Hard to maintain across formatting/styles</li>
+<li class="fragment">Distribution of starter code</li>
+<li class="fragment">Collection of submissions</li>
+<li class="fragment">Providing automated feedback</li>
+<li class="fragment">Managing final assessment</li>
+<li class="fragment">Coordinating all these tasks efficiently</li>
 </ul>
 </section>
-<section id="the-problem-with-traditional-static-analysis-1" class="slide level2">
-<h2>The Problem with Traditional Static Analysis</h2>
-<h3 id="ast-tools-are-powerful-but-complex">AST tools are powerful but complex</h3>
+<section id="traditional-assignment-workflow-challenges" class="slide level2">
+<h2>Traditional Assignment Workflow Challenges</h2>
 <ul>
-<li class="fragment">Require managing node types</li>
-<li class="fragment">Difficult to prototype new rules</li>
+<li class="fragment">Email submission creates version chaos</li>
+<li class="fragment">Manual testing is time-consuming and error-prone</li>
+<li class="fragment">Limited visibility into student progress</li>
+<li class="fragment">Feedback is often delayed and disconnected from code</li>
 </ul>
 </section>
-<section id="chasten" class="slide level2">
-<h2>Chasten</h2>
-<p>A Python program that uses XPATH expressions to find patterns in the abstract syntax tree (AST) of a Python program</p>
-</section>
-<section id="what-is-an-ast" class="slide level2">
-<h2>What is an AST?</h2>
-<p><strong>Abstract Syntax Tree (AST)</strong> = structured representation of code</p>
-<p>x = 1 + 2</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource scss number-lines code-with-copy"><code class="sourceCode scss"><span id="cb1-1"><a></a>Assign</span>
-<span id="cb1-2"><a></a> ├── Name(x)</span>
-<span id="cb1-3"><a></a> └── BinOp(<span class="op">+</span>)</span>
-<span id="cb1-4"><a></a>      ├── Constant(1)</span>
-<span id="cb1-5"><a></a>      └── Constant(2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="why-xpath" class="slide level2">
-<h2>Why XPATH?</h2>
+<section id="enter-github-github-classroom-and-github-actions" class="slide level2">
+<h2>Enter GitHub, GitHub Classroom, and GitHub Actions</h2>
+<p>A complete ecosystem for programming education that:</p>
 <ul>
-<li class="fragment">✅ Perfect for navigating ASTs</li>
-<li class="fragment">✅ Easy to write and understand</li>
-</ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource xpath number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>/FunctionDef/body//If[ancestor::If and not(parent::orelse)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>–&gt; Matches function with double nested if</p>
-</section>
-<section id="features" class="slide level2">
-<h2>Features</h2>
-<ul>
-<li class="fragment">✨ Easy-to-configure, automated analysis of a Python program’s abstract syntax tree</li>
-<li class="fragment">📃 Flexible and easy-to-use YAML-based configuration file for describing analyses and checks</li>
-<li class="fragment">🚀 Configurable saving of analysis results in the JSON, CSV, or SQLite formats</li>
-<li class="fragment">🌄 Interactive results analysis through the use of a locally running datasette server</li>
+<li class="fragment">Leverages industry-standard tools</li>
+<li class="fragment">Promotes good development practices</li>
+<li class="fragment">Automates tedious tasks</li>
+<li class="fragment">Provides immediate feedback</li>
+<li class="fragment">Creates a portfolio for students</li>
 </ul>
 </section>
-<section id="comparison-for-education-research" class="slide level2">
-<h2>Comparison for Education &amp; Research</h2>
+<section id="benefits-for-students" class="slide level2">
+<h2>Benefits for Students</h2>
+<ul>
+<li class="fragment">Learn professional version control practices</li>
+<li class="fragment">Get immediate feedback on their code</li>
+<li class="fragment">Clear indication of what to complete (TODOs)</li>
+<li class="fragment">Work in a real development environment</li>
+<li class="fragment">Build a portfolio of completed projects</li>
+<li class="fragment">Prepare for collaborative development</li>
+</ul>
 </section>
-<section id="comparison-for-education-research-1" class="slide level2">
-<h2>Comparison for Education &amp; Research</h2>
+<section id="benefits-for-instructors" class="slide level2">
+<h2>Benefits for Instructors</h2>
+<ul>
+<li class="fragment">Automated distribution of assignments</li>
+<li class="fragment">Centralized submission collection</li>
+<li class="fragment">Automated testing and grading assistance</li>
+<li class="fragment">Clear visibility into student progress</li>
+<li class="fragment">Consistent environment for all students</li>
+<li class="fragment">Rich feedback options (issues, PRs, comments)</li>
+</ul>
+</section>
+<section id="getting-started-the-workflow" class="slide level2 scrollable">
+<h2>Getting Started: The Workflow</h2>
+<ol type="1">
+<li class="fragment">Create solution repository with tests</li>
+<li class="fragment">Create starter repository with TODOs</li>
+<li class="fragment">Set up GitHub Classroom</li>
+<li class="fragment">Create and distribute assignments</li>
+<li class="fragment">Monitor student progress</li>
+<li class="fragment">Provide feedback through GitHub</li>
+<li class="fragment">Assess completed work</li>
+</ol>
+</section>
+<section id="step-1-creating-the-solution-repository" class="slide level2">
+<h2>Step 1: Creating the Solution Repository</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="co"># Create new repository with complete solution</span></span>
+<span id="cb1-2"><a></a><span class="fu">git</span> init solution-repo</span>
+<span id="cb1-3"><a></a><span class="bu">cd</span> solution-repo</span>
+<span id="cb1-4"><a></a><span class="co"># Add your complete solution code</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li class="fragment">Include a comprehensive test suite with pytest</li>
+<li class="fragment">Set up linting with flake8/pylint</li>
+<li class="fragment">Create a GitHub Actions workflow</li>
+<li class="fragment">Ensure all tests pass with your solution</li>
+</ul>
+</section>
+<section id="solution-repository-structure" class="slide level2">
+<h2>Solution Repository Structure</h2>
+<pre><code>solution-repo/
+├── src/
+│   └── solution.py
+├── tests/
+│   └── test_solution.py
+├── .github/
+│   └── workflows/
+│       └── python-checks.yml
+├── requirements.txt
+└── README.md</code></pre>
+</section>
+<section id="github-actions-workflow-example" class="slide level2">
+<h2>GitHub Actions Workflow Example</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Python Checks</span></span>
+<span id="cb3-2"><a></a></span>
+<span id="cb3-3"><a></a><span class="fu">on</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">push</span><span class="kw">]</span></span>
+<span id="cb3-4"><a></a></span>
+<span id="cb3-5"><a></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb3-6"><a></a><span class="at">  </span><span class="fu">test</span><span class="kw">:</span></span>
+<span id="cb3-7"><a></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb3-8"><a></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb3-9"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v3</span></span>
+<span id="cb3-10"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Set up Python</span></span>
+<span id="cb3-11"><a></a><span class="at">      </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/setup-python@v4</span></span>
+<span id="cb3-12"><a></a><span class="at">      </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb3-13"><a></a><span class="at">        </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">'3.10'</span></span>
+<span id="cb3-14"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Install dependencies</span></span>
+<span id="cb3-15"><a></a><span class="fu">      run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb3-16"><a></a>        python -m pip install --upgrade pip</span>
+<span id="cb3-17"><a></a>        pip install pytest flake8</span>
+<span id="cb3-18"><a></a>        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi</span>
+<span id="cb3-19"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Lint with flake8</span></span>
+<span id="cb3-20"><a></a><span class="at">      </span><span class="fu">run</span><span class="kw">:</span><span class="at"> flake8 src tests</span></span>
+<span id="cb3-21"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Test with pytest</span></span>
+<span id="cb3-22"><a></a><span class="at">      </span><span class="fu">run</span><span class="kw">:</span><span class="at"> pytest</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="step-2-implementation-ablation---creating-the-starter" class="slide level2">
+<h2>Step 2: Implementation Ablation - Creating the Starter</h2>
+<p>What is implementation ablation?</p>
+<ul>
+<li class="fragment">Systematically remove implementation details from your solution</li>
+<li class="fragment">Replace with well-documented TODOs</li>
+<li class="fragment">Leave structure intact for students to complete</li>
+<li class="fragment">Keep tests to guide students</li>
+</ul>
+</section>
+<section id="example-of-implementation-ablation" class="slide level2">
+<h2>Example of Implementation Ablation</h2>
+<p>Solution code:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> calculate_grade(scores):</span>
+<span id="cb4-2"><a></a>    total <span class="op">=</span> <span class="bu">sum</span>(scores)</span>
+<span id="cb4-3"><a></a>    average <span class="op">=</span> total <span class="op">/</span> <span class="bu">len</span>(scores)</span>
+<span id="cb4-4"><a></a>    </span>
+<span id="cb4-5"><a></a>    <span class="cf">if</span> average <span class="op">&gt;=</span> <span class="dv">90</span>:</span>
+<span id="cb4-6"><a></a>        <span class="cf">return</span> <span class="st">'A'</span></span>
+<span id="cb4-7"><a></a>    <span class="cf">elif</span> average <span class="op">&gt;=</span> <span class="dv">80</span>:</span>
+<span id="cb4-8"><a></a>        <span class="cf">return</span> <span class="st">'B'</span></span>
+<span id="cb4-9"><a></a>    <span class="cf">elif</span> average <span class="op">&gt;=</span> <span class="dv">70</span>:</span>
+<span id="cb4-10"><a></a>        <span class="cf">return</span> <span class="st">'C'</span></span>
+<span id="cb4-11"><a></a>    <span class="cf">elif</span> average <span class="op">&gt;=</span> <span class="dv">60</span>:</span>
+<span id="cb4-12"><a></a>        <span class="cf">return</span> <span class="st">'D'</span></span>
+<span id="cb4-13"><a></a>    <span class="cf">else</span>:</span>
+<span id="cb4-14"><a></a>        <span class="cf">return</span> <span class="st">'F'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="example-of-implementation-ablation-1" class="slide level2">
+<h2>Example of Implementation Ablation</h2>
+<p>Starter code:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="kw">def</span> calculate_grade(scores):</span>
+<span id="cb5-2"><a></a>    <span class="co"># </span><span class="al">TODO</span><span class="co">: Calculate the average score</span></span>
+<span id="cb5-3"><a></a>    <span class="co"># Hint: You'll need to find the sum and divide by the count</span></span>
+<span id="cb5-4"><a></a>    </span>
+<span id="cb5-5"><a></a>    <span class="co"># </span><span class="al">TODO</span><span class="co">: Determine the letter grade based on the average</span></span>
+<span id="cb5-6"><a></a>    <span class="co"># A: 90+, B: 80-89, C: 70-79, D: 60-69, F: below 60</span></span>
+<span id="cb5-7"><a></a>    </span>
+<span id="cb5-8"><a></a>    <span class="cf">return</span> <span class="va">None</span>  <span class="co"># Replace with your implementation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="step-3-setting-up-github-classroom" class="slide level2 scrollable">
+<h2>Step 3: Setting Up GitHub Classroom</h2>
+<ol type="1">
+<li class="fragment">Create a GitHub organization for your class</li>
+<li class="fragment">Authorize GitHub Classroom</li>
+<li class="fragment">Create a new classroom linked to your organization</li>
+<li class="fragment">Invite teaching assistants as organization admins</li>
+</ol>
+<!-- should we add an image here? -->
+</section>
+<section id="step-4-creating-an-assignment" class="slide level2 scrollable">
+<h2>Step 4: Creating an Assignment</h2>
+<ol type="1">
+<li class="fragment">Select “New Assignment” in GitHub Classroom</li>
+<li class="fragment">Choose individual or group assignment</li>
+<li class="fragment">Name your assignment</li>
+<li class="fragment">Set deadline and visibility options</li>
+<li class="fragment">Import your starter repository</li>
+<li class="fragment">Enable automated testing</li>
+</ol>
+<!-- an image here? -->
+</section>
+<section id="step-5-distributing-the-assignment" class="slide level2 scrollable">
+<h2>Step 5: Distributing the Assignment</h2>
+<ol type="1">
+<li class="fragment">Generate invitation link</li>
+<li class="fragment">Share with students</li>
+<li class="fragment">Students click link and accept assignment</li>
+<li class="fragment">GitHub automatically creates private student repositories</li>
+<li class="fragment">Students clone locally and start working</li>
+</ol>
+</section>
+<section id="student-experience" class="slide level2 scrollable">
+<h2>Student Experience</h2>
+<ol type="1">
+<li class="fragment">Accept assignment through unique link</li>
+<li class="fragment">Repository created with starter code</li>
+<li class="fragment">Clone repository locally</li>
+<li class="fragment">Complete TODOs guided by tests</li>
+<li class="fragment">Push changes to GitHub</li>
+<li class="fragment">Get immediate feedback from GitHub Actions</li>
+</ol>
+</section>
+<section id="automated-feedback-with-github-actions" class="slide level2">
+<h2>Automated Feedback with GitHub Actions</h2>
+<ul>
+<li class="fragment">Tests run automatically on every push</li>
+<li class="fragment">Students see red ❌ or green ✅ status checks</li>
+<li class="fragment">Detailed feedback in Actions tab</li>
+<li class="fragment">Testing failures highlight what’s still incomplete</li>
+</ul>
+</section>
+<section id="comprehensive-feedback-options" class="slide level2">
+<h2>Comprehensive Feedback Options</h2>
+<p>GitHub provides multiple feedback channels:</p>
+<ul>
+<li class="fragment">In-line comments on specific code lines</li>
+<li class="fragment">Issue creation for general feedback</li>
+<li class="fragment">Pull request reviews for detailed assessment</li>
+<li class="fragment">Automated checks for immediate technical feedback</li>
+</ul>
+</section>
+<section id="example-issue-based-feedback" class="slide level2">
+<h2>Example: Issue-Based Feedback</h2>
+<!-- This is to explain how issues can be used for feedback. IRL pictures would be nice -->
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a></a><span class="fu">## Algorithm Efficiency</span></span>
+<span id="cb6-2"><a></a></span>
+<span id="cb6-3"><a></a>Your solution works but uses O(n²) time complexity when </span>
+<span id="cb6-4"><a></a>an O(n) solution is possible. Consider using a hash map </span>
+<span id="cb6-5"><a></a>instead of nested loops.</span>
+<span id="cb6-6"><a></a></span>
+<span id="cb6-7"><a></a><span class="fu">## Code Structure</span></span>
+<span id="cb6-8"><a></a></span>
+<span id="cb6-9"><a></a>Great job breaking down the problem into functions!</span>
+<span id="cb6-10"><a></a>Your solution is well-organized and easy to follow.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="optional-integrating-with-external-tools" class="slide level2">
+<h2>Optional: Integrating with External Tools</h2>
+<p>GitHub Actions can integrate with:</p>
+<ul>
+<li class="fragment">Pytest for test coverage</li>
+<li class="fragment">Flake8/Pylint for style checking</li>
+<li class="fragment">Chasten for AST-based pattern checking</li>
+<li class="fragment">Custom grading tool such as ExecExam</li>
+<li class="fragment">And many more!</li>
+</ul>
+</section>
+<section id="example-integration-with-chasten" class="slide level2">
+<h2>Example: Integration with Chasten</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a></a><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Check with Chasten</span></span>
+<span id="cb7-2"><a></a><span class="fu">  run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb7-3"><a></a>    pip install chasten</span>
+<span id="cb7-4"><a></a>    chasten check --config .chasten.yml src/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="practical-tips-from-experience" class="slide level2">
+<h2>Practical Tips from Experience</h2>
+<ul>
+<li class="fragment">Start with simple assignments to build familiarity</li>
+<li class="fragment">Create clear README files with setup instructions</li>
+<li class="fragment">Include CI badges in README to show test status</li>
+<li class="fragment">Use descriptive commit messages for teaching moments</li>
+<li class="fragment">Consider a practice assignment for GitHub onboarding</li>
+</ul>
+</section>
+<section id="common-challenges-and-solutions" class="slide level2">
+<h2>Common Challenges and Solutions</h2>
 <table class="caption-top">
-<colgroup>
-<col style="width: 21%">
-<col style="width: 31%">
-<col style="width: 24%">
-<col style="width: 23%">
-</colgroup>
 <thead>
 <tr class="header">
-<th><strong>Feature</strong></th>
-<th><strong>Chasten</strong></th>
-<th><strong>Ruff</strong></th>
-<th><strong>Pylint</strong></th>
+<th>Challenges</th>
+<th>Solutions</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Custom Rule Creation</strong></td>
-<td>✅ Write in YAML with XPath — no coding</td>
-<td>❌ Hard-coded; not extensible</td>
-<td>⚠️ Requires Python plugin</td>
+<td>Git confusion</td>
+<td>Provide cheat sheet and office hours</td>
 </tr>
-</tbody>
-</table>
-</section>
-<section id="comparison-for-education-research-2" class="slide level2">
-<h2>Comparison for Education &amp; Research</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 21%">
-<col style="width: 31%">
-<col style="width: 24%">
-<col style="width: 23%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Feature</strong></th>
-<th><strong>Chasten</strong></th>
-<th><strong>Ruff</strong></th>
-<th><strong>Pylint</strong></th>
+<tr class="even">
+<td>Merge conflicts</td>
+<td>Teach basic conflict resolution</td>
 </tr>
-</thead>
-<tbody>
 <tr class="odd">
-<td><strong>Learning AST Concepts</strong></td>
-<td>✅ Transparent — great for teaching ASTs</td>
-<td>❌ Abstracted away</td>
-<td>⚠️ Indirect via rule behavior</td>
+<td>Test failures</td>
+<td>Make test output student-friendly</td>
 </tr>
-</tbody>
-</table>
-</section>
-<section id="comparison-for-education-research-3" class="slide level2">
-<h2>Comparison for Education &amp; Research</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 21%">
-<col style="width: 31%">
-<col style="width: 24%">
-<col style="width: 23%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Feature</strong></th>
-<th><strong>Chasten</strong></th>
-<th><strong>Ruff</strong></th>
-<th><strong>Pylint</strong></th>
+<tr class="even">
+<td>Missing setup</td>
+<td>Include detailed environment setup</td>
 </tr>
-</thead>
-<tbody>
 <tr class="odd">
-<td><strong>Research Use</strong></td>
-<td>✅ Structured output + pattern mining</td>
-<td>❌ Not suited for deep analysis</td>
-<td>⚠️ Output not researcher-friendly</td>
+<td>Privacy concerns</td>
+<td>Use private repositories</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="comparison-for-education-research-4" class="slide level2">
-<h2>Comparison for Education &amp; Research</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 21%">
-<col style="width: 31%">
-<col style="width: 24%">
-<col style="width: 23%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Feature</strong></th>
-<th><strong>Chasten</strong></th>
-<th><strong>Ruff</strong></th>
-<th><strong>Pylint</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Output Formats</strong></td>
-<td>✅ JSON, CSV, SQLite (queryable)</td>
-<td>Text, JSON</td>
-<td>Text, JSON</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="comparison-for-education-research-5" class="slide level2">
-<h2>Comparison for Education &amp; Research</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 21%">
-<col style="width: 31%">
-<col style="width: 24%">
-<col style="width: 23%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Feature</strong></th>
-<th><strong>Chasten</strong></th>
-<th><strong>Ruff</strong></th>
-<th><strong>Pylint</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Interactive Exploration</strong></td>
-<td>✅ Datasette dashboards (SQLite-ready)</td>
-<td>❌ None</td>
-<td>❌ None</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="chasten-workflow" class="slide level2">
-<h2>Chasten Workflow</h2>
+<section id="limitations-to-be-aware-of" class="slide level2">
+<h2>Limitations to Be Aware Of</h2>
+<ul>
+<li class="fragment">Learning curve for Git and GitHub</li>
+<li class="fragment">Setup time for first assignments</li>
+<li class="fragment">Need for internet access</li>
+<li class="fragment">Managing organization permissions</li>
+</ul>
 </section>
 <section id="key-takeaways" class="slide level2">
 <h2>Key Takeaways</h2>
 <ul>
-<li class="fragment"><p>✅ <strong>Declarative rule-writing with XPath</strong><br>
-Easily define grading criteria and static analysis checks — no need to write Python plugins.</p></li>
-<li class="fragment"><p>🧠 <strong>Teachable insights into code structure</strong><br>
-Helps students understand Abstract Syntax Trees (ASTs) and how code is interpreted structurally.</p></li>
-<li class="fragment"><p>📊 <strong>Structured, explorable outputs</strong><br>
-Export results to SQLite and use Datasette to visualize errors, coverage, and student patterns.</p></li>
-<li class="fragment"><p>🧪 <strong>Supports research and pedagogy</strong><br>
-Useful for analyzing coding behavior at scale, detecting common anti-patterns in student code.</p></li>
-<li class="fragment"><p>📚 <strong>Integrates into grading pipelines</strong><br>
-Run Chasten on student submissions to check for required docstrings, type hints, nested logic, etc.</p></li>
+<li class="fragment">GitHub Classroom creates realistic development workflows</li>
+<li class="fragment">Automated feedback saves instructor time</li>
+<li class="fragment">Students learn industry-standard tools and practices</li>
+<li class="fragment">Implementation ablation guides student learning</li>
+<li class="fragment">Comprehensive feedback through multiple channels</li>
 </ul>
+</section>
+<section id="questions" class="slide level2">
+<h2>Questions?</h2>
+<p>Thank you for your attention!</p>
 
 
 </section>
@@ -462,7 +573,7 @@ Run Chasten on student submissions to check for required docstrings, type hints,
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: 'c/t',
+        slideNumber: false,
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',

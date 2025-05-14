@@ -1,30 +1,66 @@
 /* Custom styles for the conference presentations website */
 
 /* General styles */
+
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     line-height: 1.6;
 }
 
-p{
-    color: #323b60
+body a {
+    color: #3459e6 !important;
 }
+
+body a:hover {
+    color: #3459e6 !important;
+    transition:
+        text-decoration-color 300ms,
+        text-underline-offset 300ms;
+    text-decoration: underline 0.1em rgba(0, 0, 0, 1);
+    text-decoration-color: #3459e6;
+    text-underline-offset: 0.3em;
+}
+
+p {
+    color: #323b60;
+}
+
 /* Code blocks */
+
 pre {
     border-radius: 8px;
     padding: 1em;
 }
 
 code {
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: "Ubuntu Mono", monospace;
 }
 
 /* Navigation */
+
 .navbar {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #fdfdff !important;
+}
+
+.navbar .navbar-nav .nav-link.active {
+    color: #fdfdff !important;
+    box-shadow: 0 0 0 2px #fdfdff;
+    border-radius: 10px;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #fdfdff !important;
+    text-decoration: none;
+    box-shadow: 0 0 0 2px #fdfdff;
+    border-radius: 10px;
 }
 
 /* Links */
+
 a {
     color: #323b60;
     text-decoration: none;
@@ -35,28 +71,33 @@ a:hover {
 }
 
 /* Footer */
+
 .footer {
     border-top: 1px solid #eaecef;
     padding: 1em 0;
 }
 
 /* Presentation specific styles */
+
 .reveal .slides {
     text-align: left;
 }
 
-.reveal h1, .reveal h2{
+.reveal h1,
+.reveal h2 {
     color: #e45c08;
 }
 
 .reveal h3 {
     color: #063970;
 }
+
 .reveal .slide-number {
     font-size: 0.8em;
 }
 
 /* Custom callout boxes */
+
 .callout {
     border-left: 4px solid #e45c08;
     padding: 1em;
@@ -66,7 +107,8 @@ a:hover {
 }
 
 /* Code highlighting */
+
 .hljs {
     background: #f6f8fa;
     border-radius: 4px;
-} 
+}

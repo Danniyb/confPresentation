@@ -1,52 +1,220 @@
 [
   {
-    "objectID": "slides/index.html",
-    "href": "slides/index.html",
-    "title": "Conference Presentations",
-    "section": "",
-    "text": "View Presentation\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\n\n\n\n\nView Presentation\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\n\n\n\n\nView Presentation\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\n\n\n\n\nView Presentation\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content\n\n\n\n\n\nUse the navigation menu at the top of the page to move between presentations. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references"
-  },
-  {
-    "objectID": "slides/index.html#available-presentations",
-    "href": "slides/index.html#available-presentations",
-    "title": "Conference Presentations",
-    "section": "",
-    "text": "View Presentation\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\n\n\n\n\nView Presentation\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\n\n\n\n\nView Presentation\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\n\n\n\n\nView Presentation\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content"
-  },
-  {
-    "objectID": "slides/index.html#navigation",
-    "href": "slides/index.html#navigation",
-    "title": "Conference Presentations",
-    "section": "",
-    "text": "Use the navigation menu at the top of the page to move between presentations. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Conference Presentations",
     "section": "",
-    "text": "Welcome to our collection of conference presentations focusing on educational technology and development tools. These presentations cover various aspects of modern software development, automated testing, and educational technology implementation.\n\n\n\nAutomated and Configurable Programming Project Checking with Chasten\n\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\nUp and Running with GitHub, GitHub Classroom, and GitHub Actions\n\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\nExecExam: A Tool to Facilitate Effective Executable Examinations in Python\n\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\nBuilding and Deploying Course Websites with Python, Quarto, and Mkdocs\n\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content\n\n\n\n\n\nEach presentation is available in the slides section. You can navigate through the presentations using the navigation menu above. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references\n\n\n\n\nThese presentations are open source and available for educational purposes. Feel free to use and modify them according to your needs. If you find any issues or have suggestions for improvements, please contribute through our GitHub repository."
+    "text": "Welcome to our collection of conference presentations focusing on educational technology and development tools. These presentations cover various aspects of modern software development, automated testing, and educational technology implementation."
   },
   {
     "objectID": "index.html#available-presentations",
     "href": "index.html#available-presentations",
     "title": "Conference Presentations",
-    "section": "",
-    "text": "Automated and Configurable Programming Project Checking with Chasten\n\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\nUp and Running with GitHub, GitHub Classroom, and GitHub Actions\n\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\nExecExam: A Tool to Facilitate Effective Executable Examinations in Python\n\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\nBuilding and Deploying Course Websites with Python, Quarto, and Mkdocs\n\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content"
+    "section": "Available Presentations",
+    "text": "Available Presentations\n\nAutomated and Configurable Programming Project Checking with Chasten\n\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\nUp and Running with GitHub, GitHub Classroom, and GitHub Actions\n\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\nExecExam: A Tool to Facilitate Effective Executable Examinations in Python\n\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\nBuilding and Deploying Course Websites with Python, Quarto, and Mkdocs\n\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content"
   },
   {
     "objectID": "index.html#getting-started",
     "href": "index.html#getting-started",
     "title": "Conference Presentations",
-    "section": "",
-    "text": "Each presentation is available in the slides section. You can navigate through the presentations using the navigation menu above. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references"
+    "section": "Getting Started",
+    "text": "Getting Started\nEach presentation is available in the slides section. You can navigate through the presentations using the navigation menu above. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references"
   },
   {
     "objectID": "index.html#contributing",
     "href": "index.html#contributing",
     "title": "Conference Presentations",
-    "section": "",
-    "text": "These presentations are open source and available for educational purposes. Feel free to use and modify them according to your needs. If you find any issues or have suggestions for improvements, please contribute through our GitHub repository."
+    "section": "Contributing",
+    "text": "Contributing\nThese presentations are open source and available for educational purposes. Feel free to use and modify them according to your needs. If you find any issues or have suggestions for improvements, please contribute through our GitHub repository."
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#the-challenge-of-programming-assignments",
+    "href": "slides/github-workflow/index.html#the-challenge-of-programming-assignments",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "The Challenge of Programming Assignments",
+    "text": "The Challenge of Programming Assignments\n\nDistribution of starter code\nCollection of submissions\nProviding automated feedback\nManaging final assessment\nCoordinating all these tasks efficiently"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#traditional-assignment-workflow-challenges",
+    "href": "slides/github-workflow/index.html#traditional-assignment-workflow-challenges",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Traditional Assignment Workflow Challenges",
+    "text": "Traditional Assignment Workflow Challenges\n\nEmail submission creates version chaos\nManual testing is time-consuming and error-prone\nLimited visibility into student progress\nFeedback is often delayed and disconnected from code"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#enter-github-github-classroom-and-github-actions",
+    "href": "slides/github-workflow/index.html#enter-github-github-classroom-and-github-actions",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Enter GitHub, GitHub Classroom, and GitHub Actions",
+    "text": "Enter GitHub, GitHub Classroom, and GitHub Actions\nA complete ecosystem for programming education that:\n\nLeverages industry-standard tools\nPromotes good development practices\nAutomates tedious tasks\nProvides immediate feedback\nCreates a portfolio for students"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#benefits-for-students",
+    "href": "slides/github-workflow/index.html#benefits-for-students",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Benefits for Students",
+    "text": "Benefits for Students\n\nLearn professional version control practices\nGet immediate feedback on their code\nClear indication of what to complete (TODOs)\nWork in a real development environment\nBuild a portfolio of completed projects\nPrepare for collaborative development"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#benefits-for-instructors",
+    "href": "slides/github-workflow/index.html#benefits-for-instructors",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Benefits for Instructors",
+    "text": "Benefits for Instructors\n\nAutomated distribution of assignments\nCentralized submission collection\nAutomated testing and grading assistance\nClear visibility into student progress\nConsistent environment for all students\nRich feedback options (issues, PRs, comments)"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#getting-started-the-workflow",
+    "href": "slides/github-workflow/index.html#getting-started-the-workflow",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Getting Started: The Workflow",
+    "text": "Getting Started: The Workflow\n\nCreate solution repository with tests\nCreate starter repository with TODOs\nSet up GitHub Classroom\nCreate and distribute assignments\nMonitor student progress\nProvide feedback through GitHub\nAssess completed work"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#step-1-creating-the-solution-repository",
+    "href": "slides/github-workflow/index.html#step-1-creating-the-solution-repository",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Step 1: Creating the Solution Repository",
+    "text": "Step 1: Creating the Solution Repository\n# Create new repository with complete solution\ngit init solution-repo\ncd solution-repo\n# Add your complete solution code\n\nInclude a comprehensive test suite with pytest\nSet up linting with flake8/pylint\nCreate a GitHub Actions workflow\nEnsure all tests pass with your solution"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#solution-repository-structure",
+    "href": "slides/github-workflow/index.html#solution-repository-structure",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Solution Repository Structure",
+    "text": "Solution Repository Structure\nsolution-repo/\n├── src/\n│   └── solution.py\n├── tests/\n│   └── test_solution.py\n├── .github/\n│   └── workflows/\n│       └── python-checks.yml\n├── requirements.txt\n└── README.md"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#github-actions-workflow-example",
+    "href": "slides/github-workflow/index.html#github-actions-workflow-example",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "GitHub Actions Workflow Example",
+    "text": "GitHub Actions Workflow Example\nname: Python Checks\n\non: [push]\n\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n    - uses: actions/checkout@v3\n    - name: Set up Python\n      uses: actions/setup-python@v4\n      with:\n        python-version: '3.10'\n    - name: Install dependencies\n      run: |\n        python -m pip install --upgrade pip\n        pip install pytest flake8\n        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi\n    - name: Lint with flake8\n      run: flake8 src tests\n    - name: Test with pytest\n      run: pytest"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#step-2-implementation-ablation---creating-the-starter",
+    "href": "slides/github-workflow/index.html#step-2-implementation-ablation---creating-the-starter",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Step 2: Implementation Ablation - Creating the Starter",
+    "text": "Step 2: Implementation Ablation - Creating the Starter\nWhat is implementation ablation?\n\nSystematically remove implementation details from your solution\nReplace with well-documented TODOs\nLeave structure intact for students to complete\nKeep tests to guide students"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#example-of-implementation-ablation",
+    "href": "slides/github-workflow/index.html#example-of-implementation-ablation",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Example of Implementation Ablation",
+    "text": "Example of Implementation Ablation\nSolution code:\ndef calculate_grade(scores):\n    total = sum(scores)\n    average = total / len(scores)\n    \n    if average &gt;= 90:\n        return 'A'\n    elif average &gt;= 80:\n        return 'B'\n    elif average &gt;= 70:\n        return 'C'\n    elif average &gt;= 60:\n        return 'D'\n    else:\n        return 'F'"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#example-of-implementation-ablation-1",
+    "href": "slides/github-workflow/index.html#example-of-implementation-ablation-1",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Example of Implementation Ablation",
+    "text": "Example of Implementation Ablation\nStarter code:\ndef calculate_grade(scores):\n    # TODO: Calculate the average score\n    # Hint: You'll need to find the sum and divide by the count\n    \n    # TODO: Determine the letter grade based on the average\n    # A: 90+, B: 80-89, C: 70-79, D: 60-69, F: below 60\n    \n    return None  # Replace with your implementation"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#step-3-setting-up-github-classroom",
+    "href": "slides/github-workflow/index.html#step-3-setting-up-github-classroom",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Step 3: Setting Up GitHub Classroom",
+    "text": "Step 3: Setting Up GitHub Classroom\n\nCreate a GitHub organization for your class\nAuthorize GitHub Classroom\nCreate a new classroom linked to your organization\nInvite teaching assistants as organization admins"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#step-4-creating-an-assignment",
+    "href": "slides/github-workflow/index.html#step-4-creating-an-assignment",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Step 4: Creating an Assignment",
+    "text": "Step 4: Creating an Assignment\n\nSelect “New Assignment” in GitHub Classroom\nChoose individual or group assignment\nName your assignment\nSet deadline and visibility options\nImport your starter repository\nEnable automated testing"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#step-5-distributing-the-assignment",
+    "href": "slides/github-workflow/index.html#step-5-distributing-the-assignment",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Step 5: Distributing the Assignment",
+    "text": "Step 5: Distributing the Assignment\n\nGenerate invitation link\nShare with students\nStudents click link and accept assignment\nGitHub automatically creates private student repositories\nStudents clone locally and start working"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#student-experience",
+    "href": "slides/github-workflow/index.html#student-experience",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Student Experience",
+    "text": "Student Experience\n\nAccept assignment through unique link\nRepository created with starter code\nClone repository locally\nComplete TODOs guided by tests\nPush changes to GitHub\nGet immediate feedback from GitHub Actions"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#automated-feedback-with-github-actions",
+    "href": "slides/github-workflow/index.html#automated-feedback-with-github-actions",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Automated Feedback with GitHub Actions",
+    "text": "Automated Feedback with GitHub Actions\n\nTests run automatically on every push\nStudents see red ❌ or green ✅ status checks\nDetailed feedback in Actions tab\nTesting failures highlight what’s still incomplete"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#comprehensive-feedback-options",
+    "href": "slides/github-workflow/index.html#comprehensive-feedback-options",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Comprehensive Feedback Options",
+    "text": "Comprehensive Feedback Options\nGitHub provides multiple feedback channels:\n\nIn-line comments on specific code lines\nIssue creation for general feedback\nPull request reviews for detailed assessment\nAutomated checks for immediate technical feedback"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#example-issue-based-feedback",
+    "href": "slides/github-workflow/index.html#example-issue-based-feedback",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Example: Issue-Based Feedback",
+    "text": "Example: Issue-Based Feedback\n\n## Algorithm Efficiency\n\nYour solution works but uses O(n²) time complexity when \nan O(n) solution is possible. Consider using a hash map \ninstead of nested loops.\n\n## Code Structure\n\nGreat job breaking down the problem into functions!\nYour solution is well-organized and easy to follow."
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#optional-integrating-with-external-tools",
+    "href": "slides/github-workflow/index.html#optional-integrating-with-external-tools",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Optional: Integrating with External Tools",
+    "text": "Optional: Integrating with External Tools\nGitHub Actions can integrate with:\n\nPytest for test coverage\nFlake8/Pylint for style checking\nChasten for AST-based pattern checking\nCustom grading tool such as ExecExam\nAnd many more!"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#example-integration-with-chasten",
+    "href": "slides/github-workflow/index.html#example-integration-with-chasten",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Example: Integration with Chasten",
+    "text": "Example: Integration with Chasten\n- name: Check with Chasten\n  run: |\n    pip install chasten\n    chasten check --config .chasten.yml src/"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#practical-tips-from-experience",
+    "href": "slides/github-workflow/index.html#practical-tips-from-experience",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Practical Tips from Experience",
+    "text": "Practical Tips from Experience\n\nStart with simple assignments to build familiarity\nCreate clear README files with setup instructions\nInclude CI badges in README to show test status\nUse descriptive commit messages for teaching moments\nConsider a practice assignment for GitHub onboarding"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#common-challenges-and-solutions",
+    "href": "slides/github-workflow/index.html#common-challenges-and-solutions",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Common Challenges and Solutions",
+    "text": "Common Challenges and Solutions\n\n\n\nChallenges\nSolutions\n\n\n\n\nGit confusion\nProvide cheat sheet and office hours\n\n\nMerge conflicts\nTeach basic conflict resolution\n\n\nTest failures\nMake test output student-friendly\n\n\nMissing setup\nInclude detailed environment setup\n\n\nPrivacy concerns\nUse private repositories"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#limitations-to-be-aware-of",
+    "href": "slides/github-workflow/index.html#limitations-to-be-aware-of",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Limitations to Be Aware Of",
+    "text": "Limitations to Be Aware Of\n\nLearning curve for Git and GitHub\nSetup time for first assignments\nNeed for internet access\nManaging organization permissions"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#key-takeaways",
+    "href": "slides/github-workflow/index.html#key-takeaways",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nGitHub Classroom creates realistic development workflows\nAutomated feedback saves instructor time\nStudents learn industry-standard tools and practices\nImplementation ablation guides student learning\nComprehensive feedback through multiple channels"
+  },
+  {
+    "objectID": "slides/github-workflow/index.html#questions",
+    "href": "slides/github-workflow/index.html#questions",
+    "title": "Up and Running with GitHub, GitHub Classroom, and GitHub Actions",
+    "section": "Questions?",
+    "text": "Questions?\nThank you for your attention!"
+  },
+  {
+    "objectID": "slides/course-websites/index.html#course-websites-are-nice-with-quarto",
+    "href": "slides/course-websites/index.html#course-websites-are-nice-with-quarto",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "section": "Course Websites are Nice with Quarto!",
+    "text": "Course Websites are Nice with Quarto!\n\nExecutable examinations\nPython program\nUses Pytest"
   },
   {
     "objectID": "slides/chasten/index.html#the-problem-with-traditional-static-analysis",
@@ -145,5 +313,33 @@
     "title": "Automated and Configurable Programming Project Checking with Chasten",
     "section": "Key Takeaways",
     "text": "Key Takeaways\n\n✅ Declarative rule-writing with XPath\nEasily define grading criteria and static analysis checks — no need to write Python plugins.\n🧠 Teachable insights into code structure\nHelps students understand Abstract Syntax Trees (ASTs) and how code is interpreted structurally.\n📊 Structured, explorable outputs\nExport results to SQLite and use Datasette to visualize errors, coverage, and student patterns.\n🧪 Supports research and pedagogy\nUseful for analyzing coding behavior at scale, detecting common anti-patterns in student code.\n📚 Integrates into grading pipelines\nRun Chasten on student submissions to check for required docstrings, type hints, nested logic, etc."
+  },
+  {
+    "objectID": "slides/execexam/index.html#wonderful-content-about-execexam",
+    "href": "slides/execexam/index.html#wonderful-content-about-execexam",
+    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
+    "section": "Wonderful Content about ExecExam",
+    "text": "Wonderful Content about ExecExam\n\nExecutable examinations\nPython program\nUses Pytest"
+  },
+  {
+    "objectID": "slides/index.html",
+    "href": "slides/index.html",
+    "title": "Slides",
+    "section": "",
+    "text": "View Presentation\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\n\n\n\n\nView Presentation\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\n\n\n\n\nView Presentation\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\n\n\n\n\nView Presentation\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content\n\n\n\n\n\nUse the navigation menu at the top of the page to move between presentations. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references"
+  },
+  {
+    "objectID": "slides/index.html#available-presentations",
+    "href": "slides/index.html#available-presentations",
+    "title": "Slides",
+    "section": "",
+    "text": "View Presentation\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\n\n\n\n\nView Presentation\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\n\n\n\n\nView Presentation\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\n\n\n\n\nView Presentation\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content"
+  },
+  {
+    "objectID": "slides/index.html#navigation",
+    "href": "slides/index.html#navigation",
+    "title": "Slides",
+    "section": "",
+    "text": "Use the navigation menu at the top of the page to move between presentations. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references"
   }
 ]
