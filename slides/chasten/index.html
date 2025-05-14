@@ -6,9 +6,11 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4a990d8dcb58f517c7c86712b8f2ac7c.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4a990d8dcb58f517c7c86712b8f2ac7c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.31">
 
+  <meta name="author" content="Daniel Bekele, Jaclyn Pham, and Gregory M. Kapfhammer">
   <meta name="dcterms.date" content="2025-05-15">
   <title>Automated and Configurable Programming Project Checking with Chasten</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -196,216 +198,188 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Automated and Configurable Programming Project Checking with Chasten</h1>
-  <p class="subtitle">Daniel Bekele, Chi (Jaclyn) Pham, and Gregory M. Kapfhammer</p>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Daniel Bekele, Jaclyn Pham, and Gregory M. Kapfhammer 
+</div>
+</div>
 </div>
 
   <p class="date">May 15, 2025</p>
 </section>
-<section id="the-problem-with-traditional-static-analysis" class="slide level2">
-<h2>The Problem with Traditional Static Analysis</h2>
-<h3 id="regular-expression-regex-code-understanding">Regular expression (regex) ≠ code understanding</h3>
+<section id="what-problem-are-we-solving" class="slide level2">
+<h2>What Problem Are We Solving?</h2>
+<div style="font-size: 0.825em; margin-top: -0.25em;">
 <ul>
-<li>Fails on structural nuance</li>
-<li>Hard to maintain across formatting/styles</li>
-</ul>
-</section>
-<section id="the-problem-with-traditional-static-analysis-1" class="slide level2">
-<h2>The Problem with Traditional Static Analysis</h2>
-<h3 id="ast-tools-are-powerful-but-complex">AST tools are powerful but complex</h3>
+<li class="fragment">Students may struggle to write <strong>efficient, readable code</strong></li>
+<li class="fragment">Manual project review is <strong>time-consuming</strong> and <strong>error-prone</strong></li>
+<li class="fragment">Many courses face these challenges:
 <ul>
-<li>Require managing node types</li>
-<li>Difficult to prototype new rules</li>
+<li class="fragment">Data structures</li>
+<li class="fragment">Algorithm analysis</li>
+<li class="fragment">Software engineering</li>
+</ul></li>
+<li class="fragment">Existing tools focus on <strong>style</strong>, not <strong>semantic structure</strong></li>
+<li class="fragment">Regex is <strong>brittle</strong>, and AST tools are <strong>hard to prototype</strong></li>
 </ul>
+</div>
+<div class="fragment fade" style="margin-top: -0.25em; font-size: 0.9em;">
+<p><iconify-icon role="img" inline="" icon="fa6-solid:lightbulb" aria-label="Icon lightbulb from fa6-solid Iconify.design set." title="Icon lightbulb from fa6-solid Iconify.design set."></iconify-icon> <strong>Project Goal</strong>: Chasten enables <strong>scalable</strong> and <strong>structure-aware</strong> feedback that effectively supports both instructors and students</p>
+</div>
 </section>
-<section id="chasten" class="slide level2">
-<h2>Chasten</h2>
-<p>A Python program that uses XPATH expressions to find patterns in the abstract syntax tree (AST) of a Python program</p>
-</section>
-<section id="what-is-an-ast" class="slide level2">
-<h2>What is an AST?</h2>
-<p><strong>Abstract Syntax Tree (AST)</strong> = structured representation of code</p>
-<p>x = 1 + 2</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource scss number-lines code-with-copy"><code class="sourceCode scss"><span id="cb1-1"><a></a>Assign</span>
-<span id="cb1-2"><a></a> ├── Name(x)</span>
-<span id="cb1-3"><a></a> └── BinOp(<span class="op">+</span>)</span>
-<span id="cb1-4"><a></a>      ├── Constant(1)</span>
-<span id="cb1-5"><a></a>      └── Constant(2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="why-xpath" class="slide level2">
-<h2>Why XPATH?</h2>
+<section id="avoid-time-complexity-of-on²" class="slide level2">
+<h2>Avoid Time Complexity of <span class="math inline">\(O(n²)\)</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="co"># O(n) is acceptable</span></span>
+<span id="cb1-2"><a></a>seen <span class="op">=</span> <span class="bu">set</span>()</span>
+<span id="cb1-3"><a></a><span class="cf">for</span> item <span class="kw">in</span> items:</span>
+<span id="cb1-4"><a></a>    <span class="cf">if</span> item <span class="kw">in</span> seen:</span>
+<span id="cb1-5"><a></a>        <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb1-6"><a></a>    seen.add(item)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="co"># O(n²) is not okay</span></span>
+<span id="cb2-2"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(items)):</span>
+<span id="cb2-3"><a></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(items)):</span>
+<span id="cb2-4"><a></a>        <span class="cf">if</span> i <span class="op">!=</span> j </span>
+<span id="cb2-5"><a></a>         <span class="kw">and</span> items[i] <span class="op">==</span> items[j]:</span>
+<span id="cb2-6"><a></a>            <span class="cf">return</span> <span class="va">True</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<div class="fade" style="font-size: 0.9em; margin-top: 0.25em;">
 <ul>
-<li>✅ Perfect for navigating ASTs</li>
-<li>✅ Easy to write and understand</li>
+<li class="fragment"><p><iconify-icon role="img" inline="" icon="fa6-solid:lightbulb" aria-label="Icon lightbulb from fa6-solid Iconify.design set." title="Icon lightbulb from fa6-solid Iconify.design set."></iconify-icon> <strong>Goal</strong>: Automatically scan the source code that students submit to confirm that there are no inefficient looping constructs</p></li>
+<li class="fragment"><p><iconify-icon role="img" inline="" icon="mdi:alert-outline" aria-label="Icon alert-outline from mdi Iconify.design set." title="Icon alert-outline from mdi Iconify.design set."></iconify-icon> <strong>Challenge</strong>: Linters like Ruff and Pylint don’t have rules to detect nested control structures that either are or are not acceptable</p></li>
+<li class="fragment"><p><iconify-icon role="img" inline="" icon="fa6-solid:gears" aria-label="Icon gears from fa6-solid Iconify.design set." title="Icon gears from fa6-solid Iconify.design set."></iconify-icon> <strong>Build</strong>: An extensible tool allowing instructors to scan for arbitrary code patterns without detailed AST knowledge</p></li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource xpath number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>/FunctionDef/body//If[ancestor::If and not(parent::orelse)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>–&gt; Matches function with double nested if</p>
+</div>
 </section>
-<section id="features" class="slide level2">
-<h2>Features</h2>
+<section id="chasten-to-the-rescue" class="slide level2">
+<h2>Chasten to the Rescue!</h2>
+<div style="font-size: 0.9em; margin-top: -0.25em;">
 <ul>
-<li>✨ Easy-to-configure, automated analysis of a Python program’s abstract syntax tree</li>
-<li>📃 Flexible and easy-to-use YAML-based configuration file for describing analyses and checks</li>
-<li>🚀 Configurable saving of analysis results in the JSON, CSV, or SQLite formats</li>
-<li>🌄 Interactive results analysis through the use of a locally running datasette server</li>
+<li class="fragment"><p><iconify-icon role="img" inline="" icon="fa6-solid:gear" aria-label="Icon gear from fa6-solid Iconify.design set." title="Icon gear from fa6-solid Iconify.design set."></iconify-icon> Uses XPath to search Python’s AST</p></li>
+<li class="fragment"><p><iconify-icon role="img" inline="" icon="mdi:file-code-outline" aria-label="Icon file-code-outline from mdi Iconify.design set." title="Icon file-code-outline from mdi Iconify.design set."></iconify-icon> Rules written in simple YAML</p></li>
+<li class="fragment"><p><iconify-icon role="img" inline="" icon="mdi:file-tree-outline" aria-label="Icon file-tree-outline from mdi Iconify.design set." title="Icon file-tree-outline from mdi Iconify.design set."></iconify-icon> Structure-first, not just style</p></li>
+<li class="fragment"><p><iconify-icon role="img" inline="" icon="mdi:database-outline" aria-label="Icon database-outline from mdi Iconify.design set." title="Icon database-outline from mdi Iconify.design set."></iconify-icon> Outputs to JSON, CSV, or SQLite</p></li>
 </ul>
+</div>
+<div class="fragment fade" style="font-size: 0.9em; margin-top: -0.25em; margin-bottom: 0.45em;">
+<p><iconify-icon role="img" inline="" icon="fa6-solid:lightbulb" aria-label="Icon lightbulb from fa6-solid Iconify.design set." title="Icon lightbulb from fa6-solid Iconify.design set."></iconify-icon> <strong>Result</strong>: Instructors define checks once and use Chasten to easily apply them at scale across all student submissions</p>
+</div>
+<div class="fragment">
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a></a><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> </span><span class="st">"nested-loops"</span></span>
+<span id="cb3-2"><a></a><span class="at">  </span><span class="fu">code</span><span class="kw">:</span><span class="at"> </span><span class="st">"PERF001"</span></span>
+<span id="cb3-3"><a></a><span class="at">  </span><span class="fu">pattern</span><span class="kw">:</span><span class="at"> </span><span class="st">"//For[descendant::For]"</span></span>
+<span id="cb3-4"><a></a><span class="at">  </span><span class="fu">description</span><span class="kw">:</span><span class="at"> </span><span class="st">"Detects doubly nested for-loops (e.g., O(n²))"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="comparison-for-education-research" class="slide level2">
-<h2>Comparison for Education &amp; Research</h2>
+<section id="lets-run-chasten" class="slide level2">
+<h2>Let’s Run Chasten!</h2>
+<div class="fragment fade" style="font-size: 0.8em;">
+<h3 id="install-the-tool">Install the Tool</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a></a><span class="ex">pipx</span> install chasten  <span class="co"># Install Chasten in venv</span></span>
+<span id="cb4-2"><a></a><span class="ex">pipx</span> list             <span class="co"># Confirm installation</span></span>
+<span id="cb4-3"><a></a><span class="ex">chasten</span> <span class="at">--help</span>        <span class="co"># View available commands</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment fade" style="font-size: 0.8em; margin-top: 0.5em;">
+<h3 id="run-chasten">Run Chasten</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a></a><span class="ex">chasten</span> analyze time-complexity-lab <span class="dt">\</span></span>
+<span id="cb5-2"><a></a>        <span class="at">--config</span> chasten-configuration <span class="dt">\</span></span>
+<span id="cb5-3"><a></a>        <span class="at">--search-path</span> time-complexity-lab <span class="dt">\</span></span>
+<span id="cb5-4"><a></a>        <span class="at">--save-directory</span> time-complexity-results <span class="dt">\</span></span>
+<span id="cb5-5"><a></a>        <span class="at">--save</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment fade" style="font-size: 0.9em; margin-top: 0.15em; margin-bottom: 0.45em;">
+<ul>
+<li>Save results to a <strong>JSON file</strong> and produce <strong>console output</strong></li>
+<li>Configure the <strong>return code</strong> for different <strong>detection goals</strong></li>
+</ul>
+</div>
 </section>
-<section id="comparison-for-education-research-1" class="slide level2">
-<h2>Comparison for Education &amp; Research</h2>
+<section id="results-from-running-chasten" class="slide level2">
+<h2>Results from Running Chasten</h2>
+<div class="fragment fade" style="font-size: 1em;">
+<h3 id="nested-loop-analysis">Nested Loop Analysis</h3>
 <table class="caption-top">
-<colgroup>
-<col style="width: 21%">
-<col style="width: 31%">
-<col style="width: 24%">
-<col style="width: 23%">
-</colgroup>
 <thead>
 <tr class="header">
-<th><strong>Feature</strong></th>
-<th><strong>Chasten</strong></th>
-<th><strong>Ruff</strong></th>
-<th><strong>Pylint</strong></th>
+<th>Check ID</th>
+<th>Check Name</th>
+<th>File</th>
+<th>Matches</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Custom Rule Creation</strong></td>
-<td>✅ Write in YAML with XPath — no coding</td>
-<td>❌ Hard-coded; not extensible</td>
-<td>⚠️ Requires Python plugin</td>
+<td>PERF001</td>
+<td>nested-loops</td>
+<td>analyze.py</td>
+<td>1</td>
 </tr>
-</tbody>
-</table>
-</section>
-<section id="comparison-for-education-research-2" class="slide level2">
-<h2>Comparison for Education &amp; Research</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 21%">
-<col style="width: 31%">
-<col style="width: 24%">
-<col style="width: 23%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Feature</strong></th>
-<th><strong>Chasten</strong></th>
-<th><strong>Ruff</strong></th>
-<th><strong>Pylint</strong></th>
+<tr class="even">
+<td>PERF001</td>
+<td>nested-loops</td>
+<td>display.py</td>
+<td>7</td>
 </tr>
-</thead>
-<tbody>
 <tr class="odd">
-<td><strong>Learning AST Concepts</strong></td>
-<td>✅ Transparent — great for teaching ASTs</td>
-<td>❌ Abstracted away</td>
-<td>⚠️ Indirect via rule behavior</td>
+<td>PERF001</td>
+<td>nested-loops</td>
+<td>main.py</td>
+<td>0</td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="fragment fade-down" style="font-size: 0.7em; margin-top: 1em;">
+<p><iconify-icon role="img" inline="" icon="mdi:format-list-numbered" aria-label="Icon format-list-numbered from mdi Iconify.design set." title="Icon format-list-numbered from mdi Iconify.design set."></iconify-icon> <strong>Check ID</strong> → A unique short rule code (e.g., <code>PERF001</code>)</p>
+</div>
+<div class="fragment fade-down" style="font-size: 0.7em;">
+<p><iconify-icon role="img" inline="" icon="mdi:label-outline" aria-label="Icon label-outline from mdi Iconify.design set." title="Icon label-outline from mdi Iconify.design set."></iconify-icon> <strong>Check Name</strong> → The rule name that matched (e.g., <code>nested-loops</code>)</p>
+</div>
+<div class="fragment fade-down" style="font-size: 0.7em;">
+<p><iconify-icon role="img" inline="" icon="mdi:file-outline" aria-label="Icon file-outline from mdi Iconify.design set." title="Icon file-outline from mdi Iconify.design set."></iconify-icon> <strong>File</strong> → The Python file that the tool scanned (e.g., <code>analyze.py</code>)</p>
+</div>
+<div class="fragment fade-down" style="font-size: 0.7em;">
+<p><iconify-icon role="img" inline="" icon="mdi:counter" aria-label="Icon counter from mdi Iconify.design set." title="Icon counter from mdi Iconify.design set."></iconify-icon> <strong>Matches</strong> → Number of times the pattern was detected in that file (e.g., <code>1</code> match)</p>
+</div>
 </section>
-<section id="comparison-for-education-research-3" class="slide level2">
-<h2>Comparison for Education &amp; Research</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 21%">
-<col style="width: 31%">
-<col style="width: 24%">
-<col style="width: 23%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Feature</strong></th>
-<th><strong>Chasten</strong></th>
-<th><strong>Ruff</strong></th>
-<th><strong>Pylint</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Research Use</strong></td>
-<td>✅ Structured output + pattern mining</td>
-<td>❌ Not suited for deep analysis</td>
-<td>⚠️ Output not researcher-friendly</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="comparison-for-education-research-4" class="slide level2">
-<h2>Comparison for Education &amp; Research</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 21%">
-<col style="width: 31%">
-<col style="width: 24%">
-<col style="width: 23%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Feature</strong></th>
-<th><strong>Chasten</strong></th>
-<th><strong>Ruff</strong></th>
-<th><strong>Pylint</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Output Formats</strong></td>
-<td>✅ JSON, CSV, SQLite (queryable)</td>
-<td>Text, JSON</td>
-<td>Text, JSON</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="comparison-for-education-research-5" class="slide level2">
-<h2>Comparison for Education &amp; Research</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 21%">
-<col style="width: 31%">
-<col style="width: 24%">
-<col style="width: 23%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Feature</strong></th>
-<th><strong>Chasten</strong></th>
-<th><strong>Ruff</strong></th>
-<th><strong>Pylint</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Interactive Exploration</strong></td>
-<td>✅ Datasette dashboards (SQLite-ready)</td>
-<td>❌ None</td>
-<td>❌ None</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="chasten-workflow" class="slide level2">
-<h2>Chasten Workflow</h2>
+<section id="limitations-and-future-directions" class="slide level2">
+<h2>Limitations and Future Directions</h2>
+<ul>
+<li class="fragment"><strong>Limitations of the Chasten Tool</strong>
+<ul>
+<li class="fragment"><iconify-icon role="img" inline="" icon="mdi:alert-circle-outline" aria-label="Icon alert-circle-outline from mdi Iconify.design set." title="Icon alert-circle-outline from mdi Iconify.design set."></iconify-icon> Doesn’t handle style, formatting, or type inference</li>
+<li class="fragment"><iconify-icon role="img" inline="" icon="mdi:timer-sand" aria-label="Icon timer-sand from mdi Iconify.design set." title="Icon timer-sand from mdi Iconify.design set."></iconify-icon> Not optimized for fast use in continuous integration</li>
+<li class="fragment"><iconify-icon role="img" inline="" icon="mdi:code-not-equal-variant" aria-label="Icon code-not-equal-variant from mdi Iconify.design set." title="Icon code-not-equal-variant from mdi Iconify.design set."></iconify-icon> Pattern matches through use of XPath on Python’s AST</li>
+</ul></li>
+<li class="fragment"><strong>Empirical Study of Chasten</strong>
+<ul>
+<li class="fragment"><iconify-icon role="img" inline="" icon="fa6-solid:scale-unbalanced-flip" aria-label="Icon scale-unbalanced-flip from fa6-solid Iconify.design set." title="Icon scale-unbalanced-flip from fa6-solid Iconify.design set."></iconify-icon> Frequency of false positives or false negatives?</li>
+<li class="fragment"><iconify-icon role="img" inline="" icon="game-icons:team-idea" aria-label="Icon team-idea from game-icons Iconify.design set." title="Icon team-idea from game-icons Iconify.design set."></iconify-icon> How do students respond to the tool’s feedback?</li>
+<li class="fragment"><iconify-icon role="img" inline="" icon="fa6-solid:flask" aria-label="Icon flask from fa6-solid Iconify.design set." title="Icon flask from fa6-solid Iconify.design set."></iconify-icon> Differences in scores with varied feedback types?</li>
+</ul></li>
+</ul>
 </section>
 <section id="key-takeaways" class="slide level2">
 <h2>Key Takeaways</h2>
 <ul>
-<li><p>✅ <strong>Declarative rule-writing with XPath</strong><br>
-Easily define grading criteria and static analysis checks — no need to write Python plugins.</p></li>
-<li><p>🧠 <strong>Teachable insights into code structure</strong><br>
-Helps students understand Abstract Syntax Trees (ASTs) and how code is interpreted structurally.</p></li>
-<li><p>📊 <strong>Structured, explorable outputs</strong><br>
-Export results to SQLite and use Datasette to visualize errors, coverage, and student patterns.</p></li>
-<li><p>🧪 <strong>Supports research and pedagogy</strong><br>
-Useful for analyzing coding behavior at scale, detecting common anti-patterns in student code.</p></li>
-<li><p>📚 <strong>Integrates into grading pipelines</strong><br>
-Run Chasten on student submissions to check for required docstrings, type hints, nested logic, etc.</p></li>
+<li class="fragment"><p><iconify-icon role="img" inline="" icon="mdi:pen" aria-label="Icon pen from mdi Iconify.design set." title="Icon pen from mdi Iconify.design set."></iconify-icon> Write declarative rules for AST-based code checks</p></li>
+<li class="fragment"><p><iconify-icon role="img" inline="" icon="mdi:email-check-outline" aria-label="Icon email-check-outline from mdi Iconify.design set." title="Icon email-check-outline from mdi Iconify.design set."></iconify-icon> Focus on bespoke code structure patterns in Python</p></li>
+<li class="fragment"><p><iconify-icon role="img" inline="" icon="mdi:school-outline" aria-label="Icon school-outline from mdi Iconify.design set." title="Icon school-outline from mdi Iconify.design set."></iconify-icon> Automated grading aligned with learning outcomes</p></li>
+<li class="fragment"><p><iconify-icon role="img" inline="" icon="mdi:chart-bar-stacked" aria-label="Icon chart-bar-stacked from mdi Iconify.design set." title="Icon chart-bar-stacked from mdi Iconify.design set."></iconify-icon> Generate data-rich insights into student code patterns</p></li>
 </ul>
+<div class="fragment boxed-content" style="font-size: 0.95em;">
+<ul>
+<li><strong>Try out Chasten and contribute to its development!</strong>
+<ul>
+<li><iconify-icon role="img" inline="" icon="fa6-solid:link" aria-label="Icon link from fa6-solid Iconify.design set." title="Icon link from fa6-solid Iconify.design set."></iconify-icon> GitHub: <a href="https://github.com/AstuteSource/chasten">https://github.com/AstuteSource/chasten</a></li>
+<li><iconify-icon role="img" inline="" icon="fa6-solid:code" aria-label="Icon code from fa6-solid Iconify.design set." title="Icon code from fa6-solid Iconify.design set."></iconify-icon> PyPI: <a href="https://pypi.org/project/chasten/">https://pypi.org/project/chasten/</a></li>
+</ul></li>
+</ul>
+</div>
 
 
 </section>
@@ -465,7 +439,7 @@ Run Chasten on student submissions to check for required docstrings, type hints,
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: 'c/t',
+        slideNumber: false,
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',

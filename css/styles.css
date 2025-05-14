@@ -111,6 +111,10 @@ a:hover {
     font-size: 0.8em;
 }
 
+.reveal p {
+    color: #333;
+}
+
 .boxed-content {
     border: 3px solid #1c1c1c;
     padding: 10px;

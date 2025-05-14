@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://GatorEducator.github.io/PyCon2025-EducationAndTypingSummit-Presentations/conference-presentations/slides/execexam/index.html</loc>
-    <lastmod>2025-05-14T21:50:23.260Z</lastmod>
-  </url>
-  <url>
-    <loc>https://GatorEducator.github.io/PyCon2025-EducationAndTypingSummit-Presentations/slides/course-websites/index.html</loc>
-    <lastmod>2025-05-14T21:50:23.263Z</lastmod>
-  </url>
-  <url>
-    <loc>https://GatorEducator.github.io/PyCon2025-EducationAndTypingSummit-Presentations/slides/execexam/index.html</loc>
-    <lastmod>2025-05-14T21:50:23.265Z</lastmod>
-  </url>
-  <url>
-    <loc>https://GatorEducator.github.io/PyCon2025-EducationAndTypingSummit-Presentations/slides/index.html</loc>
-    <lastmod>2025-05-14T21:50:23.266Z</lastmod>
-  </url>
-  <url>
-    <loc>https://GatorEducator.github.io/PyCon2025-EducationAndTypingSummit-Presentations/slides/github-workflow/index.html</loc>
-    <lastmod>2025-05-14T21:50:23.266Z</lastmod>
+    <loc>https://GatorEducator.github.io/PyCon2025-EducationAndTypingSummit-Presentations/index.html</loc>
+    <lastmod>2025-05-14T23:22:55.540Z</lastmod>
   </url>
   <url>
     <loc>https://GatorEducator.github.io/PyCon2025-EducationAndTypingSummit-Presentations/slides/chasten/index.html</loc>
-    <lastmod>2025-05-14T21:50:23.262Z</lastmod>
+    <lastmod>2025-05-14T23:22:55.540Z</lastmod>
   </url>
   <url>
-    <loc>https://GatorEducator.github.io/PyCon2025-EducationAndTypingSummit-Presentations/index.html</loc>
-    <lastmod>2025-05-14T21:50:23.262Z</lastmod>
+    <loc>https://GatorEducator.github.io/PyCon2025-EducationAndTypingSummit-Presentations/slides/github-workflow/index.html</loc>
+    <lastmod>2025-05-14T23:22:55.544Z</lastmod>
+  </url>
+  <url>
+    <loc>https://GatorEducator.github.io/PyCon2025-EducationAndTypingSummit-Presentations/slides/index.html</loc>
+    <lastmod>2025-05-14T23:22:55.544Z</lastmod>
+  </url>
+  <url>
+    <loc>https://GatorEducator.github.io/PyCon2025-EducationAndTypingSummit-Presentations/slides/execexam/index.html</loc>
+    <lastmod>2025-05-14T23:22:55.542Z</lastmod>
+  </url>
+  <url>
+    <loc>https://GatorEducator.github.io/PyCon2025-EducationAndTypingSummit-Presentations/slides/course-websites/index.html</loc>
+    <lastmod>2025-05-14T23:22:55.540Z</lastmod>
   </url>
 </urlset>

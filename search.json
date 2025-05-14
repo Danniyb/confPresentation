@@ -1,206 +1,80 @@
 [
   {
-    "objectID": "conference-presentations/slides/execexam/index.html#what-is-an-execuatable-examination",
-    "href": "conference-presentations/slides/execexam/index.html#what-is-an-execuatable-examination",
-    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
-    "section": "What is an Execuatable Examination?",
-    "text": "What is an Execuatable Examination?\n\nAssessing real programming ability\n\nA student writes, modifies, and runs code to solve a real problem\nGraded via automated tests (e.g. Pytest)\nUnlike static exams, this tests:\n\nProgramming logic\nDebugging ability\nTool use (editor, terminal, Git)\n\n\n🎯 Like a take-home project — but precise, consistent, and scalable"
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Conference Presentations",
+    "section": "",
+    "text": "Welcome to our collection of conference presentations focusing on educational technology and development tools. These presentations cover various aspects of modern software development, automated testing, and educational technology implementation."
   },
   {
-    "objectID": "conference-presentations/slides/execexam/index.html#the-problem",
-    "href": "conference-presentations/slides/execexam/index.html#the-problem",
-    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
-    "section": "The Problem",
-    "text": "The Problem\nWhy do we need better assessments?\n\nManual grading is slow and inconsistent\nStudents often don’t know why their code fails\nFeedback is shallow or missing altogether\n\n🚫 “Test failed” isn’t enough."
+    "objectID": "index.html#available-presentations",
+    "href": "index.html#available-presentations",
+    "title": "Conference Presentations",
+    "section": "Available Presentations",
+    "text": "Available Presentations\n\nAutomated and Configurable Programming Project Checking with Chasten\n\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\nUp and Running with GitHub, GitHub Classroom, and GitHub Actions\n\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\nExecExam: A Tool to Facilitate Effective Executable Examinations in Python\n\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\nBuilding and Deploying Course Websites with Python, Quarto, and Mkdocs\n\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content"
   },
   {
-    "objectID": "conference-presentations/slides/execexam/index.html#what-is-execexam",
-    "href": "conference-presentations/slides/execexam/index.html#what-is-execexam",
-    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
-    "section": "What is ExecExam?",
-    "text": "What is ExecExam?\nScalable, feedback-rich assessment tool\n\nRuns Pytest on student code\nUnlike Pytest, continues past the first failure\nExplains why a test failed\nSuggests how to fix it\nUtilizes LLMs for even better feedback"
+    "objectID": "index.html#getting-started",
+    "href": "index.html#getting-started",
+    "title": "Conference Presentations",
+    "section": "Getting Started",
+    "text": "Getting Started\nEach presentation is available in the slides section. You can navigate through the presentations using the navigation menu above. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references"
   },
   {
-    "objectID": "conference-presentations/slides/execexam/index.html#key-features",
-    "href": "conference-presentations/slides/execexam/index.html#key-features",
-    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
-    "section": "Key Features",
-    "text": "Key Features\nWhy use ExecExam?\n\n🧪 Full Pytest coverage, Streamlines assessment\n💻 Can be run throughout the student coding process\n🧠 AI-powered failure analysis\n⚙️ GitHub integration, easy CI/CD\n🔁 Enhance the learning experience by offering actionable insights throughout the coding process"
+    "objectID": "index.html#contributing",
+    "href": "index.html#contributing",
+    "title": "Conference Presentations",
+    "section": "Contributing",
+    "text": "Contributing\nThese presentations are open source and available for educational purposes. Feel free to use and modify them according to your needs. If you find any issues or have suggestions for improvements, please contribute through our GitHub repository."
   },
   {
-    "objectID": "conference-presentations/slides/execexam/index.html#for-instructors",
-    "href": "conference-presentations/slides/execexam/index.html#for-instructors",
-    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
-    "section": "For Instructors",
-    "text": "For Instructors\nHow to adopt it\n\nDesign scaffolded coding tasks\nWrite tests\nDeploy with GitHub Actions or CLI\nGrade fairly, at scale\n\n🧰 Lightweight setup—just Python, Git, and your test cases"
-  },
-  {
-    "objectID": "conference-presentations/slides/execexam/index.html#future-work",
-    "href": "conference-presentations/slides/execexam/index.html#future-work",
-    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
-    "section": "Future Work",
-    "text": "Future Work\n\nWhat’s next for ExecExam?\n\n📊 Analytics & Instructor Features\n\nStore test outcomes and feedback over time\nVisualize student debugging and improvement paths\nLog LLM interactions to evaluate effectiveness\nHold out hidden test cases for instructor-only grading\n\n🧠 Adaptive Feedback Loops\n\nTailor feedback complexity to student performance\nAllow students to rate LLM feedback"
-  },
-  {
-    "objectID": "conference-presentations/slides/execexam/index.html#key-takeaways",
-    "href": "conference-presentations/slides/execexam/index.html#key-takeaways",
-    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
-    "section": "Key Takeaways",
-    "text": "Key Takeaways\n\nBetter exam grading, better learning\n\nHelps students debug and learn\nSaves teachers time\nMore fair + consistent grading\nScales to large classes\n\n\n\n🚀 Try ExecExam: Let’s build smarter CS assessments\n\n🔗 GitHub Repository: https://github.com/GatorEducator/execexam\n💻 PyPI: https://pypi.org/project/execexam/\n🤝 Reach out or contribute\n\nPallas-Athena Cain: cain01@allegheny.edu\nGregory M. Kapfhammer: gkapfhammer@allegheny.edu\n\n\n🦚 Consider a birds of a feather session about automated grading"
-  },
-  {
-    "objectID": "conference-presentations/slides/execexam/index.html#references",
-    "href": "conference-presentations/slides/execexam/index.html#references",
-    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
-    "section": "References",
-    "text": "References\n\n\nJoão Paulo Barros, Luís Estevens, Rui Dias, Rui Pais, and Elisabete Soeiro. 2003. Using lab exams to ensure programming practice in an introductory programming course. SIGCSE Bull. 35, 3 (September 2003), 16–20. https://doi.org/10.1145/961290.961519\nJonathan Corley, Ana Stanescu, Lewis Baumstark, and Michael C. Orsega. 2020. Paper Or IDE? The Impact of Exam Format on Student Performance in a CS1 Course. In Proceedings of the 51st ACM Technical Symposium on Computer Science Education (SIGCSE ’20). Association for Computing Machinery, New York, NY, USA, 706–712. https://doi.org/10.1145/3328778.3366857\nScott Grissom, Laurie Murphy, Renée McCauley, and Sue Fitzgerald. 2016. Paper vs. Computer-based Exams: A Study of Errors in Recursive Binary Tree Algorithms. In Proceedings of the 47th ACM Technical Symposium on Computing Science Education (SIGCSE ’16). Association for Computing Machinery, New York, NY, USA, 6–11. https://doi.org/10.1145/2839509.2844587\nSevkli, Z. 2024. Assessing the Impact of Open-Resource Access on Student Performance in Computer-Based Examinations. In Proceedings of the 2024 ASEE Annual Conference & Exposition, Portland, Oregon. https://doi.org/10.18260/1-2–46619\nVesa Lappalainen, Antti-Jussi Lakanen, and Harri Högmander. 2016. Paper-based vs computer-based exams in CS1. In Proceedings of the 16th Koli Calling International Conference on Computing Education Research (Koli Calling ’16). Association for Computing Machinery, New York, NY, USA, 172–173. https://doi.org/10.1145/2999541.2999565"
-  },
-  {
-    "objectID": "slides/course-websites/index.html#what-problem-are-we-solving",
-    "href": "slides/course-websites/index.html#what-problem-are-we-solving",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "objectID": "slides/chasten/index.html#what-problem-are-we-solving",
+    "href": "slides/chasten/index.html#what-problem-are-we-solving",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
     "section": "What Problem Are We Solving?",
-    "text": "What Problem Are We Solving?\n\n\nCourse sites as static archives rather than living resources\nStudents view materials as products to consume not projects to contribute to, limiting learning and engagement\nInteractive examples require separate tools or platforms\nContent becomes quickly outdated without a sustainable update process that leverages industry-standard tools\n\n\n\n Ultimate Goal: Introduce how using packages like Quarto make it possible to create interactive and maintainable course websites"
+    "text": "What Problem Are We Solving?\n\n\nStudents may struggle to write efficient, readable code\nManual project review is time-consuming and error-prone\nMany courses face these challenges:\n\nData structures\nAlgorithm analysis\nSoftware engineering\n\nExisting tools focus on style, not semantic structure\nRegex is brittle, and AST tools are hard to prototype\n\n\n\n Project Goal: Chasten enables scalable and structure-aware feedback that effectively supports both instructors and students"
   },
   {
-    "objectID": "slides/course-websites/index.html#building-and-deploying-with-quarto",
-    "href": "slides/course-websites/index.html#building-and-deploying-with-quarto",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Building and Deploying with Quarto",
-    "text": "Building and Deploying with Quarto\n\n\nQuarto: Accessible markdown-based framework\nPython + WebAssembly: Easily run Python in the browser\nGitHub: Version control and collaborative workflows\nGitHub Actions: Automated testing and deployment\n\n\n\n\n Ultimate Goal: Build content-focused, interactive, collaborative course sites that instructors can maintain with minimal effort\n Next Steps: Give examples of content you can immediately use! See https://github.com/GatorEducator/PyCon2025-EducationAndTypingSummit-Presentations for more details!"
+    "objectID": "slides/chasten/index.html#avoid-time-complexity-of-on²",
+    "href": "slides/chasten/index.html#avoid-time-complexity-of-on²",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Avoid Time Complexity of \\(O(n²)\\)",
+    "text": "Avoid Time Complexity of \\(O(n²)\\)\n\n\n# O(n) is acceptable\nseen = set()\nfor item in items:\n    if item in seen:\n        return True\n    seen.add(item)\n\n# O(n²) is not okay\nfor i in range(len(items)):\n    for j in range(len(items)):\n        if i != j \n         and items[i] == items[j]:\n            return True\n\n\n\n Goal: Automatically scan the source code that students submit to confirm that there are no inefficient looping constructs\n Challenge: Linters like Ruff and Pylint don’t have rules to detect nested control structures that either are or are not acceptable\n Build: An extensible tool allowing instructors to scan for arbitrary code patterns without detailed AST knowledge"
   },
   {
-    "objectID": "slides/course-websites/index.html#explore-use-of-the-linkedlist",
-    "href": "slides/course-websites/index.html#explore-use-of-the-linkedlist",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Explore Use of the LinkedList",
-    "text": "Explore Use of the LinkedList\n\n\n\n\n\n\n\n\n Task: Visualize ListNode and LinkedList and explain the True outputs!"
+    "objectID": "slides/chasten/index.html#chasten-to-the-rescue",
+    "href": "slides/chasten/index.html#chasten-to-the-rescue",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Chasten to the Rescue!",
+    "text": "Chasten to the Rescue!\n\n\n Uses XPath to search Python’s AST\n Rules written in simple YAML\n Structure-first, not just style\n Outputs to JSON, CSV, or SQLite\n\n\n\n Result: Instructors define checks once and use Chasten to easily apply them at scale across all student submissions\n\n\n- name: \"nested-loops\"\n  code: \"PERF001\"\n  pattern: \"//For[descendant::For]\"\n  description: \"Detects doubly nested for-loops (e.g., O(n²))\""
   },
   {
-    "objectID": "slides/course-websites/index.html#setting-up-the-course-infrastructure",
-    "href": "slides/course-websites/index.html#setting-up-the-course-infrastructure",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Setting Up the Course Infrastructure",
-    "text": "Setting Up the Course Infrastructure\n\nCreate a GitHub repository with Quarto structure\nConfigure navigation, styling, and organization in _quarto.yml\nSet up GitHub Actions for automated deployment\nCreate templates for student contributions\nPublish to GitHub Pages or Netlify"
+    "objectID": "slides/chasten/index.html#lets-run-chasten",
+    "href": "slides/chasten/index.html#lets-run-chasten",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Let’s Run Chasten!",
+    "text": "Let’s Run Chasten!\n\nInstall the Tool\npipx install chasten  # Install Chasten in venv\npipx list             # Confirm installation\nchasten --help        # View available commands\n\n\nRun Chasten\nchasten analyze time-complexity-lab \\\n        --config chasten-configuration \\\n        --search-path time-complexity-lab \\\n        --save-directory time-complexity-results \\\n        --save\n\n\n\nSave results to a JSON file and produce console output\nConfigure the return code for different detection goals"
   },
   {
-    "objectID": "slides/course-websites/index.html#the-instructors-role",
-    "href": "slides/course-websites/index.html#the-instructors-role",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "The Instructor’s Role",
-    "text": "The Instructor’s Role\n\n\nCreate core course content and structure\nEstablish contribution guidelines\nReview and provide feedback on student submissions\nGuide collaborative knowledge building"
+    "objectID": "slides/chasten/index.html#results-from-running-chasten",
+    "href": "slides/chasten/index.html#results-from-running-chasten",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Results from Running Chasten",
+    "text": "Results from Running Chasten\n\nNested Loop Analysis\n\n\n\nCheck ID\nCheck Name\nFile\nMatches\n\n\n\n\nPERF001\nnested-loops\nanalyze.py\n1\n\n\nPERF001\nnested-loops\ndisplay.py\n7\n\n\nPERF001\nnested-loops\nmain.py\n0\n\n\n\n\n\n Check ID → A unique short rule code (e.g., PERF001)\n\n\n Check Name → The rule name that matched (e.g., nested-loops)\n\n\n File → The Python file that the tool scanned (e.g., analyze.py)\n\n\n Matches → Number of times the pattern was detected in that file (e.g., 1 match)"
   },
   {
-    "objectID": "slides/course-websites/index.html#how-students-contribute",
-    "href": "slides/course-websites/index.html#how-students-contribute",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "How Students Contribute",
-    "text": "How Students Contribute\n\nFork the repository and create content in their assigned folder\nWrite reflections and examples in simple Markdown with code\nSubmit a Pull Request for review and feedback\nContent is automatically published when approved"
+    "objectID": "slides/chasten/index.html#limitations-and-future-directions",
+    "href": "slides/chasten/index.html#limitations-and-future-directions",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Limitations and Future Directions",
+    "text": "Limitations and Future Directions\n\nLimitations of the Chasten Tool\n\n Doesn’t handle style, formatting, or type inference\n Not optimized for fast use in continuous integration\n Pattern matches through use of XPath on Python’s AST\n\nEmpirical Study of Chasten\n\n Frequency of false positives or false negatives?\n How do students respond to the tool’s feedback?\n Differences in scores with varied feedback types?"
   },
   {
-    "objectID": "slides/course-websites/index.html#real-world-example",
-    "href": "slides/course-websites/index.html#real-world-example",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Real World Example",
-    "text": "Real World Example\n\n\nAlgorithmology.org\nAlgorithmology GitHub repository"
-  },
-  {
-    "objectID": "slides/course-websites/index.html#educational-benefits",
-    "href": "slides/course-websites/index.html#educational-benefits",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Educational Benefits",
-    "text": "Educational Benefits\n\nLearn by Contributing: Students practice real-world technical documentation\nCode + Context: Code always presented with educational context\nLiterate Programming: Encourages explaining code, not just writing it\nContinuous Improvement: Course materials evolve each semester"
-  },
-  {
-    "objectID": "slides/course-websites/index.html#technical-advantages",
-    "href": "slides/course-websites/index.html#technical-advantages",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Technical Advantages",
-    "text": "Technical Advantages\n\n\nLow Barrier to Entry: Markdown is easier than HTML/CSS/JS\nFocus on Content: Technical details are abstracted away\nInteractive Examples: Code runs in the browser without installation\nFull-Text Search: Find anything across all course materials\nDeveloper Workflow: Students learn how to collaborate using industry-standard tools"
-  },
-  {
-    "objectID": "slides/course-websites/index.html#future-improvements",
-    "href": "slides/course-websites/index.html#future-improvements",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Future Improvements",
-    "text": "Future Improvements\n\n\nFull browser-based IDE experience\nBetter error messages for WebAssembly Python\nImplementation of a note taking tool, allowing students to take notes in the browser by commenting on the slides"
-  },
-  {
-    "objectID": "slides/course-websites/index.html#why-you-should-consider-this-approach",
-    "href": "slides/course-websites/index.html#why-you-should-consider-this-approach",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Why You Should Consider This Approach",
-    "text": "Why You Should Consider This Approach\n\nStudent Ownership: Contributions create investment in the course\nLiving Knowledge Base: Materials improve rather than decay over time\nPractical Skills: Industry tools in an educational context\nTransparency: Public materials encourage higher quality work\nScalability: Works for any course size, from small seminars to large lectures"
-  },
-  {
-    "objectID": "slides/execexam/index.html#what-is-an-executable-examination",
-    "href": "slides/execexam/index.html#what-is-an-executable-examination",
-    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
-    "section": "What is an Executable Examination?",
-    "text": "What is an Executable Examination?\n\n Goal: Assess a student’s ability to program with real tools\n\nA student writes, modifies, and runs code to solve a real problem\nGraded via automated tests that use Pytest tests and assertions\nUnlike static examinations an executable examination assesses:\n\nProgramming logic\nDebugging ability\nTool use (e.g., text editor, terminal, IDE, and Git)\n\n\n\n\n🎯 Like a take-home project — but precise, consistent, and scalable!\nReference: Chris Bourke, Yael Erez, and Orit Hazzan. 2023. “Executable Exams: Taxonomy, Implementation and Prospects”. In Proceedings of 54th SIGCSE."
-  },
-  {
-    "objectID": "slides/execexam/index.html#problems-with-computing-assessments",
-    "href": "slides/execexam/index.html#problems-with-computing-assessments",
-    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
-    "section": "Problems with Computing Assessments",
-    "text": "Problems with Computing Assessments\n\n Why do we need better assessments?\n\nManual grading is slow and inconsistent\nStudents often don’t know why their code fails\nFeedback is shallow or missing altogether\nLimited assessment of effective tool use\nPytest not a good fit for assessment\n\n\n\n🚫 “Test failed” isn’t enough! ExecExam presents a compelling alternative to either manual assessment or running only Pytest."
-  },
-  {
-    "objectID": "slides/execexam/index.html#what-is-execexam",
-    "href": "slides/execexam/index.html#what-is-execexam",
-    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
-    "section": "What is ExecExam?",
-    "text": "What is ExecExam?\n\n Scalable, feedback-rich assessment tool built in Python\n\n\n\nRuns Pytest tests on student code\nReports all test failures and context\nClearly explains why a test failed\nSuggests how to fix tested function\nUses LLMs for enhanced feedback\n\n\n\n\n\n Next Step: Explore ExecExam’s features and how teachers can integrate them into the assessments for their programming courses!"
-  },
-  {
-    "objectID": "slides/execexam/index.html#understanding-execexams-output",
-    "href": "slides/execexam/index.html#understanding-execexams-output",
-    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
-    "section": "Understanding ExecExam’s Output",
-    "text": "Understanding ExecExam’s Output"
-  },
-  {
-    "objectID": "slides/execexam/index.html#key-features-of-execexam",
-    "href": "slides/execexam/index.html#key-features-of-execexam",
-    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
-    "section": "Key Features of ExecExam",
-    "text": "Key Features of ExecExam\n\n Why use ExecExam for your next assessment?\n\n\n🧪 Configured Pytest runs for streamlined assessment\n💻 Runs on student laptop through assessment process\n📜 Provides contextualized, detailed test failure reports\n⚙️ Integrates with GitHub and GitHub Actions for CI/CD\n🧠 Features flexible, democratized LLM-powered debugging\n🔁 Offers actionable insights to instructors and students!\n🛠️ Open-source tool collaboratively developed on GitHub"
-  },
-  {
-    "objectID": "slides/execexam/index.html#getting-started-with-execexam",
-    "href": "slides/execexam/index.html#getting-started-with-execexam",
-    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
-    "section": "Getting Started with ExecExam",
-    "text": "Getting Started with ExecExam\n How instructors can adopt automated assessments\n\n\nCreate a solution repository\n\nDesign scaffolded coding tasks\nWrite test cases using Pytest\nAdd ExecExam as a dependency\nUse GatorGrader to run all checks\n\nUsing solution ablation to create a starter repository\nGitHub Classroom distributes and receives examinations"
-  },
-  {
-    "objectID": "slides/execexam/index.html#conclusions-and-future-work",
-    "href": "slides/execexam/index.html#conclusions-and-future-work",
-    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
-    "section": "Conclusions and Future Work",
-    "text": "Conclusions and Future Work\n\n\n📊 Analytics and Instructor Features\n\nStore test outcomes and feedback over time\nVisualize student debugging and improvement paths\nLog LLM interactions to evaluate effectiveness\nHold out hidden test cases for instructor-only grading\n\n🧠 Adaptive Feedback Loops\n\nTailor feedback complexity to student performance\nAllow students to rate different types of LLM feedback\n\n\n\n\n\n🔗 GitHub Repository: https://github.com/GatorEducator/execexam\n💻 PyPI: https://pypi.org/project/execexam/"
-  },
-  {
-    "objectID": "slides/index.html",
-    "href": "slides/index.html",
-    "title": "Slides",
-    "section": "",
-    "text": "View Presentation\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\n\n\n\n\nView Presentation\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\n\n\n\n\nView Presentation\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\n\n\n\n\nView Presentation\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content\n\n\n\n\n\nUse the navigation menu at the top of the page to move between presentations. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references"
-  },
-  {
-    "objectID": "slides/index.html#available-presentations",
-    "href": "slides/index.html#available-presentations",
-    "title": "Slides",
-    "section": "",
-    "text": "View Presentation\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\n\n\n\n\nView Presentation\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\n\n\n\n\nView Presentation\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\n\n\n\n\nView Presentation\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content"
-  },
-  {
-    "objectID": "slides/index.html#navigation",
-    "href": "slides/index.html#navigation",
-    "title": "Slides",
-    "section": "",
-    "text": "Use the navigation menu at the top of the page to move between presentations. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references"
+    "objectID": "slides/chasten/index.html#key-takeaways",
+    "href": "slides/chasten/index.html#key-takeaways",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\n Write declarative rules for AST-based code checks\n Focus on bespoke code structure patterns in Python\n Automated grading aligned with learning outcomes\n Generate data-rich insights into student code patterns\n\n\n\nTry out Chasten and contribute to its development!\n\n GitHub: https://github.com/AstuteSource/chasten\n PyPI: https://pypi.org/project/chasten/"
   },
   {
     "objectID": "slides/github-workflow/index.html#the-challenge-of-programming-assignments",
@@ -385,129 +259,150 @@
     "text": "Questions?\nThank you for your attention!"
   },
   {
-    "objectID": "slides/chasten/index.html#the-problem-with-traditional-static-analysis",
-    "href": "slides/chasten/index.html#the-problem-with-traditional-static-analysis",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "The Problem with Traditional Static Analysis",
-    "text": "The Problem with Traditional Static Analysis\nRegular expression (regex) ≠ code understanding\n\nFails on structural nuance\nHard to maintain across formatting/styles"
-  },
-  {
-    "objectID": "slides/chasten/index.html#the-problem-with-traditional-static-analysis-1",
-    "href": "slides/chasten/index.html#the-problem-with-traditional-static-analysis-1",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "The Problem with Traditional Static Analysis",
-    "text": "The Problem with Traditional Static Analysis\nAST tools are powerful but complex\n\nRequire managing node types\nDifficult to prototype new rules"
-  },
-  {
-    "objectID": "slides/chasten/index.html#chasten",
-    "href": "slides/chasten/index.html#chasten",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Chasten",
-    "text": "Chasten\nA Python program that uses XPATH expressions to find patterns in the abstract syntax tree (AST) of a Python program"
-  },
-  {
-    "objectID": "slides/chasten/index.html#what-is-an-ast",
-    "href": "slides/chasten/index.html#what-is-an-ast",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "What is an AST?",
-    "text": "What is an AST?\nAbstract Syntax Tree (AST) = structured representation of code\nx = 1 + 2\nAssign\n ├── Name(x)\n └── BinOp(+)\n      ├── Constant(1)\n      └── Constant(2)"
-  },
-  {
-    "objectID": "slides/chasten/index.html#why-xpath",
-    "href": "slides/chasten/index.html#why-xpath",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Why XPATH?",
-    "text": "Why XPATH?\n\n✅ Perfect for navigating ASTs\n✅ Easy to write and understand\n\n/FunctionDef/body//If[ancestor::If and not(parent::orelse)]\n–&gt; Matches function with double nested if"
-  },
-  {
-    "objectID": "slides/chasten/index.html#features",
-    "href": "slides/chasten/index.html#features",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Features",
-    "text": "Features\n\n✨ Easy-to-configure, automated analysis of a Python program’s abstract syntax tree\n📃 Flexible and easy-to-use YAML-based configuration file for describing analyses and checks\n🚀 Configurable saving of analysis results in the JSON, CSV, or SQLite formats\n🌄 Interactive results analysis through the use of a locally running datasette server"
-  },
-  {
-    "objectID": "slides/chasten/index.html#comparison-for-education-research",
-    "href": "slides/chasten/index.html#comparison-for-education-research",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Comparison for Education & Research",
-    "text": "Comparison for Education & Research"
-  },
-  {
-    "objectID": "slides/chasten/index.html#comparison-for-education-research-1",
-    "href": "slides/chasten/index.html#comparison-for-education-research-1",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Comparison for Education & Research",
-    "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nCustom Rule Creation\n✅ Write in YAML with XPath — no coding\n❌ Hard-coded; not extensible\n⚠️ Requires Python plugin"
-  },
-  {
-    "objectID": "slides/chasten/index.html#comparison-for-education-research-2",
-    "href": "slides/chasten/index.html#comparison-for-education-research-2",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Comparison for Education & Research",
-    "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nLearning AST Concepts\n✅ Transparent — great for teaching ASTs\n❌ Abstracted away\n⚠️ Indirect via rule behavior"
-  },
-  {
-    "objectID": "slides/chasten/index.html#comparison-for-education-research-3",
-    "href": "slides/chasten/index.html#comparison-for-education-research-3",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Comparison for Education & Research",
-    "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nResearch Use\n✅ Structured output + pattern mining\n❌ Not suited for deep analysis\n⚠️ Output not researcher-friendly"
-  },
-  {
-    "objectID": "slides/chasten/index.html#comparison-for-education-research-4",
-    "href": "slides/chasten/index.html#comparison-for-education-research-4",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Comparison for Education & Research",
-    "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nOutput Formats\n✅ JSON, CSV, SQLite (queryable)\nText, JSON\nText, JSON"
-  },
-  {
-    "objectID": "slides/chasten/index.html#comparison-for-education-research-5",
-    "href": "slides/chasten/index.html#comparison-for-education-research-5",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Comparison for Education & Research",
-    "text": "Comparison for Education & Research\n\n\n\n\n\n\n\n\n\nFeature\nChasten\nRuff\nPylint\n\n\n\n\nInteractive Exploration\n✅ Datasette dashboards (SQLite-ready)\n❌ None\n❌ None"
-  },
-  {
-    "objectID": "slides/chasten/index.html#chasten-workflow",
-    "href": "slides/chasten/index.html#chasten-workflow",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Chasten Workflow",
-    "text": "Chasten Workflow"
-  },
-  {
-    "objectID": "slides/chasten/index.html#key-takeaways",
-    "href": "slides/chasten/index.html#key-takeaways",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Key Takeaways",
-    "text": "Key Takeaways\n\n✅ Declarative rule-writing with XPath\nEasily define grading criteria and static analysis checks — no need to write Python plugins.\n🧠 Teachable insights into code structure\nHelps students understand Abstract Syntax Trees (ASTs) and how code is interpreted structurally.\n📊 Structured, explorable outputs\nExport results to SQLite and use Datasette to visualize errors, coverage, and student patterns.\n🧪 Supports research and pedagogy\nUseful for analyzing coding behavior at scale, detecting common anti-patterns in student code.\n📚 Integrates into grading pipelines\nRun Chasten on student submissions to check for required docstrings, type hints, nested logic, etc."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Conference Presentations",
+    "objectID": "slides/index.html",
+    "href": "slides/index.html",
+    "title": "Slides",
     "section": "",
-    "text": "Welcome to our collection of conference presentations focusing on educational technology and development tools. These presentations cover various aspects of modern software development, automated testing, and educational technology implementation."
+    "text": "View Presentation\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\n\n\n\n\nView Presentation\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\n\n\n\n\nView Presentation\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\n\n\n\n\nView Presentation\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content\n\n\n\n\n\nUse the navigation menu at the top of the page to move between presentations. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references"
   },
   {
-    "objectID": "index.html#available-presentations",
-    "href": "index.html#available-presentations",
-    "title": "Conference Presentations",
-    "section": "Available Presentations",
-    "text": "Available Presentations\n\nAutomated and Configurable Programming Project Checking with Chasten\n\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\nUp and Running with GitHub, GitHub Classroom, and GitHub Actions\n\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\nExecExam: A Tool to Facilitate Effective Executable Examinations in Python\n\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\nBuilding and Deploying Course Websites with Python, Quarto, and Mkdocs\n\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content"
+    "objectID": "slides/index.html#available-presentations",
+    "href": "slides/index.html#available-presentations",
+    "title": "Slides",
+    "section": "",
+    "text": "View Presentation\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\n\n\n\n\nView Presentation\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\n\n\n\n\nView Presentation\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\n\n\n\n\nView Presentation\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content"
   },
   {
-    "objectID": "index.html#getting-started",
-    "href": "index.html#getting-started",
-    "title": "Conference Presentations",
-    "section": "Getting Started",
-    "text": "Getting Started\nEach presentation is available in the slides section. You can navigate through the presentations using the navigation menu above. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references"
+    "objectID": "slides/index.html#navigation",
+    "href": "slides/index.html#navigation",
+    "title": "Slides",
+    "section": "",
+    "text": "Use the navigation menu at the top of the page to move between presentations. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references"
   },
   {
-    "objectID": "index.html#contributing",
-    "href": "index.html#contributing",
-    "title": "Conference Presentations",
-    "section": "Contributing",
-    "text": "Contributing\nThese presentations are open source and available for educational purposes. Feel free to use and modify them according to your needs. If you find any issues or have suggestions for improvements, please contribute through our GitHub repository."
+    "objectID": "slides/execexam/index.html#what-is-an-executable-examination",
+    "href": "slides/execexam/index.html#what-is-an-executable-examination",
+    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
+    "section": "What is an Executable Examination?",
+    "text": "What is an Executable Examination?\n\n Goal: Assess a student’s ability to program with real tools\n\nA student writes, modifies, and runs code to solve a real problem\nGraded via automated tests that use Pytest tests and assertions\nUnlike static examinations an executable examination assesses:\n\nProgramming logic\nDebugging ability\nTool use (e.g., text editor, terminal, IDE, and Git)\n\n\n\n\n🎯 Like a take-home project — but precise, consistent, and scalable!\nReference: Chris Bourke, Yael Erez, and Orit Hazzan. 2023. “Executable Exams: Taxonomy, Implementation and Prospects”. In Proceedings of 54th SIGCSE."
+  },
+  {
+    "objectID": "slides/execexam/index.html#problems-with-computing-assessments",
+    "href": "slides/execexam/index.html#problems-with-computing-assessments",
+    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
+    "section": "Problems with Computing Assessments",
+    "text": "Problems with Computing Assessments\n\n Why do we need better assessments?\n\nManual grading is slow and inconsistent\nStudents often don’t know why their code fails\nFeedback is shallow or missing altogether\nLimited assessment of effective tool use\nPytest not a good fit for assessment\n\n\n\n🚫 Test assertion failure is not enough! ExecExam is a compelling alternative to either manual assessment or running only Pytest."
+  },
+  {
+    "objectID": "slides/execexam/index.html#what-is-execexam",
+    "href": "slides/execexam/index.html#what-is-execexam",
+    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
+    "section": "What is ExecExam?",
+    "text": "What is ExecExam?\n\n Scalable, feedback-rich assessment tool built in Python\n\n\n\nRuns Pytest tests on student code\nReports all test failures and context\nClearly explains why a test failed\nSuggests how to fix tested function\nUses LLMs for enhanced feedback\n\n\n\n\n\n Next Step: Explore ExecExam’s features and how teachers can integrate them into the assessments for their programming courses!"
+  },
+  {
+    "objectID": "slides/execexam/index.html#understanding-execexams-output",
+    "href": "slides/execexam/index.html#understanding-execexams-output",
+    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
+    "section": "Understanding ExecExam’s Output",
+    "text": "Understanding ExecExam’s Output"
+  },
+  {
+    "objectID": "slides/execexam/index.html#key-features-of-execexam",
+    "href": "slides/execexam/index.html#key-features-of-execexam",
+    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
+    "section": "Key Features of ExecExam",
+    "text": "Key Features of ExecExam\n\n Why use ExecExam for your next assessment?\n\n\n🧪 Configured Pytest runs for streamlined assessment\n💻 Runs on student laptop through assessment process\n📜 Provides contextualized, detailed test failure reports\n⚙️ Integrates with GitHub and GitHub Actions for CI/CD\n🧠 Features flexible, democratized LLM-powered debugging\n🔁 Offers actionable insights to instructors and students!\n🛠️ Open-source tool collaboratively developed on GitHub"
+  },
+  {
+    "objectID": "slides/execexam/index.html#getting-started-with-execexam",
+    "href": "slides/execexam/index.html#getting-started-with-execexam",
+    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
+    "section": "Getting Started with ExecExam",
+    "text": "Getting Started with ExecExam\n How instructors can adopt automated assessments\n\n\nCreate a solution repository\n\nDesign scaffolded coding tasks\nWrite test cases using Pytest\nAdd ExecExam as a dependency\nUse GatorGrader to run all checks\n\nUsing solution ablation to create a starter repository\nGitHub Classroom distributes and receives examinations"
+  },
+  {
+    "objectID": "slides/execexam/index.html#conclusions-and-future-work",
+    "href": "slides/execexam/index.html#conclusions-and-future-work",
+    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
+    "section": "Conclusions and Future Work",
+    "text": "Conclusions and Future Work\n\n\n📊 Analytics and Instructor Features\n\nStore test outcomes and feedback over time\nVisualize student debugging and improvement paths\nLog LLM interactions to evaluate effectiveness\nHold out hidden test cases for instructor-only grading\n\n🧠 Adaptive Feedback Loops\n\nTailor feedback complexity to student performance\nAllow students to rate different types of LLM feedback\n\n\n\n\n\n🔗 GitHub Repository: https://github.com/GatorEducator/execexam\n💻 PyPI: https://pypi.org/project/execexam/"
+  },
+  {
+    "objectID": "slides/course-websites/index.html#what-problem-are-we-solving",
+    "href": "slides/course-websites/index.html#what-problem-are-we-solving",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "section": "What Problem Are We Solving?",
+    "text": "What Problem Are We Solving?\n\n\nCourse sites as static archives rather than living resources\nStudents view materials as products to consume not projects to contribute to, limiting learning and engagement\nInteractive examples require separate tools or platforms\nContent becomes quickly outdated without a sustainable update process that leverages industry-standard tools\n\n\n\n Ultimate Goal: Introduce how using packages like Quarto make it possible to create interactive and maintainable course websites"
+  },
+  {
+    "objectID": "slides/course-websites/index.html#building-and-deploying-with-quarto",
+    "href": "slides/course-websites/index.html#building-and-deploying-with-quarto",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "section": "Building and Deploying with Quarto",
+    "text": "Building and Deploying with Quarto\n\n\nQuarto: Accessible markdown-based framework\nPython + WebAssembly: Easily run Python in the browser\nGitHub: Version control and collaborative workflows\nGitHub Actions: Automated testing and deployment\n\n\n\n\n Ultimate Goal: Build content-focused, interactive, collaborative course sites that instructors can maintain with minimal effort\n Next Steps: Give examples of content you can immediately use! See https://github.com/GatorEducator/PyCon2025-EducationAndTypingSummit-Presentations for more details!"
+  },
+  {
+    "objectID": "slides/course-websites/index.html#explore-use-of-the-linkedlist",
+    "href": "slides/course-websites/index.html#explore-use-of-the-linkedlist",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "section": "Explore Use of the LinkedList",
+    "text": "Explore Use of the LinkedList\n\n\n\n\n\n\n\n\n Task: Visualize ListNode and LinkedList and explain the True outputs!"
+  },
+  {
+    "objectID": "slides/course-websites/index.html#setting-up-the-course-infrastructure",
+    "href": "slides/course-websites/index.html#setting-up-the-course-infrastructure",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "section": "Setting Up the Course Infrastructure",
+    "text": "Setting Up the Course Infrastructure\n\nCreate a GitHub repository with Quarto structure\nConfigure navigation, styling, and organization in _quarto.yml\nSet up GitHub Actions for automated deployment\nCreate templates for student contributions\nPublish to GitHub Pages or Netlify"
+  },
+  {
+    "objectID": "slides/course-websites/index.html#the-instructors-role",
+    "href": "slides/course-websites/index.html#the-instructors-role",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "section": "The Instructor’s Role",
+    "text": "The Instructor’s Role\n\n\nCreate core course content and structure\nEstablish contribution guidelines\nReview and provide feedback on student submissions\nGuide collaborative knowledge building"
+  },
+  {
+    "objectID": "slides/course-websites/index.html#how-students-contribute",
+    "href": "slides/course-websites/index.html#how-students-contribute",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "section": "How Students Contribute",
+    "text": "How Students Contribute\n\nFork the repository and create content in their assigned folder\nWrite reflections and examples in simple Markdown with code\nSubmit a Pull Request for review and feedback\nContent is automatically published when approved"
+  },
+  {
+    "objectID": "slides/course-websites/index.html#real-world-example",
+    "href": "slides/course-websites/index.html#real-world-example",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "section": "Real World Example",
+    "text": "Real World Example\n\n\nAlgorithmology.org\nAlgorithmology GitHub repository"
+  },
+  {
+    "objectID": "slides/course-websites/index.html#educational-benefits",
+    "href": "slides/course-websites/index.html#educational-benefits",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "section": "Educational Benefits",
+    "text": "Educational Benefits\n\nLearn by Contributing: Students practice real-world technical documentation\nCode + Context: Code always presented with educational context\nLiterate Programming: Encourages explaining code, not just writing it\nContinuous Improvement: Course materials evolve each semester"
+  },
+  {
+    "objectID": "slides/course-websites/index.html#technical-advantages",
+    "href": "slides/course-websites/index.html#technical-advantages",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "section": "Technical Advantages",
+    "text": "Technical Advantages\n\n\nLow Barrier to Entry: Markdown is easier than HTML/CSS/JS\nFocus on Content: Technical details are abstracted away\nInteractive Examples: Code runs in the browser without installation\nFull-Text Search: Find anything across all course materials\nDeveloper Workflow: Students learn how to collaborate using industry-standard tools"
+  },
+  {
+    "objectID": "slides/course-websites/index.html#future-improvements",
+    "href": "slides/course-websites/index.html#future-improvements",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "section": "Future Improvements",
+    "text": "Future Improvements\n\n\nFull browser-based IDE experience\nBetter error messages for WebAssembly Python\nImplementation of a note taking tool, allowing students to take notes in the browser by commenting on the slides"
+  },
+  {
+    "objectID": "slides/course-websites/index.html#why-you-should-consider-this-approach",
+    "href": "slides/course-websites/index.html#why-you-should-consider-this-approach",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "section": "Why You Should Consider This Approach",
+    "text": "Why You Should Consider This Approach\n\nStudent Ownership: Contributions create investment in the course\nLiving Knowledge Base: Materials improve rather than decay over time\nPractical Skills: Industry tools in an educational context\nTransparency: Public materials encourage higher quality work\nScalability: Works for any course size, from small seminars to large lectures"
   }
 ]
