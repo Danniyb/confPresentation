@@ -6,9 +6,12 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4a990d8dcb58f517c7c86712b8f2ac7c.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4a990d8dcb58f517c7c86712b8f2ac7c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.31">
 
+  <meta name="author" content="Pallas-Athena Cain, Hemani Alaparthi, and Gregory Kapfhammer">
+  <meta name="dcterms.date" content="2025-05-15">
   <title>ExecExam: A Tool to Facilitate Effective Executable Examinations in Python</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -29,7 +32,7 @@
     }
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
-  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="./styles.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -129,19 +132,134 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">ExecExam: A Tool to Facilitate Effective Executable Examinations in Python</h1>
-  <p class="subtitle">Pallas-Athen Cain, Hemani Alaparthi, and Gregory M. Kapfhammer</p>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Pallas-Athena Cain, Hemani Alaparthi, and Gregory Kapfhammer 
+</div>
+</div>
 </div>
 
+  <p class="date">May 15, 2025</p>
 </section>
-<section id="wonderful-content-about-execexam" class="slide level2">
-<h2>Wonderful Content about ExecExam</h2>
+<section id="what-is-an-executable-examination" class="slide level2">
+<h2>What is an Executable Examination?</h2>
+<div class="fragment" style="margin-top: -0.15em; font-size: 0.8em;">
+<p><iconify-icon role="img" inline="" icon="fa6-solid:gears" aria-label="Icon gears from fa6-solid Iconify.design set." title="Icon gears from fa6-solid Iconify.design set."></iconify-icon> <strong>Goal: Assess a student’s ability to program with real tools</strong></p>
 <ul>
-<li>Executable examinations</li>
-<li>Python program</li>
-<li>Uses Pytest</li>
+<li>A student writes, modifies, and runs code to solve a real problem</li>
+<li>Graded via automated tests that use Pytest tests and assertions</li>
+<li>Unlike static examinations an executable examination assesses:
+<ul>
+<li>Programming logic</li>
+<li>Debugging ability</li>
+<li>Tool use (e.g., text editor, terminal, IDE, and Git)</li>
+</ul></li>
 </ul>
+</div>
+<div class="fragment fade" style="margin-top: -0.15em; font-size: 0.8em;">
+<p>🎯 <strong>Like a take-home project — but precise, consistent, and scalable!</strong></p>
+<p><strong>Reference</strong>: Chris Bourke, Yael Erez, and Orit Hazzan. 2023. “Executable Exams: Taxonomy, Implementation and Prospects”. In Proceedings of 54th SIGCSE.</p>
+</div>
+</section>
+<section id="problems-with-computing-assessments" class="slide level2">
+<h2>Problems with Computing Assessments</h2>
+<div class="fragment">
+<p><iconify-icon role="img" inline="" icon="game-icons:team-idea" aria-label="Icon team-idea from game-icons Iconify.design set." title="Icon team-idea from game-icons Iconify.design set."></iconify-icon> <strong>Why do we need better assessments?</strong></p>
+<ul>
+<li>Manual grading is slow and inconsistent</li>
+<li>Students often don’t know why their code fails</li>
+<li>Feedback is shallow or missing altogether</li>
+<li>Limited assessment of effective tool use</li>
+<li>Pytest not a good fit for assessment</li>
+</ul>
+</div>
+<div class="fragment fade" style="margin-top: -0.15em; font-size: 0.9em;">
+<p>🚫 “Test failed” isn’t enough! ExecExam presents a compelling alternative to either manual assessment or running only Pytest.</p>
+</div>
+</section>
+<section id="what-is-execexam" class="slide level2">
+<h2>What is ExecExam?</h2>
+<div class="fragment">
+<p><iconify-icon role="img" inline="" icon="fa6-solid:gears" aria-label="Icon gears from fa6-solid Iconify.design set." title="Icon gears from fa6-solid Iconify.design set."></iconify-icon> <strong>Scalable, feedback-rich assessment tool built in Python</strong></p>
+<div class="columns">
+<div class="column" style="width:65%;">
+<ul>
+<li>Runs Pytest tests on student code</li>
+<li>Reports all test failures and context</li>
+<li>Clearly explains why a test failed</li>
+<li>Suggests how to fix tested function</li>
+<li>Uses LLMs for enhanced feedback</li>
+</ul>
+</div><div class="column middle" style="width:35%;">
+<p><img data-src="ExecExam_-_Logo_-_300.png" style="width:100.0%"></p>
+</div></div>
+<div class="fragment fade" style="margin-top: -0.75em; font-size: 0.9em;">
+<p><iconify-icon role="img" inline="" icon="fa6-solid:lightbulb" aria-label="Icon lightbulb from fa6-solid Iconify.design set." title="Icon lightbulb from fa6-solid Iconify.design set."></iconify-icon> <strong>Next Step</strong>: Explore ExecExam’s features and how teachers can integrate them into the assessments for their programming courses!</p>
+</div>
+</div>
+</section>
+<section id="understanding-execexams-output" class="slide level2">
+<h2>Understanding ExecExam’s Output</h2>
+
+<img data-src="terminal.png" class="r-stretch"></section>
+<section id="key-features-of-execexam" class="slide level2">
+<h2>Key Features of ExecExam</h2>
+<div class="fragment">
+<p><iconify-icon role="img" inline="" icon="fa6-solid:lightbulb" aria-label="Icon lightbulb from fa6-solid Iconify.design set." title="Icon lightbulb from fa6-solid Iconify.design set."></iconify-icon> <strong>Why use ExecExam for your next assessment?</strong></p>
+</div>
+<ul>
+<li class="fragment">🧪 Configured Pytest runs for streamlined assessment</li>
+<li class="fragment">💻 Runs on student laptop through assessment process</li>
+<li class="fragment">📜 Provides contextualized, detailed test failure reports</li>
+<li class="fragment">⚙️ Integrates with GitHub and GitHub Actions for CI/CD</li>
+<li class="fragment">🧠 Features flexible, democratized LLM-powered debugging</li>
+<li class="fragment">🔁 Offers actionable insights to instructors and students!</li>
+<li class="fragment">🛠️ Open-source tool collaboratively developed on GitHub</li>
+</ul>
+</section>
+<section id="getting-started-with-execexam" class="slide level2">
+<h2>Getting Started with ExecExam</h2>
+<p><iconify-icon role="img" inline="" icon="fa6-solid:gears" aria-label="Icon gears from fa6-solid Iconify.design set." title="Icon gears from fa6-solid Iconify.design set."></iconify-icon> <strong>How instructors can adopt automated assessments</strong></p>
+<div class="fragment">
+<ul>
+<li>Create a <strong>solution repository</strong>
+<ul>
+<li>Design scaffolded coding tasks</li>
+<li>Write test cases using Pytest</li>
+<li>Add ExecExam as a dependency</li>
+<li>Use GatorGrader to run all checks</li>
+</ul></li>
+<li>Using <strong>solution ablation</strong> to create a <strong>starter repository</strong></li>
+<li>GitHub Classroom <strong>distributes</strong> and <strong>receives</strong> examinations</li>
+</ul>
+</div>
+</section>
+<section id="conclusions-and-future-work" class="slide level2">
+<h2>Conclusions and Future Work</h2>
+<div class="fragment" style="margin-top: -0.15em; font-size: 0.8em;">
+<ul>
+<li>📊 <strong>Analytics and Instructor Features</strong>
+<ul>
+<li>Store test outcomes and feedback over time</li>
+<li>Visualize student debugging and improvement paths</li>
+<li>Log LLM interactions to evaluate effectiveness</li>
+<li>Hold out hidden test cases for instructor-only grading</li>
+</ul></li>
+<li>🧠 <strong>Adaptive Feedback Loops</strong>
+<ul>
+<li>Tailor feedback complexity to student performance</li>
+<li>Allow students to rate different types of LLM feedback</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment" style="margin-top: -0.25em; font-size: 0.8em;">
+<ul>
+<li>🔗 GitHub Repository: <a href="https://github.com/GatorEducator/execexam">https://github.com/GatorEducator/execexam</a></li>
+<li>💻 PyPI: <a href="https://pypi.org/project/execexam/">https://pypi.org/project/execexam/</a></li>
+</ul>
+</div>
 
 
 </section>

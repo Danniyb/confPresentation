@@ -1,12 +1,12 @@
-/* Custom styles for the conference presentations website on execexam */
+/* Custom styles for the conference presentations website */
 
 /* General styles */
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     line-height: 1.6;
     background-color: #fff8f0;
-    color: #333; 
+    color: #333;
 }
 
 /* Code blocks */
@@ -14,13 +14,13 @@ body {
 pre {
     border-radius: 8px;
     padding: 1em;
-    background-color: #ffe6cc; 
+    background-color: #ffe6cc;
     color: #333;
-    border: 1px solid #ff9f5c; 
+    border: 1px solid #ff9f5c;
 }
 
 code {
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: "Ubuntu Mono", monospace;
     color: #d35400;
 }
 
@@ -67,11 +67,14 @@ a:hover {
     text-align: left;
 }
 
-.reveal h1, .reveal h2, .reveal h3 {
+.reveal h1,
+.reveal h2,
+.reveal h3 {
     color: #ff6f3c;
 }
 
 /* Presentation specific styles */
+
 .reveal h1 {
     font-size: 2em;
     color: #ff6f3c;
@@ -96,6 +99,23 @@ a:hover {
     font-size: 0.8em;
     color: #333;
 }
+
+.boxed-content {
+    border: 3px solid #1c1c1c;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tight-boxed-content {
+    border: 3px solid #1c1c1c;
+    padding: -2px;
+    border-radius: 5px;
+}
+
+.boxed-content p {
+    color: #333;
+}
+
 
 /* Custom callout boxes */
 

@@ -133,11 +133,53 @@
     "text": "Why You Should Consider This Approach\n\nStudent Ownership: Contributions create investment in the course\nLiving Knowledge Base: Materials improve rather than decay over time\nPractical Skills: Industry tools in an educational context\nTransparency: Public materials encourage higher quality work\nScalability: Works for any course size, from small seminars to large lectures"
   },
   {
-    "objectID": "slides/execexam/index.html#wonderful-content-about-execexam",
-    "href": "slides/execexam/index.html#wonderful-content-about-execexam",
+    "objectID": "slides/execexam/index.html#what-is-an-executable-examination",
+    "href": "slides/execexam/index.html#what-is-an-executable-examination",
     "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
-    "section": "Wonderful Content about ExecExam",
-    "text": "Wonderful Content about ExecExam\n\nExecutable examinations\nPython program\nUses Pytest"
+    "section": "What is an Executable Examination?",
+    "text": "What is an Executable Examination?\n\n Goal: Assess a student’s ability to program with real tools\n\nA student writes, modifies, and runs code to solve a real problem\nGraded via automated tests that use Pytest tests and assertions\nUnlike static examinations an executable examination assesses:\n\nProgramming logic\nDebugging ability\nTool use (e.g., text editor, terminal, IDE, and Git)\n\n\n\n\n🎯 Like a take-home project — but precise, consistent, and scalable!\nReference: Chris Bourke, Yael Erez, and Orit Hazzan. 2023. “Executable Exams: Taxonomy, Implementation and Prospects”. In Proceedings of 54th SIGCSE."
+  },
+  {
+    "objectID": "slides/execexam/index.html#problems-with-computing-assessments",
+    "href": "slides/execexam/index.html#problems-with-computing-assessments",
+    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
+    "section": "Problems with Computing Assessments",
+    "text": "Problems with Computing Assessments\n\n Why do we need better assessments?\n\nManual grading is slow and inconsistent\nStudents often don’t know why their code fails\nFeedback is shallow or missing altogether\nLimited assessment of effective tool use\nPytest not a good fit for assessment\n\n\n\n🚫 “Test failed” isn’t enough! ExecExam presents a compelling alternative to either manual assessment or running only Pytest."
+  },
+  {
+    "objectID": "slides/execexam/index.html#what-is-execexam",
+    "href": "slides/execexam/index.html#what-is-execexam",
+    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
+    "section": "What is ExecExam?",
+    "text": "What is ExecExam?\n\n Scalable, feedback-rich assessment tool built in Python\n\n\n\nRuns Pytest tests on student code\nReports all test failures and context\nClearly explains why a test failed\nSuggests how to fix tested function\nUses LLMs for enhanced feedback\n\n\n\n\n\n Next Step: Explore ExecExam’s features and how teachers can integrate them into the assessments for their programming courses!"
+  },
+  {
+    "objectID": "slides/execexam/index.html#understanding-execexams-output",
+    "href": "slides/execexam/index.html#understanding-execexams-output",
+    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
+    "section": "Understanding ExecExam’s Output",
+    "text": "Understanding ExecExam’s Output"
+  },
+  {
+    "objectID": "slides/execexam/index.html#key-features-of-execexam",
+    "href": "slides/execexam/index.html#key-features-of-execexam",
+    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
+    "section": "Key Features of ExecExam",
+    "text": "Key Features of ExecExam\n\n Why use ExecExam for your next assessment?\n\n\n🧪 Configured Pytest runs for streamlined assessment\n💻 Runs on student laptop through assessment process\n📜 Provides contextualized, detailed test failure reports\n⚙️ Integrates with GitHub and GitHub Actions for CI/CD\n🧠 Features flexible, democratized LLM-powered debugging\n🔁 Offers actionable insights to instructors and students!\n🛠️ Open-source tool collaboratively developed on GitHub"
+  },
+  {
+    "objectID": "slides/execexam/index.html#getting-started-with-execexam",
+    "href": "slides/execexam/index.html#getting-started-with-execexam",
+    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
+    "section": "Getting Started with ExecExam",
+    "text": "Getting Started with ExecExam\n How instructors can adopt automated assessments\n\n\nCreate a solution repository\n\nDesign scaffolded coding tasks\nWrite test cases using Pytest\nAdd ExecExam as a dependency\nUse GatorGrader to run all checks\n\nUsing solution ablation to create a starter repository\nGitHub Classroom distributes and receives examinations"
+  },
+  {
+    "objectID": "slides/execexam/index.html#conclusions-and-future-work",
+    "href": "slides/execexam/index.html#conclusions-and-future-work",
+    "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
+    "section": "Conclusions and Future Work",
+    "text": "Conclusions and Future Work\n\n\n📊 Analytics and Instructor Features\n\nStore test outcomes and feedback over time\nVisualize student debugging and improvement paths\nLog LLM interactions to evaluate effectiveness\nHold out hidden test cases for instructor-only grading\n\n🧠 Adaptive Feedback Loops\n\nTailor feedback complexity to student performance\nAllow students to rate different types of LLM feedback\n\n\n\n\n\n🔗 GitHub Repository: https://github.com/GatorEducator/execexam\n💻 PyPI: https://pypi.org/project/execexam/"
   },
   {
     "objectID": "slides/index.html",
