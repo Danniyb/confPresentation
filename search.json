@@ -340,14 +340,14 @@
     "href": "slides/course-websites/index.html#building-and-deploying-with-quarto",
     "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
     "section": "Building and Deploying with Quarto",
-    "text": "Building and Deploying with Quarto\n\n\nQuarto: Accessible markdown-based framework\nPython + WebAssembly: Easily run Python in the browser\nGitHub: Version control and collaborative workflows\nGitHub Actions: Automated testing and deployment\n\n\n\n\n Ultimate Goal: Build content-focused, interactive, collaborative course sites that instructors can maintain with minimal effort\n Next Steps: Give examples of content you can immediately use! See https://github.com/GatorEducator/PyCon2025-EducationAndTypingSummit-Presentations for more details!"
+    "text": "Building and Deploying with Quarto\n\n\nQuarto: Accessible markdown-based framework\nPython + WebAssembly: Easily run Python in the browser\nGitHub: Version control and collaborative workflows\nGitHub Actions: Automated testing and deployment\n\n\n\n\n Ultimate Goal: Build content-focused, interactive, collaborative course sites that instructors can maintain with minimal effort\n Next Steps: Give examples of content you can immediately use! See Algorithmology.org for more details!"
   },
   {
-    "objectID": "slides/course-websites/index.html#explore-use-of-the-linkedlist",
-    "href": "slides/course-websites/index.html#explore-use-of-the-linkedlist",
+    "objectID": "slides/course-websites/index.html#interactive-fibonacci-sequence",
+    "href": "slides/course-websites/index.html#interactive-fibonacci-sequence",
     "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Explore Use of the LinkedList",
-    "text": "Explore Use of the LinkedList\n\n\n\n\n\n\n\n\n Task: Visualize ListNode and LinkedList and explain the True outputs!"
+    "section": "Interactive Fibonacci Sequence",
+    "text": "Interactive Fibonacci Sequence\n\n\n\n\n\n\n\n\n Task: Try modifying the code to calculate more terms or implement a different algorithm!"
   },
   {
     "objectID": "slides/course-websites/index.html#setting-up-the-course-infrastructure",
@@ -357,52 +357,31 @@
     "text": "Setting Up the Course Infrastructure\n\nCreate a GitHub repository with Quarto structure\nConfigure navigation, styling, and organization in _quarto.yml\nSet up GitHub Actions for automated deployment\nCreate templates for student contributions\nPublish to GitHub Pages or Netlify"
   },
   {
-    "objectID": "slides/course-websites/index.html#the-instructors-role",
-    "href": "slides/course-websites/index.html#the-instructors-role",
+    "objectID": "slides/course-websites/index.html#course-roles-contributions",
+    "href": "slides/course-websites/index.html#course-roles-contributions",
     "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "The Instructor’s Role",
-    "text": "The Instructor’s Role\n\n\nCreate core course content and structure\nEstablish contribution guidelines\nReview and provide feedback on student submissions\nGuide collaborative knowledge building"
+    "section": "Course Roles & Contributions",
+    "text": "Course Roles & Contributions\n\n\nInstructor’s Role\n\n\nCreate course content and structure\nEstablish contribution guidelines\nReview and provide feedback\nGuide collaborative learning\n\n\n\n\n\nStudent’s Role\n\n\nFork repository, create content\nWrite reflections with code examples\nSubmit PRs for review\nLearn from publication process"
   },
   {
-    "objectID": "slides/course-websites/index.html#how-students-contribute",
-    "href": "slides/course-websites/index.html#how-students-contribute",
+    "objectID": "slides/course-websites/index.html#real-world-examples",
+    "href": "slides/course-websites/index.html#real-world-examples",
     "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "How Students Contribute",
-    "text": "How Students Contribute\n\nFork the repository and create content in their assigned folder\nWrite reflections and examples in simple Markdown with code\nSubmit a Pull Request for review and feedback\nContent is automatically published when approved"
+    "section": "Real World Examples",
+    "text": "Real World Examples\n\n\nCourse Website\n\n\n\n\n\n\n\n\n\n\nGitHub Repository"
   },
   {
-    "objectID": "slides/course-websites/index.html#real-world-example",
-    "href": "slides/course-websites/index.html#real-world-example",
+    "objectID": "slides/course-websites/index.html#technical-advantages-future-improvements",
+    "href": "slides/course-websites/index.html#technical-advantages-future-improvements",
     "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Real World Example",
-    "text": "Real World Example\n\n\nAlgorithmology.org\nAlgorithmology GitHub repository"
-  },
-  {
-    "objectID": "slides/course-websites/index.html#educational-benefits",
-    "href": "slides/course-websites/index.html#educational-benefits",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Educational Benefits",
-    "text": "Educational Benefits\n\nLearn by Contributing: Students practice real-world technical documentation\nCode + Context: Code always presented with educational context\nLiterate Programming: Encourages explaining code, not just writing it\nContinuous Improvement: Course materials evolve each semester"
-  },
-  {
-    "objectID": "slides/course-websites/index.html#technical-advantages",
-    "href": "slides/course-websites/index.html#technical-advantages",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Technical Advantages",
-    "text": "Technical Advantages\n\n\nLow Barrier to Entry: Markdown is easier than HTML/CSS/JS\nFocus on Content: Technical details are abstracted away\nInteractive Examples: Code runs in the browser without installation\nFull-Text Search: Find anything across all course materials\nDeveloper Workflow: Students learn how to collaborate using industry-standard tools"
-  },
-  {
-    "objectID": "slides/course-websites/index.html#future-improvements",
-    "href": "slides/course-websites/index.html#future-improvements",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Future Improvements",
-    "text": "Future Improvements\n\n\nFull browser-based IDE experience\nBetter error messages for WebAssembly Python\nImplementation of a note taking tool, allowing students to take notes in the browser by commenting on the slides"
+    "section": "Technical Advantages & Future Improvements",
+    "text": "Technical Advantages & Future Improvements\n\n\nCurrent Advantages\n\n\nLow Barrier to Entry: Markdown is easier than HTML/CSS/JS\nFocus on Content: Technical details are abstracted away\nInteractive Examples: Code runs in the browser without installation\nFull-Text Search: Find anything across all course materials\nDeveloper Workflow: Students learn how to collaborate using industry-standard tools\n\n\n\nFuture Improvements\n\n\nFull browser-based IDE experience\nBetter error messages for WebAssembly Python\nIn-browser note taking and collaborative whiteboarding tools"
   },
   {
     "objectID": "slides/course-websites/index.html#why-you-should-consider-this-approach",
     "href": "slides/course-websites/index.html#why-you-should-consider-this-approach",
     "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
     "section": "Why You Should Consider This Approach",
-    "text": "Why You Should Consider This Approach\n\nStudent Ownership: Contributions create investment in the course\nLiving Knowledge Base: Materials improve rather than decay over time\nPractical Skills: Industry tools in an educational context\nTransparency: Public materials encourage higher quality work\nScalability: Works for any course size, from small seminars to large lectures"
+    "text": "Why You Should Consider This Approach\n\nStudent Ownership: Contributions create investment in the course\nTransparency: Public materials encourage higher quality work\nLiving Knowledge Base: Materials improve rather than decay over time\nPractical Skills: Industry tools in an educational context\nScalability: Works for any course size, from small seminars to large lectures\n\n\nContact Us & Resources:\nSite: https://algorithmology.org/\nRepo: https://github.com/Algorithmology/www.algorithmology.org\nAlish Chhetri: chhetri01@allegheny.edu\nGregory M. Kapfhammer: gkapfhammer@allegheny.edu"
   }
 ]
