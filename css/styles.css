@@ -167,3 +167,16 @@ a:hover {
     background: #f6f8fa;
     border-radius: 4px;
 }
+
+/* Custom classes for boxed content */
+.boxed-content {
+  border: 3px solid #1c1c1c;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.tight-boxed-content {
+  border: 3px solid #1c1c1c;
+  padding: -2px;
+  border-radius: 5px;
+}

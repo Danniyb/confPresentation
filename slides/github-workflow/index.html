@@ -6,7 +6,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4a990d8dcb58f517c7c86712b8f2ac7c.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4a990d8dcb58f517c7c86712b8f2ac7c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.31">
 
   <title>Up and Running with GitHub, GitHub Classroom, and GitHub Actions</title>
@@ -27,72 +28,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #24292e;  }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #24292e; } /* Normal */
-    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
-    code span.an { color: #6a737d; } /* Annotation */
-    code span.at { color: #d73a49; } /* Attribute */
-    code span.bn { color: #005cc5; } /* BaseN */
-    code span.bu { color: #d73a49; } /* BuiltIn */
-    code span.cf { color: #d73a49; } /* ControlFlow */
-    code span.ch { color: #032f62; } /* Char */
-    code span.cn { color: #005cc5; } /* Constant */
-    code span.co { color: #6a737d; } /* Comment */
-    code span.cv { color: #6a737d; } /* CommentVar */
-    code span.do { color: #6a737d; } /* Documentation */
-    code span.dt { color: #d73a49; } /* DataType */
-    code span.dv { color: #005cc5; } /* DecVal */
-    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
-    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
-    code span.fl { color: #005cc5; } /* Float */
-    code span.fu { color: #6f42c1; } /* Function */
-    code span.im { color: #032f62; } /* Import */
-    code span.in { color: #6a737d; } /* Information */
-    code span.kw { color: #d73a49; } /* Keyword */
-    code span.op { color: #24292e; } /* Operator */
-    code span.ot { color: #6f42c1; } /* Other */
-    code span.pp { color: #d73a49; } /* Preprocessor */
-    code span.re { color: #6a737d; } /* RegionMarker */
-    code span.sc { color: #005cc5; } /* SpecialChar */
-    code span.ss { color: #032f62; } /* SpecialString */
-    code span.st { color: #032f62; } /* String */
-    code span.va { color: #e36209; } /* Variable */
-    code span.vs { color: #032f62; } /* VerbatimString */
-    code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
   <link rel="stylesheet" href="../../css/styles.css">
@@ -201,267 +136,179 @@
 </div>
 
 </section>
-<section id="the-challenge-of-programming-assignments" class="slide level2">
-<h2>The Challenge of Programming Assignments</h2>
+<section id="traditional-assignment-challenges" class="slide level2">
+<h2>Traditional Assignment Challenges</h2>
+<div class="fragment" style="margin-top: -0.15em">
 <ul>
-<li class="fragment">Distribution of starter code</li>
-<li class="fragment">Collection of submissions</li>
-<li class="fragment">Providing automated feedback</li>
-<li class="fragment">Managing final assessment</li>
-<li class="fragment">Coordinating all these tasks efficiently</li>
+<li><iconify-icon role="img" inline="" icon="fa6-solid:lightbulb" aria-label="Icon lightbulb from fa6-solid Iconify.design set." title="Icon lightbulb from fa6-solid Iconify.design set."></iconify-icon> <strong>Inefficient workflows cause</strong>
+<ul>
+<li>Version chaos via email submissions</li>
+<li>Time-consuming manual testing</li>
+<li>Delayed feedback disconnected from code</li>
+<li>Limited visibility into student progress</li>
+<li>Unrealistic development practices</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment fade boxed-content" style="margin-top: 0.25em; font-size: 0.825em;">
+<p><iconify-icon role="img" inline="" icon="fa6-solid:microscope" aria-label="Icon microscope from fa6-solid Iconify.design set." title="Icon microscope from fa6-solid Iconify.design set."></iconify-icon> How can we create a workflow that <strong>automates repetitive tasks</strong>, provides <strong>immediate feedback</strong>, and teaches <strong>industry-standard practices</strong>?</p>
+</div>
+</section>
+<section id="key-solution-github-github-classroom-and-github-actions" class="slide level2">
+<h2>Key Solution: GitHub, GitHub Classroom, and GitHub Actions</h2>
+<p><strong>A complete ecosystem for programming education offering</strong>:</p>
+<ul>
+<li class="fragment"><strong>Industry-standard tools</strong>: Git, CI/CD, code review</li>
+<li class="fragment"><strong>Good practices</strong>: Commit messages, branching, reviews</li>
+<li class="fragment"><strong>Task automation</strong>: Testing, style checks, distribution</li>
+<li class="fragment"><strong>Immediate feedback</strong>: Pass/fail checks and detailed logs</li>
+<li class="fragment"><strong>Student portfolios</strong>: Real-world projects on GitHub</li>
+<li class="fragment"><strong>Instructor insights</strong>: Progress tracking and code reviews</li>
 </ul>
 </section>
-<section id="traditional-assignment-workflow-challenges" class="slide level2">
-<h2>Traditional Assignment Workflow Challenges</h2>
+<section id="github-classroom-benefits" class="slide level2">
+<h2>GitHub Classroom Benefits</h2>
+<div class="columns">
+<div class="column" style="width:48%;">
+<h3 id="for-students">For Students</h3>
 <ul>
-<li class="fragment">Email submission creates version chaos</li>
-<li class="fragment">Manual testing is time-consuming and error-prone</li>
-<li class="fragment">Limited visibility into student progress</li>
-<li class="fragment">Feedback is often delayed and disconnected from code</li>
+<li>Version control</li>
+<li>Immediate feedback</li>
+<li>Clear guidance with <code>TODO</code>s</li>
+<li>Portfolio building</li>
+<li>Development environment</li>
 </ul>
-</section>
-<section id="enter-github-github-classroom-and-github-actions" class="slide level2">
-<h2>Enter GitHub, GitHub Classroom, and GitHub Actions</h2>
-<p>A complete ecosystem for programming education that:</p>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:48%;">
+<h3 id="for-instructors">For Instructors</h3>
 <ul>
-<li class="fragment">Leverages industry-standard tools</li>
-<li class="fragment">Promotes good development practices</li>
-<li class="fragment">Automates tedious tasks</li>
-<li class="fragment">Provides immediate feedback</li>
-<li class="fragment">Creates a portfolio for students</li>
+<li>Automated distribution</li>
+<li>Centralized collection</li>
+<li>Automated testing</li>
+<li>Progress visibility</li>
+<li>Consistent environments</li>
 </ul>
+</div></div>
+<div class="fragment fade boxed-content" style="margin-top: -0.2em; font-size: 0.8em;">
+<p><iconify-icon role="img" inline="" icon="fa6-solid:star" aria-label="Icon star from fa6-solid Iconify.design set." title="Icon star from fa6-solid Iconify.design set."></iconify-icon> <strong>Summary:</strong> GitHub Classroom bridges the gap between learning and professional development while saving time for students and instructors</p>
+</div>
 </section>
-<section id="benefits-for-students" class="slide level2">
-<h2>Benefits for Students</h2>
+<section id="implementation-workflow" class="slide level2">
+<h2>Implementation Workflow</h2>
+<div class="columns">
+<div class="column" style="font-size: 0.8em;">
+<h3 id="setup-repositories"><iconify-icon role="img" inline="" icon="material-symbols:check-rounded" aria-label="Icon check-rounded from material-symbols Iconify.design set." title="Icon check-rounded from material-symbols Iconify.design set."></iconify-icon> <strong>Setup Repositories</strong></h3>
 <ul>
-<li class="fragment">Learn professional version control practices</li>
-<li class="fragment">Get immediate feedback on their code</li>
-<li class="fragment">Clear indication of what to complete (TODOs)</li>
-<li class="fragment">Work in a real development environment</li>
-<li class="fragment">Build a portfolio of completed projects</li>
-<li class="fragment">Prepare for collaborative development</li>
+<li>Write full solution with tests<br>
+</li>
+<li>Apply implementation ablation<br>
+</li>
+<li>Set up CI/CD pipeline</li>
 </ul>
-</section>
-<section id="benefits-for-instructors" class="slide level2">
-<h2>Benefits for Instructors</h2>
+</div><div class="column" style="font-size: 0.8em;">
+<h3 id="setup-github-classroom"><iconify-icon role="img" inline="" icon="material-symbols:check-rounded" aria-label="Icon check-rounded from material-symbols Iconify.design set." title="Icon check-rounded from material-symbols Iconify.design set."></iconify-icon> <strong>Setup GitHub Classroom</strong></h3>
 <ul>
-<li class="fragment">Automated distribution of assignments</li>
-<li class="fragment">Centralized submission collection</li>
-<li class="fragment">Automated testing and grading assistance</li>
-<li class="fragment">Clear visibility into student progress</li>
-<li class="fragment">Consistent environment for all students</li>
-<li class="fragment">Rich feedback options (issues, PRs, comments)</li>
+<li>Link organization and repositories<br>
+</li>
+<li>Set deadlines and visibility<br>
+</li>
+<li>Invite students to classroom</li>
 </ul>
-</section>
-<section id="getting-started-the-workflow" class="slide level2 scrollable">
-<h2>Getting Started: The Workflow</h2>
-<ol type="1">
-<li class="fragment">Create solution repository with tests</li>
-<li class="fragment">Create starter repository with TODOs</li>
-<li class="fragment">Set up GitHub Classroom</li>
-<li class="fragment">Create and distribute assignments</li>
-<li class="fragment">Monitor student progress</li>
-<li class="fragment">Provide feedback through GitHub</li>
-<li class="fragment">Assess completed work</li>
-</ol>
-</section>
-<section id="step-1-creating-the-solution-repository" class="slide level2">
-<h2>Step 1: Creating the Solution Repository</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="co"># Create new repository with complete solution</span></span>
-<span id="cb1-2"><a></a><span class="fu">git</span> init solution-repo</span>
-<span id="cb1-3"><a></a><span class="bu">cd</span> solution-repo</span>
-<span id="cb1-4"><a></a><span class="co"># Add your complete solution code</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+<div class="columns">
+<div class="column" style="font-size: 0.8em;">
+<h3 id="feedback-assessment"><iconify-icon role="img" inline="" icon="material-symbols:check-rounded" aria-label="Icon check-rounded from material-symbols Iconify.design set." title="Icon check-rounded from material-symbols Iconify.design set."></iconify-icon> <strong>Feedback &amp; Assessment</strong></h3>
 <ul>
-<li class="fragment">Include a comprehensive test suite with pytest</li>
-<li class="fragment">Set up linting with flake8/pylint</li>
-<li class="fragment">Create a GitHub Actions workflow</li>
-<li class="fragment">Ensure all tests pass with your solution</li>
+<li>Track progress via GitHub insights<br>
+</li>
+<li>Code reviews via pull requests<br>
+</li>
+<li>Assignment clarifications via issues</li>
 </ul>
-</section>
-<section id="solution-repository-structure" class="slide level2">
-<h2>Solution Repository Structure</h2>
-<pre><code>solution-repo/
-├── src/
-│   └── solution.py
-├── tests/
-│   └── test_solution.py
-├── .github/
-│   └── workflows/
-│       └── python-checks.yml
-├── requirements.txt
-└── README.md</code></pre>
-</section>
-<section id="github-actions-workflow-example" class="slide level2">
-<h2>GitHub Actions Workflow Example</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Python Checks</span></span>
-<span id="cb3-2"><a></a></span>
-<span id="cb3-3"><a></a><span class="fu">on</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">push</span><span class="kw">]</span></span>
-<span id="cb3-4"><a></a></span>
-<span id="cb3-5"><a></a><span class="fu">jobs</span><span class="kw">:</span></span>
-<span id="cb3-6"><a></a><span class="at">  </span><span class="fu">test</span><span class="kw">:</span></span>
-<span id="cb3-7"><a></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
-<span id="cb3-8"><a></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
-<span id="cb3-9"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v3</span></span>
-<span id="cb3-10"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Set up Python</span></span>
-<span id="cb3-11"><a></a><span class="at">      </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/setup-python@v4</span></span>
-<span id="cb3-12"><a></a><span class="at">      </span><span class="fu">with</span><span class="kw">:</span></span>
-<span id="cb3-13"><a></a><span class="at">        </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">'3.10'</span></span>
-<span id="cb3-14"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Install dependencies</span></span>
-<span id="cb3-15"><a></a><span class="fu">      run</span><span class="kw">: </span><span class="ch">|</span></span>
-<span id="cb3-16"><a></a>        python -m pip install --upgrade pip</span>
-<span id="cb3-17"><a></a>        pip install pytest flake8</span>
-<span id="cb3-18"><a></a>        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi</span>
-<span id="cb3-19"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Lint with flake8</span></span>
-<span id="cb3-20"><a></a><span class="at">      </span><span class="fu">run</span><span class="kw">:</span><span class="at"> flake8 src tests</span></span>
-<span id="cb3-21"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Test with pytest</span></span>
-<span id="cb3-22"><a></a><span class="at">      </span><span class="fu">run</span><span class="kw">:</span><span class="at"> pytest</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="step-2-implementation-ablation---creating-the-starter" class="slide level2">
-<h2>Step 2: Implementation Ablation - Creating the Starter</h2>
-<p>What is implementation ablation?</p>
+</div><div class="column" style="font-size: 0.8em;">
+<h3 id="monitor-progress"><iconify-icon role="img" inline="" icon="material-symbols:check-rounded" aria-label="Icon check-rounded from material-symbols Iconify.design set." title="Icon check-rounded from material-symbols Iconify.design set."></iconify-icon> <strong>Monitor Progress</strong></h3>
 <ul>
-<li class="fragment">Systematically remove implementation details from your solution</li>
-<li class="fragment">Replace with well-documented TODOs</li>
-<li class="fragment">Leave structure intact for students to complete</li>
-<li class="fragment">Keep tests to guide students</li>
+<li>Automated test results (✅/❌)<br>
+</li>
+<li>Detailed logs for error diagnosis<br>
+</li>
+<li>Student feedback and code review</li>
 </ul>
-</section>
-<section id="example-of-implementation-ablation" class="slide level2">
-<h2>Example of Implementation Ablation</h2>
-<p>Solution code:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="kw">def</span> calculate_grade(scores):</span>
-<span id="cb4-2"><a></a>    total <span class="op">=</span> <span class="bu">sum</span>(scores)</span>
-<span id="cb4-3"><a></a>    average <span class="op">=</span> total <span class="op">/</span> <span class="bu">len</span>(scores)</span>
-<span id="cb4-4"><a></a>    </span>
-<span id="cb4-5"><a></a>    <span class="cf">if</span> average <span class="op">&gt;=</span> <span class="dv">90</span>:</span>
-<span id="cb4-6"><a></a>        <span class="cf">return</span> <span class="st">'A'</span></span>
-<span id="cb4-7"><a></a>    <span class="cf">elif</span> average <span class="op">&gt;=</span> <span class="dv">80</span>:</span>
-<span id="cb4-8"><a></a>        <span class="cf">return</span> <span class="st">'B'</span></span>
-<span id="cb4-9"><a></a>    <span class="cf">elif</span> average <span class="op">&gt;=</span> <span class="dv">70</span>:</span>
-<span id="cb4-10"><a></a>        <span class="cf">return</span> <span class="st">'C'</span></span>
-<span id="cb4-11"><a></a>    <span class="cf">elif</span> average <span class="op">&gt;=</span> <span class="dv">60</span>:</span>
-<span id="cb4-12"><a></a>        <span class="cf">return</span> <span class="st">'D'</span></span>
-<span id="cb4-13"><a></a>    <span class="cf">else</span>:</span>
-<span id="cb4-14"><a></a>        <span class="cf">return</span> <span class="st">'F'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="example-of-implementation-ablation-1" class="slide level2">
-<h2>Example of Implementation Ablation</h2>
-<p>Starter code:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="kw">def</span> calculate_grade(scores):</span>
-<span id="cb5-2"><a></a>    <span class="co"># </span><span class="al">TODO</span><span class="co">: Calculate the average score</span></span>
-<span id="cb5-3"><a></a>    <span class="co"># Hint: You'll need to find the sum and divide by the count</span></span>
-<span id="cb5-4"><a></a>    </span>
-<span id="cb5-5"><a></a>    <span class="co"># </span><span class="al">TODO</span><span class="co">: Determine the letter grade based on the average</span></span>
-<span id="cb5-6"><a></a>    <span class="co"># A: 90+, B: 80-89, C: 70-79, D: 60-69, F: below 60</span></span>
-<span id="cb5-7"><a></a>    </span>
-<span id="cb5-8"><a></a>    <span class="cf">return</span> <span class="va">None</span>  <span class="co"># Replace with your implementation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="step-3-setting-up-github-classroom" class="slide level2 scrollable">
-<h2>Step 3: Setting Up GitHub Classroom</h2>
-<ol type="1">
-<li class="fragment">Create a GitHub organization for your class</li>
-<li class="fragment">Authorize GitHub Classroom</li>
-<li class="fragment">Create a new classroom linked to your organization</li>
-<li class="fragment">Invite teaching assistants as organization admins</li>
-</ol>
-<!-- should we add an image here? -->
-</section>
-<section id="step-4-creating-an-assignment" class="slide level2 scrollable">
-<h2>Step 4: Creating an Assignment</h2>
-<ol type="1">
-<li class="fragment">Select “New Assignment” in GitHub Classroom</li>
-<li class="fragment">Choose individual or group assignment</li>
-<li class="fragment">Name your assignment</li>
-<li class="fragment">Set deadline and visibility options</li>
-<li class="fragment">Import your starter repository</li>
-<li class="fragment">Enable automated testing</li>
-</ol>
-<!-- an image here? -->
-</section>
-<section id="step-5-distributing-the-assignment" class="slide level2 scrollable">
-<h2>Step 5: Distributing the Assignment</h2>
-<ol type="1">
-<li class="fragment">Generate invitation link</li>
-<li class="fragment">Share with students</li>
-<li class="fragment">Students click link and accept assignment</li>
-<li class="fragment">GitHub automatically creates private student repositories</li>
-<li class="fragment">Students clone locally and start working</li>
-</ol>
-</section>
-<section id="student-experience" class="slide level2 scrollable">
-<h2>Student Experience</h2>
-<ol type="1">
-<li class="fragment">Accept assignment through unique link</li>
-<li class="fragment">Repository created with starter code</li>
-<li class="fragment">Clone repository locally</li>
-<li class="fragment">Complete TODOs guided by tests</li>
-<li class="fragment">Push changes to GitHub</li>
-<li class="fragment">Get immediate feedback from GitHub Actions</li>
-</ol>
-</section>
-<section id="automated-feedback-with-github-actions" class="slide level2">
-<h2>Automated Feedback with GitHub Actions</h2>
+</div></div>
+<div class="fragment">
 <ul>
-<li class="fragment">Tests run automatically on every push</li>
-<li class="fragment">Students see red ❌ or green ✅ status checks</li>
-<li class="fragment">Detailed feedback in Actions tab</li>
-<li class="fragment">Testing failures highlight what’s still incomplete</li>
+<li>Create <strong>solution</strong> and <strong>starter</strong> repositories for each assignment</li>
 </ul>
+</div>
 </section>
-<section id="comprehensive-feedback-options" class="slide level2">
-<h2>Comprehensive Feedback Options</h2>
-<p>GitHub provides multiple feedback channels:</p>
+<section id="implementation-ablation" class="slide level2">
+<h2>Implementation Ablation</h2>
 <ul>
-<li class="fragment">In-line comments on specific code lines</li>
-<li class="fragment">Issue creation for general feedback</li>
-<li class="fragment">Pull request reviews for detailed assessment</li>
-<li class="fragment">Automated checks for immediate technical feedback</li>
-</ul>
-</section>
-<section id="example-issue-based-feedback" class="slide level2">
-<h2>Example: Issue-Based Feedback</h2>
-<!-- This is to explain how issues can be used for feedback. IRL pictures would be nice -->
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a></a><span class="fu">## Algorithm Efficiency</span></span>
-<span id="cb6-2"><a></a></span>
-<span id="cb6-3"><a></a>Your solution works but uses O(n²) time complexity when </span>
-<span id="cb6-4"><a></a>an O(n) solution is possible. Consider using a hash map </span>
-<span id="cb6-5"><a></a>instead of nested loops.</span>
-<span id="cb6-6"><a></a></span>
-<span id="cb6-7"><a></a><span class="fu">## Code Structure</span></span>
-<span id="cb6-8"><a></a></span>
-<span id="cb6-9"><a></a>Great job breaking down the problem into functions!</span>
-<span id="cb6-10"><a></a>Your solution is well-organized and easy to follow.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="optional-integrating-with-external-tools" class="slide level2">
-<h2>Optional: Integrating with External Tools</h2>
-<p>GitHub Actions can integrate with:</p>
+<li><strong>After solution creation, must create a starter repository</strong>:
 <ul>
-<li class="fragment">Pytest for test coverage</li>
-<li class="fragment">Flake8/Pylint for style checking</li>
-<li class="fragment">Chasten for AST-based pattern checking</li>
-<li class="fragment">Custom grading tool such as ExecExam</li>
-<li class="fragment">And many more!</li>
+<li>Remove implementation details from your solution</li>
+<li>Replace with well-documented <code>TODO</code>s as placeholders</li>
+<li>Leave structure intact for students to complete</li>
+<li>Keep tests and various checks to guide students</li>
+</ul></li>
 </ul>
-</section>
-<section id="example-integration-with-chasten" class="slide level2">
-<h2>Example: Integration with Chasten</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a></a><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Check with Chasten</span></span>
-<span id="cb7-2"><a></a><span class="fu">  run</span><span class="kw">: </span><span class="ch">|</span></span>
-<span id="cb7-3"><a></a>    pip install chasten</span>
-<span id="cb7-4"><a></a>    chasten check --config .chasten.yml src/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="practical-tips-from-experience" class="slide level2">
-<h2>Practical Tips from Experience</h2>
+<div class="fragment boxed-content" style="font-size: 0.75em;">
 <ul>
-<li class="fragment">Start with simple assignments to build familiarity</li>
-<li class="fragment">Create clear README files with setup instructions</li>
-<li class="fragment">Include CI badges in README to show test status</li>
-<li class="fragment">Use descriptive commit messages for teaching moments</li>
-<li class="fragment">Consider a practice assignment for GitHub onboarding</li>
+<li><iconify-icon role="img" inline="" icon="game-icons:team-idea" aria-label="Icon team-idea from game-icons Iconify.design set." title="Icon team-idea from game-icons Iconify.design set."></iconify-icon> <strong>Tests run automatically</strong> on each push to student’s repository:
+<ul>
+<li>✅/❌ <strong>Status checks</strong> provide immediate feedback</li>
+<li>🛠️ <strong>Detailed logs</strong> highlight errors for quick diagnosis</li>
+</ul></li>
 </ul>
+</div>
+</section>
+<section id="multi-level-feedback-system" class="slide level2">
+<h2>Multi-level Feedback System</h2>
+<div class="columns">
+<div class="column" style="width:100%;">
+<div class="fragment">
+<h3 id="automated">Automated</h3>
+</div>
+<div class="fragment">
+<ul>
+<li><strong>GitHub Actions check</strong>: pass/fail status for each check</li>
+<li><strong>Code quality checks</strong>: PEP8 compliance with Ruff</li>
+<li><strong>Test coverage reports</strong>: Pytest and Coverage.py</li>
+</ul>
+</div>
+<div class="fragment">
+<h3 id="manual">Manual</h3>
+</div>
+<div class="fragment">
+<ul>
+<li><strong>In-line code comments</strong>: specific suggestions on code</li>
+<li><strong>Pull request reviews</strong>: detailed feedback on approach</li>
+<li><strong>Issue-based feedback</strong>: high-level design discussions</li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="integrating-with-external-tools" class="slide level2">
+<h2>Integrating with External Tools</h2>
+<p><strong>GitHub Actions can integrate with tools like</strong></p>
+<ul>
+<li>Pytest for test coverage</li>
+<li>Ruff for style checking</li>
+<li>Chasten for AST-based pattern checking</li>
+<li>Custom grading tool such as ExecExam</li>
+<li>… <em>And many more</em>!</li>
+</ul>
+<div class="fragment fade" style="margin-top: 0.5em; font-size: 0.925em;">
+<p><iconify-icon role="img" inline="" icon="fa6-solid:puzzle-piece" aria-label="Icon puzzle-piece from fa6-solid Iconify.design set." title="Icon puzzle-piece from fa6-solid Iconify.design set."></iconify-icon> <strong>Integration Benefits</strong>: Automated feedback fosters code quality, adoptions of industry practices, and eases instructor workload</p>
+</div>
 </section>
 <section id="common-challenges-and-solutions" class="slide level2">
 <h2>Common Challenges and Solutions</h2>
+<div class="fragment fade" style="margin-top: 0.25em; font-size: 0.9em;">
+<p><iconify-icon role="img" inline="" icon="fa6-solid:rocket" aria-label="Icon rocket from fa6-solid Iconify.design set." title="Icon rocket from fa6-solid Iconify.design set."></iconify-icon> <strong>GitHub Classroom creates a realistic, automated workflow that benefits both students and instructors. But there are challenges!</strong></p>
+</div>
+<div class="fragment fade" style="margin-top: 0.5em; font-size: 0.8em; margin-bottom: 0.3em;">
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -492,29 +339,26 @@
 </tr>
 </tbody>
 </table>
-</section>
-<section id="limitations-to-be-aware-of" class="slide level2">
-<h2>Limitations to Be Aware Of</h2>
-<ul>
-<li class="fragment">Learning curve for Git and GitHub</li>
-<li class="fragment">Setup time for first assignments</li>
-<li class="fragment">Need for internet access</li>
-<li class="fragment">Managing organization permissions</li>
-</ul>
+</div>
+<div class="fragment fade boxed-content" style="margin-top: 0.4em; font-size: 0.9em;">
+<p><strong>Challenges:</strong> Learning curve for Git and GitHub and associated tools</p>
+</div>
 </section>
 <section id="key-takeaways" class="slide level2">
 <h2>Key Takeaways</h2>
+<!-- TODO: Please make these bullets points fit on a single line -->
+<div class="fragment" style="font-size: 0.9em;">
 <ul>
-<li class="fragment">GitHub Classroom creates realistic development workflows</li>
-<li class="fragment">Automated feedback saves instructor time</li>
-<li class="fragment">Students learn industry-standard tools and practices</li>
-<li class="fragment">Implementation ablation guides student learning</li>
-<li class="fragment">Comprehensive feedback through multiple channels</li>
+<li><iconify-icon role="img" inline="" icon="fa6-solid:check-circle" aria-label="Icon check-circle from fa6-solid Iconify.design set." title="Icon check-circle from fa6-solid Iconify.design set."></iconify-icon> <strong>Streamlined workflow</strong> from assignment creation to grading</li>
+<li><iconify-icon role="img" inline="" icon="fa6-solid:check-circle" aria-label="Icon check-circle from fa6-solid Iconify.design set." title="Icon check-circle from fa6-solid Iconify.design set."></iconify-icon> <strong>Industry-relevant skills</strong> that benefit students beyond the classroom</li>
+<li><iconify-icon role="img" inline="" icon="fa6-solid:check-circle" aria-label="Icon check-circle from fa6-solid Iconify.design set." title="Icon check-circle from fa6-solid Iconify.design set."></iconify-icon> <strong>Automated testing</strong> saves instructor time and provides immediate feedback</li>
+<li><iconify-icon role="img" inline="" icon="fa6-solid:check-circle" aria-label="Icon check-circle from fa6-solid Iconify.design set." title="Icon check-circle from fa6-solid Iconify.design set."></iconify-icon> <strong>Visible progress</strong> through commit history helps with targeted interventions</li>
+<li><iconify-icon role="img" inline="" icon="fa6-solid:check-circle" aria-label="Icon check-circle from fa6-solid Iconify.design set." title="Icon check-circle from fa6-solid Iconify.design set."></iconify-icon> <strong>Reduced administrative overhead</strong> through integrated tools and workflows</li>
 </ul>
-</section>
-<section id="questions" class="slide level2">
-<h2>Questions?</h2>
-<p>Thank you for your attention!</p>
+</div>
+<div class="fragment fade boxed-content" style="margin-top: 0.5em; font-size: 0.9em;">
+<p><iconify-icon role="img" inline="" icon="fa6-solid:comment" aria-label="Icon comment from fa6-solid Iconify.design set." title="Icon comment from fa6-solid Iconify.design set."></iconify-icon> Thank You! Questions?</p>
+</div>
 
 
 </section>
