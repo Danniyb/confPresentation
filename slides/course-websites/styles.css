@@ -1,0 +1,179 @@
+/* Custom styles for the conference presentations website */
+
+/* General styles */
+
+body {
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    background-color: #fff8f0;
+    color: #333;
+}
+
+/* Title size adjustment */
+.reveal .quarto-title-block .title {
+    font-size: 1.5em !important;
+}
+
+/* Code blocks */
+
+pre {
+    border-radius: 8px;
+    padding: 1em;
+    background-color: #ffe6cc;
+    color: #333;
+    border: 1px solid #ff9f5c;
+}
+
+code {
+    font-family: "Ubuntu Mono", monospace;
+    color: #d35400;
+}
+
+/* Navigation */
+
+.navbar {
+    background-color: #ff9f5c;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Links */
+
+a {
+    color: #ff6f3c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+
+.footer {
+    border-top: 1px solid #ff9f5c;
+    padding: 1em 0;
+    background-color: #fff8f0;
+    color: #333;
+    margin-top: 2em;
+}
+
+/* Fix for footer spacing in presentations */
+.reveal .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.reveal .slide-content {
+    margin-bottom: 3em; /* Add space for footer */
+}
+
+/* Contact box styling */
+.boxed-content {
+    margin-bottom: 3em !important;
+}
+
+/* Presentation specific styles */
+
+.reveal .slides {
+    text-align: left;
+    width: 95% !important;
+    max-width: 1400px !important; /* Adjust this value to change width */
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+    color: #ff6f3c;
+    text-align: center;
+}
+
+/* Presentation specific styles */
+
+.reveal h1 {
+    font-size: 1.5em;
+    color: #ff6f3c;
+    text-align: center;
+}
+
+.reveal h2 {
+    font-size: 1.5em;
+    color: #ff6f3c;
+    text-align: center;
+}
+
+.reveal h3 {
+    font-size: 1.25em;
+    color: #ff6f3c;
+    text-align: center;
+}
+
+.reveal .slide-number {
+    font-size: 0.8em;
+    color: #ff9f5c;
+}
+
+.reveal .quarto-title-block .quarto-title-authors .quarto-title-author .quarto-title-author-name {
+    font-size: 0.8em;
+    color: #333;
+}
+
+.boxed-content {
+    border: 3px solid #1c1c1c;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tight-boxed-content {
+    border: 3px solid #1c1c1c;
+    padding: -2px;
+    border-radius: 5px;
+}
+
+.boxed-content p {
+    color: #333;
+}
+
+
+/* Custom callout boxes */
+
+.callout {
+    border-left: 4px solid #ff6f3c;
+    padding: 1em;
+    margin: 1em 0;
+    background-color: #fff8f0;
+    border-radius: 4px;
+    color: #333;
+}
+
+/* Ensure content has enough width */
+.reveal .slide-content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Additional title styling with high specificity */
+.reveal .slides section .quarto-title-block h1.title {
+    font-size: 1.5em !important;
+}
+
+/* Code highlighting */
+
+.hljs {
+    background: #ffe6cc;
+    border-radius: 4px;
+    color: #333;
+}

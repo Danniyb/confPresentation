@@ -34,7 +34,7 @@
     }
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
-  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="styles.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -148,13 +148,13 @@ Alish Chhetri and Gregory M. Kapfhammer
   <p class="date">May 15, 2025</p>
 </section>
 <section id="what-problem-are-we-solving" class="slide level2">
-<h2>What Problem Are We Solving?</h2>
-<div style="margin-top: -0.15em;">
+<h2><span style="font-size: 0.9em;">What Problem Are We Solving?</span></h2>
+<div style="margin-top: 1em; font-size: 0.8em;">
 <ul>
 <li class="fragment">Course sites as <strong>static archives</strong> rather than <strong>living resources</strong></li>
-<li class="fragment">Students view materials as <strong>products to consume</strong> not <strong>projects to contribute to</strong>, limiting learning and engagement</li>
-<li class="fragment">Interactive examples require <strong>separate tools</strong> or <strong>platforms</strong></li>
-<li class="fragment">Content becomes <strong>quickly outdated</strong> without a sustainable update process that leverages <strong>industry-standard tools</strong></li>
+<li class="fragment">Students view materials as <strong>products to consume</strong> rather than <strong>projects to contribute to</strong></li>
+<li class="fragment">Interactive examples require <strong>separate tools</strong> or external <strong>platforms</strong></li>
+<li class="fragment">Content becomes <strong>quickly outdated</strong> without sustainable update processes</li>
 </ul>
 </div>
 <div class="fragment fade boxed-content" style="margin-top: -0.05em; font-size: 0.9em;">
@@ -166,14 +166,14 @@ Alish Chhetri and Gregory M. Kapfhammer
 <div class="fragment">
 <ul>
 <li><strong>Quarto</strong>: Accessible markdown-based framework</li>
-<li><strong>Python + WebAssembly</strong>: Easily run Python in the browser</li>
+<li><strong>Python &amp; WebAssembly</strong>: Easily run Python in the browser</li>
 <li><strong>GitHub</strong>: Version control and collaborative workflows</li>
 <li><strong>GitHub Actions</strong>: Automated testing and deployment</li>
 </ul>
 </div>
-<div class="fragment fade tight-boxed-content" style="margin-top: -0.05em; margin-bottom: -0.25em; font-size: 0.8em;">
+<div class="fragment fade tight-boxed-content" style="margin-top: -0.05em; margin-bottom: -0.25em; font-size: 0.70em;">
 <ul>
-<li><iconify-icon role="img" inline="" icon="fa6-solid:lightbulb" aria-label="Icon lightbulb from fa6-solid Iconify.design set." title="Icon lightbulb from fa6-solid Iconify.design set."></iconify-icon> <strong>Ultimate Goal</strong>: Build content-focused, interactive, collaborative course sites that instructors can maintain with minimal effort</li>
+<li><iconify-icon role="img" inline="" icon="fa6-solid:lightbulb" aria-label="Icon lightbulb from fa6-solid Iconify.design set." title="Icon lightbulb from fa6-solid Iconify.design set."></iconify-icon> <strong>Ultimate Goal</strong>: Build content-focused, interactive, collaborative course sites that instructors can maintain with minimal effort.</li>
 <li><iconify-icon role="img" inline="" icon="fa6-solid:diagram-project" aria-label="Icon diagram-project from fa6-solid Iconify.design set." title="Icon diagram-project from fa6-solid Iconify.design set."></iconify-icon> <strong>Next Steps</strong>: Give examples of content you can immediately use! See <a href="https://algorithmology.org/">Algorithmology.org</a> for more details!</li>
 </ul>
 </div>
@@ -196,13 +196,15 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWUsIm1heC1saW5lcyI6
 </section>
 <section id="setting-up-the-course-infrastructure" class="slide level2 scrollable">
 <h2>Setting Up the Course Infrastructure</h2>
+<div class="fragment" style="margin-left: 3.75em; margin-top: 1em;">
 <ol type="1">
-<li class="fragment">Create a GitHub repository with Quarto structure</li>
-<li class="fragment">Configure navigation, styling, and organization in <code>_quarto.yml</code></li>
-<li class="fragment">Set up GitHub Actions for automated deployment</li>
-<li class="fragment">Create templates for student contributions</li>
-<li class="fragment">Publish to GitHub Pages or Netlify</li>
+<li>Create a GitHub repository with Quarto structure</li>
+<li>Configure navigation, styling, and organization in <code>_quarto.yml</code></li>
+<li>Set up GitHub Actions for automated deployment</li>
+<li>Create templates for student contributions</li>
+<li>Publish to GitHub Pages or Netlify</li>
 </ol>
+</div>
 </section>
 <section id="course-roles-contributions" class="slide level2">
 <h2>Course Roles &amp; Contributions</h2>
@@ -211,10 +213,11 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWUsIm1heC1saW5lcyI6
 <h3 id="instructors-role">Instructor’s Role</h3>
 <div class="fragment fade-right">
 <ul>
-<li>Create course content and structure</li>
+<li>Create course content structure</li>
 <li>Establish contribution guidelines</li>
 <li>Review and provide feedback</li>
 <li>Guide collaborative learning</li>
+<li>Maintain core infrastructure</li>
 </ul>
 </div>
 </div><div class="column" style="width:4%;">
@@ -223,10 +226,11 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWUsIm1heC1saW5lcyI6
 <h3 id="students-role">Student’s Role</h3>
 <div class="fragment fade-left">
 <ul>
-<li>Fork repository, create content</li>
-<li>Write reflections with code examples</li>
-<li>Submit PRs for review</li>
-<li>Learn from publication process</li>
+<li>Fork repository for contributions</li>
+<li>Create content in assigned areas</li>
+<li>Submit pull requests for review</li>
+<li>Engage in peer feedback</li>
+<li><span style="font-size: 0.9em;">Create technical documentation</span></li>
 </ul>
 </div>
 </div></div>
@@ -239,7 +243,7 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWUsIm1heC1saW5lcyI6
 <div class="fragment fade-right">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="algorithmology_website.png" class="quarto-figure quarto-figure-center" width="500"></p>
+<p><img data-src="algorithmology_website.png" class="quarto-figure quarto-figure-center" width="400"></p>
 </figure>
 </div>
 </div>
@@ -248,53 +252,56 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWUsIm1heC1saW5lcyI6
 </div><div class="column" style="width:48%;">
 <h3 id="github-repository"><a href="https://github.com/Algorithmology/www.algorithmology.org">GitHub Repository</a></h3>
 <div class="fragment fade-left">
-<h4 id="section"><a href="https://github.com/Algorithmology/www.algorithmology.org"></a></h4>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="algorithmology_repo.png" class="quarto-figure quarto-figure-center" width="500"></p>
+<p><img data-src="algorithmology_repo.png" class="quarto-figure quarto-figure-center" width="400"></p>
 </figure>
 </div>
 </div>
 </div></div>
 </section>
-<section id="technical-advantages-future-improvements" class="slide level2">
-<h2>Technical Advantages &amp; Future Improvements</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<h3 id="current-advantages">Current Advantages</h3>
-<div class="fragment fade-right">
+<section id="future-improvements" class="slide level2">
+<h2>Future Improvements</h2>
+<div class="fragment fade-right" style="font-size: .85em; margin-top: 1.25em;">
 <ul>
-<li><strong>Low Barrier to Entry</strong>: Markdown is easier than HTML/CSS/JS</li>
-<li><strong>Focus on Content</strong>: Technical details are abstracted away</li>
-<li><strong>Interactive Examples</strong>: Code runs in the browser without installation</li>
-<li><strong>Full-Text Search</strong>: Find anything across all course materials</li>
-<li><strong>Developer Workflow</strong>: Students learn how to collaborate using industry-standard tools</li>
+<li><strong>Browser-Based IDE Experience</strong>: Complete development environment in the browser</li>
+<li><strong>Enhanced WebAssembly</strong>: Better error messages and debugging for Python in browser</li>
+<li><strong>Collaborative Features</strong>: Note taking and shared whiteboarding tools</li>
+<li><strong>Automated Feedback</strong>: AI-powered assistance for student contributions</li>
+<li><strong>Enhanced Visualizations</strong>: Interactive data and algorithm visualizations</li>
 </ul>
 </div>
-</div><div class="column" style="width:40%;">
-<h3 id="future-improvements">Future Improvements</h3>
-<div class="fragment fade-left">
+</section>
+<section id="why-you-should-consider-this-approach" class="slide level2">
+<h2><span style="font-size: 0.9em;">Why You Should Consider This Approach</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="educational-benefits">Educational Benefits</h3>
+<div class="fragment fade-right" style="font-size: 0.8em;">
 <ul>
-<li>Full browser-based IDE experience</li>
-<li>Better error messages for WebAssembly Python</li>
-<li>In-browser note taking and collaborative whiteboarding tools</li>
+<li><strong>Student Ownership &amp; Investment</strong>: Students become stakeholders in course content</li>
+<li><strong>Living Educational Resources</strong>: Materials continuously evolve and improve</li>
+<li><strong>Industry-Standard Practices</strong>: Students gain experience with professional tools</li>
+<li><strong>Transparent Learning Process</strong>: Public materials encourage higher quality work</li>
+<li><strong>Adaptable for All Class Sizes</strong>: Effective from seminars to large lectures</li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<h3 id="technical-benefits">Technical Benefits</h3>
+<div class="fragment fade-left" style="font-size: 0.8em;">
+<ul>
+<li><strong>Simplified Content Creation</strong>: Markdown reduces technical barriers</li>
+<li><strong>Focus on Educational Value</strong>: Infrastructure complexity is abstracted away</li>
+<li><strong>Browser-Based Interactivity</strong>: Code execution without local installations</li>
+<li><strong>Comprehensive Searchability</strong>: Find content across all course materials</li>
+<li><strong>Collaborative Development</strong>: Modern version control and workflows</li>
 </ul>
 </div>
 </div></div>
-</section>
-<section id="why-you-should-consider-this-approach" class="slide level2">
-<h2>Why You Should Consider This Approach</h2>
-<ul>
-<li class="fragment"><strong>Student Ownership</strong>: Contributions create investment in the course</li>
-<li class="fragment"><strong>Transparency</strong>: Public materials encourage higher quality work</li>
-<li class="fragment"><strong>Living Knowledge Base</strong>: Materials improve rather than decay over time</li>
-<li class="fragment"><strong>Practical Skills</strong>: Industry tools in an educational context</li>
-<li class="fragment"><strong>Scalability</strong>: Works for any course size, from small seminars to large lectures</li>
-</ul>
-<div class="fragment fade boxed-content" style="margin-top: 1em; font-size: 0.8em;">
-<p><strong>Contact Us &amp; Resources</strong>:</p>
-<p><strong>Site</strong>: <a href="https://algorithmology.org/">https://algorithmology.org/</a></p>
-<p><strong>Repo</strong>: <a href="https://github.com/Algorithmology/www.algorithmology.org">https://github.com/Algorithmology/www.algorithmology.org</a></p>
+<div class="fragment fade boxed-content" style="margin-top: 2em; margin-bottom: 1em; font-size: 0.8em; padding: 0.5em;">
+<p><strong>Contact Information &amp; Resources</strong></p>
+<p><strong>Website</strong>: <a href="https://algorithmology.org/">https://algorithmology.org/</a></p>
+<p><strong>Repository</strong>: <a href="https://github.com/Algorithmology/www.algorithmology.org">https://github.com/Algorithmology/www.algorithmology.org</a></p>
 <p><strong>Alish Chhetri</strong>: chhetri01@allegheny.edu</p>
 <p><strong>Gregory M. Kapfhammer</strong>: gkapfhammer@allegheny.edu</p>
 </div>

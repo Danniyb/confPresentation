@@ -214,14 +214,14 @@
     "href": "slides/course-websites/index.html#what-problem-are-we-solving",
     "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
     "section": "What Problem Are We Solving?",
-    "text": "What Problem Are We Solving?\n\n\nCourse sites as static archives rather than living resources\nStudents view materials as products to consume not projects to contribute to, limiting learning and engagement\nInteractive examples require separate tools or platforms\nContent becomes quickly outdated without a sustainable update process that leverages industry-standard tools\n\n\n\n Ultimate Goal: Introduce how using packages like Quarto make it possible to create interactive and maintainable course websites"
+    "text": "What Problem Are We Solving?\n\n\nCourse sites as static archives rather than living resources\nStudents view materials as products to consume rather than projects to contribute to\nInteractive examples require separate tools or external platforms\nContent becomes quickly outdated without sustainable update processes\n\n\n\n Ultimate Goal: Introduce how using packages like Quarto make it possible to create interactive and maintainable course websites"
   },
   {
     "objectID": "slides/course-websites/index.html#building-and-deploying-with-quarto",
     "href": "slides/course-websites/index.html#building-and-deploying-with-quarto",
     "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
     "section": "Building and Deploying with Quarto",
-    "text": "Building and Deploying with Quarto\n\n\nQuarto: Accessible markdown-based framework\nPython + WebAssembly: Easily run Python in the browser\nGitHub: Version control and collaborative workflows\nGitHub Actions: Automated testing and deployment\n\n\n\n\n Ultimate Goal: Build content-focused, interactive, collaborative course sites that instructors can maintain with minimal effort\n Next Steps: Give examples of content you can immediately use! See Algorithmology.org for more details!"
+    "text": "Building and Deploying with Quarto\n\n\nQuarto: Accessible markdown-based framework\nPython & WebAssembly: Easily run Python in the browser\nGitHub: Version control and collaborative workflows\nGitHub Actions: Automated testing and deployment\n\n\n\n\n Ultimate Goal: Build content-focused, interactive, collaborative course sites that instructors can maintain with minimal effort.\n Next Steps: Give examples of content you can immediately use! See Algorithmology.org for more details!"
   },
   {
     "objectID": "slides/course-websites/index.html#interactive-fibonacci-sequence",
@@ -235,14 +235,14 @@
     "href": "slides/course-websites/index.html#setting-up-the-course-infrastructure",
     "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
     "section": "Setting Up the Course Infrastructure",
-    "text": "Setting Up the Course Infrastructure\n\nCreate a GitHub repository with Quarto structure\nConfigure navigation, styling, and organization in _quarto.yml\nSet up GitHub Actions for automated deployment\nCreate templates for student contributions\nPublish to GitHub Pages or Netlify"
+    "text": "Setting Up the Course Infrastructure\n\n\nCreate a GitHub repository with Quarto structure\nConfigure navigation, styling, and organization in _quarto.yml\nSet up GitHub Actions for automated deployment\nCreate templates for student contributions\nPublish to GitHub Pages or Netlify"
   },
   {
     "objectID": "slides/course-websites/index.html#course-roles-contributions",
     "href": "slides/course-websites/index.html#course-roles-contributions",
     "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
     "section": "Course Roles & Contributions",
-    "text": "Course Roles & Contributions\n\n\nInstructor’s Role\n\n\nCreate course content and structure\nEstablish contribution guidelines\nReview and provide feedback\nGuide collaborative learning\n\n\n\n\n\nStudent’s Role\n\n\nFork repository, create content\nWrite reflections with code examples\nSubmit PRs for review\nLearn from publication process"
+    "text": "Course Roles & Contributions\n\n\nInstructor’s Role\n\n\nCreate course content structure\nEstablish contribution guidelines\nReview and provide feedback\nGuide collaborative learning\nMaintain core infrastructure\n\n\n\n\n\nStudent’s Role\n\n\nFork repository for contributions\nCreate content in assigned areas\nSubmit pull requests for review\nEngage in peer feedback\nCreate technical documentation"
   },
   {
     "objectID": "slides/course-websites/index.html#real-world-examples",
@@ -252,17 +252,17 @@
     "text": "Real World Examples\n\n\nCourse Website\n\n\n\n\n\n\n\n\n\n\nGitHub Repository"
   },
   {
-    "objectID": "slides/course-websites/index.html#technical-advantages-future-improvements",
-    "href": "slides/course-websites/index.html#technical-advantages-future-improvements",
+    "objectID": "slides/course-websites/index.html#future-improvements",
+    "href": "slides/course-websites/index.html#future-improvements",
     "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Technical Advantages & Future Improvements",
-    "text": "Technical Advantages & Future Improvements\n\n\nCurrent Advantages\n\n\nLow Barrier to Entry: Markdown is easier than HTML/CSS/JS\nFocus on Content: Technical details are abstracted away\nInteractive Examples: Code runs in the browser without installation\nFull-Text Search: Find anything across all course materials\nDeveloper Workflow: Students learn how to collaborate using industry-standard tools\n\n\n\nFuture Improvements\n\n\nFull browser-based IDE experience\nBetter error messages for WebAssembly Python\nIn-browser note taking and collaborative whiteboarding tools"
+    "section": "Future Improvements",
+    "text": "Future Improvements\n\n\nBrowser-Based IDE Experience: Complete development environment in the browser\nEnhanced WebAssembly: Better error messages and debugging for Python in browser\nCollaborative Features: Note taking and shared whiteboarding tools\nAutomated Feedback: AI-powered assistance for student contributions\nEnhanced Visualizations: Interactive data and algorithm visualizations"
   },
   {
     "objectID": "slides/course-websites/index.html#why-you-should-consider-this-approach",
     "href": "slides/course-websites/index.html#why-you-should-consider-this-approach",
     "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
     "section": "Why You Should Consider This Approach",
-    "text": "Why You Should Consider This Approach\n\nStudent Ownership: Contributions create investment in the course\nTransparency: Public materials encourage higher quality work\nLiving Knowledge Base: Materials improve rather than decay over time\nPractical Skills: Industry tools in an educational context\nScalability: Works for any course size, from small seminars to large lectures\n\n\nContact Us & Resources:\nSite: https://algorithmology.org/\nRepo: https://github.com/Algorithmology/www.algorithmology.org\nAlish Chhetri: chhetri01@allegheny.edu\nGregory M. Kapfhammer: gkapfhammer@allegheny.edu"
+    "text": "Why You Should Consider This Approach\n\n\nEducational Benefits\n\n\nStudent Ownership & Investment: Students become stakeholders in course content\nLiving Educational Resources: Materials continuously evolve and improve\nIndustry-Standard Practices: Students gain experience with professional tools\nTransparent Learning Process: Public materials encourage higher quality work\nAdaptable for All Class Sizes: Effective from seminars to large lectures\n\n\n\nTechnical Benefits\n\n\nSimplified Content Creation: Markdown reduces technical barriers\nFocus on Educational Value: Infrastructure complexity is abstracted away\nBrowser-Based Interactivity: Code execution without local installations\nComprehensive Searchability: Find content across all course materials\nCollaborative Development: Modern version control and workflows\n\n\n\n\nContact Information & Resources\nWebsite: https://algorithmology.org/\nRepository: https://github.com/Algorithmology/www.algorithmology.org\nAlish Chhetri: chhetri01@allegheny.edu\nGregory M. Kapfhammer: gkapfhammer@allegheny.edu"
   }
 ]
