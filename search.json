@@ -28,53 +28,81 @@
     "text": "Contributing\nThese presentations are open source and available for educational purposes. Feel free to use and modify them according to your needs. If you find any issues or have suggestions for improvements, please contribute through our GitHub repository."
   },
   {
-    "objectID": "slides/chasten/index.html#what-problem-are-we-solving",
-    "href": "slides/chasten/index.html#what-problem-are-we-solving",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "objectID": "slides/index.html",
+    "href": "slides/index.html",
+    "title": "Slides",
+    "section": "",
+    "text": "View Presentation\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\n\n\n\n\nView Presentation\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\n\n\n\n\nView Presentation\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\n\n\n\n\nView Presentation\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content\n\n\n\n\n\nUse the navigation menu at the top of the page to move between presentations. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references"
+  },
+  {
+    "objectID": "slides/index.html#available-presentations",
+    "href": "slides/index.html#available-presentations",
+    "title": "Slides",
+    "section": "",
+    "text": "View Presentation\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\n\n\n\n\nView Presentation\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\n\n\n\n\nView Presentation\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\n\n\n\n\nView Presentation\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content"
+  },
+  {
+    "objectID": "slides/index.html#navigation",
+    "href": "slides/index.html#navigation",
+    "title": "Slides",
+    "section": "",
+    "text": "Use the navigation menu at the top of the page to move between presentations. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references"
+  },
+  {
+    "objectID": "slides/course-websites/index.html#what-problem-are-we-solving",
+    "href": "slides/course-websites/index.html#what-problem-are-we-solving",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
     "section": "What Problem Are We Solving?",
-    "text": "What Problem Are We Solving?\n\n\nStudents may struggle to write efficient, readable code\nManual project review is time-consuming and error-prone\nMany courses face these challenges:\n\nData structures\nAlgorithm analysis\nSoftware engineering\n\nExisting tools focus on style, not semantic structure\nRegex is brittle, and AST tools are hard to prototype\n\n\n\n Project Goal: Chasten enables scalable and structure-aware feedback that effectively supports both instructors and students"
+    "text": "What Problem Are We Solving?\n\n\nCourse sites as static archives rather than living resources\nStudents view materials as products to consume rather than projects to contribute to\nInteractive examples require separate tools or external platforms\nContent becomes quickly outdated without sustainable update processes\n\n\n\n Ultimate Goal: Introduce how using packages like Quarto make it possible to create interactive and maintainable course websites"
   },
   {
-    "objectID": "slides/chasten/index.html#avoid-time-complexity-of-on²",
-    "href": "slides/chasten/index.html#avoid-time-complexity-of-on²",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Avoid Time Complexity of \\(O(n²)\\)",
-    "text": "Avoid Time Complexity of \\(O(n²)\\)\n\n\n# O(n) is acceptable\nseen = set()\nfor item in items:\n    if item in seen:\n        return True\n    seen.add(item)\n\n# O(n²) is not okay\nfor i in range(len(items)):\n    for j in range(len(items)):\n        if i != j \n         and items[i] == items[j]:\n            return True\n\n\n\n Goal: Automatically scan the source code that students submit to confirm that there are no inefficient looping constructs\n Challenge: Linters like Ruff and Pylint don’t have rules to detect nested control structures that either are or are not acceptable\n Build: An extensible tool allowing instructors to scan for arbitrary code patterns without detailed AST knowledge"
+    "objectID": "slides/course-websites/index.html#building-and-deploying-with-quarto",
+    "href": "slides/course-websites/index.html#building-and-deploying-with-quarto",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "section": "Building and Deploying with Quarto",
+    "text": "Building and Deploying with Quarto\n\n\nQuarto: Accessible markdown-based framework\nPython & WebAssembly: Easily run Python in the browser\nGitHub: Version control and collaborative workflows\nGitHub Actions: Automated testing and deployment\n\n\n\n\n Ultimate Goal: Build content-focused, interactive, collaborative course sites that instructors can maintain with minimal effort.\n Next Steps: Give examples of content you can immediately use! See Algorithmology.org for more details!"
   },
   {
-    "objectID": "slides/chasten/index.html#chasten-to-the-rescue",
-    "href": "slides/chasten/index.html#chasten-to-the-rescue",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Chasten to the Rescue!",
-    "text": "Chasten to the Rescue!\n\n\n Uses XPath to search Python’s AST\n Rules written in simple YAML\n Structure-first, not just style\n Outputs to JSON, CSV, or SQLite\n\n\n\n Result: Instructors define checks once and use Chasten to easily apply them at scale across all student submissions\n\n\n- name: \"nested-loops\"\n  code: \"PERF001\"\n  pattern: \"//For[descendant::For]\"\n  description: \"Detects doubly nested for-loops (e.g., O(n²))\""
+    "objectID": "slides/course-websites/index.html#interactive-fibonacci-sequence",
+    "href": "slides/course-websites/index.html#interactive-fibonacci-sequence",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "section": "Interactive Fibonacci Sequence",
+    "text": "Interactive Fibonacci Sequence\n\n\n\n\n\n\n\n\n Task: Try modifying the code to calculate more terms or implement a different algorithm!"
   },
   {
-    "objectID": "slides/chasten/index.html#lets-run-chasten",
-    "href": "slides/chasten/index.html#lets-run-chasten",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Let’s Run Chasten!",
-    "text": "Let’s Run Chasten!\n\nInstall the Tool\npipx install chasten  # Install Chasten in venv\npipx list             # Confirm installation\nchasten --help        # View available commands\n\n\nRun Chasten\nchasten analyze time-complexity-lab \\\n        --config chasten-configuration \\\n        --search-path time-complexity-lab \\\n        --save-directory time-complexity-results \\\n        --save\n\n\n\nSave results to a JSON file and produce console output\nConfigure the return code for different detection goals"
+    "objectID": "slides/course-websites/index.html#setting-up-the-course-infrastructure",
+    "href": "slides/course-websites/index.html#setting-up-the-course-infrastructure",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "section": "Setting Up the Course Infrastructure",
+    "text": "Setting Up the Course Infrastructure\n\n\nCreate a GitHub repository with Quarto structure\nConfigure navigation, styling, and organization in _quarto.yml\nSet up GitHub Actions for automated deployment\nCreate templates for student contributions\nPublish to GitHub Pages or Netlify"
   },
   {
-    "objectID": "slides/chasten/index.html#results-from-running-chasten",
-    "href": "slides/chasten/index.html#results-from-running-chasten",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Results from Running Chasten",
-    "text": "Results from Running Chasten\n\nNested Loop Analysis\n\n\n\nCheck ID\nCheck Name\nFile\nMatches\n\n\n\n\nPERF001\nnested-loops\nanalyze.py\n1\n\n\nPERF001\nnested-loops\ndisplay.py\n7\n\n\nPERF001\nnested-loops\nmain.py\n0\n\n\n\n\n\n Check ID → A unique short rule code (e.g., PERF001)\n\n\n Check Name → The rule name that matched (e.g., nested-loops)\n\n\n File → The Python file that the tool scanned (e.g., analyze.py)\n\n\n Matches → Number of times the pattern was detected in that file (e.g., 1 match)"
+    "objectID": "slides/course-websites/index.html#course-roles-contributions",
+    "href": "slides/course-websites/index.html#course-roles-contributions",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "section": "Course Roles & Contributions",
+    "text": "Course Roles & Contributions\n\n\nInstructor’s Role\n\n\nCreate course content structure\nEstablish contribution guidelines\nReview and provide feedback\nGuide collaborative learning\nMaintain core infrastructure\n\n\n\n\n\nStudent’s Role\n\n\nFork repository for contributions\nCreate content in assigned areas\nSubmit pull requests for review\nEngage in peer feedback\nCreate technical documentation"
   },
   {
-    "objectID": "slides/chasten/index.html#limitations-and-future-directions",
-    "href": "slides/chasten/index.html#limitations-and-future-directions",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Limitations and Future Directions",
-    "text": "Limitations and Future Directions\n\nLimitations of the Chasten Tool\n\n Doesn’t handle style, formatting, or type inference\n Not optimized for fast use in continuous integration\n Pattern matches through use of XPath on Python’s AST\n\nEmpirical Study of Chasten\n\n Frequency of false positives or false negatives?\n How do students respond to the tool’s feedback?\n Differences in scores with varied feedback types?"
+    "objectID": "slides/course-websites/index.html#real-world-examples",
+    "href": "slides/course-websites/index.html#real-world-examples",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "section": "Real World Examples",
+    "text": "Real World Examples\n\n\nCourse Website\n\n\n\n\n\n\n\n\n\n\nGitHub Repository"
   },
   {
-    "objectID": "slides/chasten/index.html#key-takeaways",
-    "href": "slides/chasten/index.html#key-takeaways",
-    "title": "Automated and Configurable Programming Project Checking with Chasten",
-    "section": "Key Takeaways",
-    "text": "Key Takeaways\n\n Write declarative rules for AST-based code checks\n Focus on bespoke code structure patterns in Python\n Automated grading aligned with learning outcomes\n Generate data-rich insights into student code patterns\n\n\n\nTry out Chasten and contribute to its development!\n\n GitHub: https://github.com/AstuteSource/chasten\n PyPI: https://pypi.org/project/chasten/"
+    "objectID": "slides/course-websites/index.html#future-improvements",
+    "href": "slides/course-websites/index.html#future-improvements",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "section": "Future Improvements",
+    "text": "Future Improvements\n\n\nBrowser-Based IDE Experience: Complete development environment in the browser\nEnhanced WebAssembly: Better error messages and debugging for Python in browser\nCollaborative Features: Note taking and shared whiteboarding tools\nAutomated Feedback: AI-powered assistance for student contributions\nEnhanced Visualizations: Interactive data and algorithm visualizations"
+  },
+  {
+    "objectID": "slides/course-websites/index.html#why-you-should-consider-this-approach",
+    "href": "slides/course-websites/index.html#why-you-should-consider-this-approach",
+    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "section": "Why You Should Consider This Approach",
+    "text": "Why You Should Consider This Approach\n\n\nEducational Benefits\n\n\nStudent Ownership & Investment: Students become stakeholders in course content\nLiving Educational Resources: Materials continuously evolve and improve\nIndustry-Standard Practices: Students gain experience with professional tools\nTransparent Learning Process: Public materials encourage higher quality work\nAdaptable for All Class Sizes: Effective from seminars to large lectures\n\n\n\nTechnical Benefits\n\n\nSimplified Content Creation: Markdown reduces technical barriers\nFocus on Educational Value: Infrastructure complexity is abstracted away\nBrowser-Based Interactivity: Code execution without local installations\nComprehensive Searchability: Find content across all course materials\nCollaborative Development: Modern version control and workflows\n\n\n\n\nContact Information & Resources\nWebsite: https://algorithmology.org/\nRepository: https://github.com/Algorithmology/www.algorithmology.org\nAlish Chhetri: chhetri01@allegheny.edu\nGregory M. Kapfhammer: gkapfhammer@allegheny.edu"
   },
   {
     "objectID": "slides/github-workflow/index.html#traditional-assignment-challenges",
@@ -140,27 +168,6 @@
     "text": "Key Takeaways\n\n\n Streamlined workflow from assignment creation to grading\n Industry-relevant skills that benefit beyond the classroom\n Automated testing for immediate feedback\n Visible progress through tracking commit history\n Reduced administrative overhead with integrated tools\n\n\n\n Thank You! Questions?"
   },
   {
-    "objectID": "slides/index.html",
-    "href": "slides/index.html",
-    "title": "Slides",
-    "section": "",
-    "text": "View Presentation\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\n\n\n\n\nView Presentation\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\n\n\n\n\nView Presentation\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\n\n\n\n\nView Presentation\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content\n\n\n\n\n\nUse the navigation menu at the top of the page to move between presentations. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references"
-  },
-  {
-    "objectID": "slides/index.html#available-presentations",
-    "href": "slides/index.html#available-presentations",
-    "title": "Slides",
-    "section": "",
-    "text": "View Presentation\nLearn about automated project checking and configuration\nUnderstand how to implement efficient project validation\nExplore best practices for automated testing\n\n\n\n\n\nView Presentation\nMaster GitHub workflow integration\nSet up GitHub Classroom for educational purposes\nImplement automated workflows with GitHub Actions\n\n\n\n\n\nView Presentation\nDiscover tools for creating executable examinations\nLearn about Python-based testing frameworks\nImplement effective examination strategies\n\n\n\n\n\nView Presentation\nCreate modern course websites\nImplement documentation with Mkdocs\nDeploy and maintain educational content"
-  },
-  {
-    "objectID": "slides/index.html#navigation",
-    "href": "slides/index.html#navigation",
-    "title": "Slides",
-    "section": "",
-    "text": "Use the navigation menu at the top of the page to move between presentations. Each presentation includes:\n\nDetailed slides with code examples\nImplementation guides\nBest practices and recommendations\nAdditional resources and references"
-  },
-  {
     "objectID": "slides/execexam/index.html#what-is-an-executable-examination",
     "href": "slides/execexam/index.html#what-is-an-executable-examination",
     "title": "ExecExam: A Tool to Facilitate Effective Executable Examinations in Python",
@@ -210,59 +217,52 @@
     "text": "Conclusions and Future Work\n\n\n📊 Analytics and Instructor Features\n\nStore test outcomes and feedback over time\nVisualize student debugging and improvement paths\nLog LLM interactions to evaluate effectiveness\nHold out hidden test cases for instructor-only grading\n\n🧠 Adaptive Feedback Loops\n\nTailor feedback complexity to student performance\nAllow students to rate different types of LLM feedback\n\n\n\n\n\n🔗 GitHub Repository: https://github.com/GatorEducator/execexam\n💻 PyPI: https://pypi.org/project/execexam/"
   },
   {
-    "objectID": "slides/course-websites/index.html#what-problem-are-we-solving",
-    "href": "slides/course-websites/index.html#what-problem-are-we-solving",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
+    "objectID": "slides/chasten/index.html#what-problem-are-we-solving",
+    "href": "slides/chasten/index.html#what-problem-are-we-solving",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
     "section": "What Problem Are We Solving?",
-    "text": "What Problem Are We Solving?\n\n\nCourse sites as static archives rather than living resources\nStudents view materials as products to consume rather than projects to contribute to\nInteractive examples require separate tools or external platforms\nContent becomes quickly outdated without sustainable update processes\n\n\n\n Ultimate Goal: Introduce how using packages like Quarto make it possible to create interactive and maintainable course websites"
+    "text": "What Problem Are We Solving?\n\n\nStudents may struggle to write efficient, readable code\nManual project review is time-consuming and error-prone\nMany courses face these challenges:\n\nData structures\nAlgorithm analysis\nSoftware engineering\n\nExisting tools focus on style, not semantic structure\nRegex is brittle, and AST tools are hard to prototype\n\n\n\n Project Goal: Chasten enables scalable and structure-aware feedback that effectively supports both instructors and students"
   },
   {
-    "objectID": "slides/course-websites/index.html#building-and-deploying-with-quarto",
-    "href": "slides/course-websites/index.html#building-and-deploying-with-quarto",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Building and Deploying with Quarto",
-    "text": "Building and Deploying with Quarto\n\n\nQuarto: Accessible markdown-based framework\nPython & WebAssembly: Easily run Python in the browser\nGitHub: Version control and collaborative workflows\nGitHub Actions: Automated testing and deployment\n\n\n\n\n Ultimate Goal: Build content-focused, interactive, collaborative course sites that instructors can maintain with minimal effort.\n Next Steps: Give examples of content you can immediately use! See Algorithmology.org for more details!"
+    "objectID": "slides/chasten/index.html#avoid-time-complexity-of-on²",
+    "href": "slides/chasten/index.html#avoid-time-complexity-of-on²",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Avoid Time Complexity of \\(O(n²)\\)",
+    "text": "Avoid Time Complexity of \\(O(n²)\\)\n\n\n# O(n) is acceptable\nseen = set()\nfor item in items:\n    if item in seen:\n        return True\n    seen.add(item)\n\n# O(n²) is not okay\nfor i in range(len(items)):\n    for j in range(len(items)):\n        if i != j \n         and items[i] == items[j]:\n            return True\n\n\n\n Goal: Automatically scan the source code that students submit to confirm that there are no inefficient looping constructs\n Challenge: Linters like Ruff and Pylint don’t have rules to detect nested control structures that either are or are not acceptable\n Build: An extensible tool allowing instructors to scan for arbitrary code patterns without detailed AST knowledge"
   },
   {
-    "objectID": "slides/course-websites/index.html#interactive-fibonacci-sequence",
-    "href": "slides/course-websites/index.html#interactive-fibonacci-sequence",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Interactive Fibonacci Sequence",
-    "text": "Interactive Fibonacci Sequence\n\n\n\n\n\n\n\n\n Task: Try modifying the code to calculate more terms or implement a different algorithm!"
+    "objectID": "slides/chasten/index.html#chasten-to-the-rescue",
+    "href": "slides/chasten/index.html#chasten-to-the-rescue",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Chasten to the Rescue!",
+    "text": "Chasten to the Rescue!\n\n\n Uses XPath to search Python’s AST\n Rules written in simple YAML\n Structure-first, not just style\n Outputs to JSON, CSV, or SQLite\n\n\n\n Result: Instructors define checks once and use Chasten to easily apply them at scale across all student submissions\n\n\n- name: \"nested-loops\"\n  code: \"PERF001\"\n  pattern: \"//For[descendant::For]\"\n  description: \"Detects doubly nested for-loops (e.g., O(n²))\""
   },
   {
-    "objectID": "slides/course-websites/index.html#setting-up-the-course-infrastructure",
-    "href": "slides/course-websites/index.html#setting-up-the-course-infrastructure",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Setting Up the Course Infrastructure",
-    "text": "Setting Up the Course Infrastructure\n\n\nCreate a GitHub repository with Quarto structure\nConfigure navigation, styling, and organization in _quarto.yml\nSet up GitHub Actions for automated deployment\nCreate templates for student contributions\nPublish to GitHub Pages or Netlify"
+    "objectID": "slides/chasten/index.html#lets-run-chasten",
+    "href": "slides/chasten/index.html#lets-run-chasten",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Let’s Run Chasten!",
+    "text": "Let’s Run Chasten!\n\nInstall the Tool\npipx install chasten  # Install Chasten in venv\npipx list             # Confirm installation\nchasten --help        # View available commands\n\n\nRun Chasten\nchasten analyze time-complexity-lab \\\n        --config chasten-configuration \\\n        --search-path time-complexity-lab \\\n        --save-directory time-complexity-results \\\n        --save\n\n\n\nSave results to a JSON file and produce console output\nConfigure the return code for different detection goals"
   },
   {
-    "objectID": "slides/course-websites/index.html#course-roles-contributions",
-    "href": "slides/course-websites/index.html#course-roles-contributions",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Course Roles & Contributions",
-    "text": "Course Roles & Contributions\n\n\nInstructor’s Role\n\n\nCreate course content structure\nEstablish contribution guidelines\nReview and provide feedback\nGuide collaborative learning\nMaintain core infrastructure\n\n\n\n\n\nStudent’s Role\n\n\nFork repository for contributions\nCreate content in assigned areas\nSubmit pull requests for review\nEngage in peer feedback\nCreate technical documentation"
+    "objectID": "slides/chasten/index.html#results-from-running-chasten",
+    "href": "slides/chasten/index.html#results-from-running-chasten",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Results from Running Chasten",
+    "text": "Results from Running Chasten\n\nNested Loop Analysis\n\n\n\nCheck ID\nCheck Name\nFile\nMatches\n\n\n\n\nPERF001\nnested-loops\nanalyze.py\n1\n\n\nPERF001\nnested-loops\ndisplay.py\n7\n\n\nPERF001\nnested-loops\nmain.py\n0\n\n\n\n\n\n Check ID → A unique short rule code (e.g., PERF001)\n\n\n Check Name → The rule name that matched (e.g., nested-loops)\n\n\n File → The Python file that the tool scanned (e.g., analyze.py)\n\n\n Matches → Number of times the pattern was detected in that file (e.g., 1 match)"
   },
   {
-    "objectID": "slides/course-websites/index.html#real-world-examples",
-    "href": "slides/course-websites/index.html#real-world-examples",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Real World Examples",
-    "text": "Real World Examples\n\n\nCourse Website\n\n\n\n\n\n\n\n\n\n\nGitHub Repository"
+    "objectID": "slides/chasten/index.html#limitations-and-future-directions",
+    "href": "slides/chasten/index.html#limitations-and-future-directions",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Limitations and Future Directions",
+    "text": "Limitations and Future Directions\n\nLimitations of the Chasten Tool\n\n Doesn’t handle style, formatting, or type inference\n Not optimized for fast use in continuous integration\n Pattern matches through use of XPath on Python’s AST\n\nEmpirical Study of Chasten\n\n Frequency of false positives or false negatives?\n How do students respond to the tool’s feedback?\n Differences in scores with varied feedback types?"
   },
   {
-    "objectID": "slides/course-websites/index.html#future-improvements",
-    "href": "slides/course-websites/index.html#future-improvements",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Future Improvements",
-    "text": "Future Improvements\n\n\nBrowser-Based IDE Experience: Complete development environment in the browser\nEnhanced WebAssembly: Better error messages and debugging for Python in browser\nCollaborative Features: Note taking and shared whiteboarding tools\nAutomated Feedback: AI-powered assistance for student contributions\nEnhanced Visualizations: Interactive data and algorithm visualizations"
-  },
-  {
-    "objectID": "slides/course-websites/index.html#why-you-should-consider-this-approach",
-    "href": "slides/course-websites/index.html#why-you-should-consider-this-approach",
-    "title": "Building and Deploying Course Websites with Python, Quarto, and Mkdocs",
-    "section": "Why You Should Consider This Approach",
-    "text": "Why You Should Consider This Approach\n\n\nEducational Benefits\n\n\nStudent Ownership & Investment: Students become stakeholders in course content\nLiving Educational Resources: Materials continuously evolve and improve\nIndustry-Standard Practices: Students gain experience with professional tools\nTransparent Learning Process: Public materials encourage higher quality work\nAdaptable for All Class Sizes: Effective from seminars to large lectures\n\n\n\nTechnical Benefits\n\n\nSimplified Content Creation: Markdown reduces technical barriers\nFocus on Educational Value: Infrastructure complexity is abstracted away\nBrowser-Based Interactivity: Code execution without local installations\nComprehensive Searchability: Find content across all course materials\nCollaborative Development: Modern version control and workflows\n\n\n\n\nContact Information & Resources\nWebsite: https://algorithmology.org/\nRepository: https://github.com/Algorithmology/www.algorithmology.org\nAlish Chhetri: chhetri01@allegheny.edu\nGregory M. Kapfhammer: gkapfhammer@allegheny.edu"
+    "objectID": "slides/chasten/index.html#key-takeaways",
+    "href": "slides/chasten/index.html#key-takeaways",
+    "title": "Automated and Configurable Programming Project Checking with Chasten",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\n Write declarative rules for AST-based code checks\n Focus on bespoke code structure patterns in Python\n Automated grading aligned with learning outcomes\n Generate data-rich insights into student code patterns\n\n\n\nTry out Chasten and contribute to its development!\n\n GitHub: https://github.com/AstuteSource/chasten\n PyPI: https://pypi.org/project/chasten/"
   }
 ]

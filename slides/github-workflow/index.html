@@ -645,7 +645,7 @@
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp("https:\/\/GatorEducator\.github\.io\/PyCon2025-EducationAndTypingSummit-Presentations\/");
+            var filterRegex = new RegExp("https:\/\/GatorEducator\.github\.io\/PyCon2025-EducationSummit-Presentations\/");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
